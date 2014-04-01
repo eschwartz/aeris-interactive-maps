@@ -1,0 +1,34 @@
+# standard gitignore
+.idea/
+.idea/*
+.DS_STORE
+*.log
+
+bower_components/
+
+# Sandbox
+examples/sandbox/
+
+# environment specific files
+examples/apikeys.js
+
+# SASS
+.sass-cache
+**/theme/**/*.css
+**/themes/**/*.css
+!**/themes/**/styleguide/*.css
+!**/themes/**/styleguide/**/*.css
+
+build/
+
+# node
+**/node_modules/
+
+# Generated YUIDoc documentation
+docs/public/
+docs/api/
+docs/assets/css/
+
+# Generated SpecRunners
+tests/specrunner.html
+tests/specrunner-*.html
