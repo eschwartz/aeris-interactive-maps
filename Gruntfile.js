@@ -54,6 +54,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jasmine-legacy');
 
   grunt.registerTask('test', [
-    'jasmine-legacy'
+    'jasmine-legacy:aim'
+  ]);
+
+  grunt.registerTask('test-dev', [
+    'jasmine-legacy:local'
   ]);
 };
