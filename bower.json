@@ -1,0 +1,23 @@
+{
+  "name": "aeris-interactive-maps",
+  "version": "0.0.0",
+  "authors": [
+    "Edan Schwartz <edan@edanschwartz.com>"
+  ],
+  "description": "Interactive maps using the Aeris.js library",
+  "keywords": [
+    "maps",
+    "weather",
+    "google maps",
+    "leaflet"
+  ],
+  "license": "BSD",
+  "homepage": "aerisjs.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "tests"
+  ]
+}

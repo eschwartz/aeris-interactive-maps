@@ -1,0 +1,28 @@
+{
+  "name": "aeris-interactive-maps",
+  "version": "0.0.0",
+  "description": "Interactive maps using the Aeris.js library",
+  "main": "src/maps/map",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hamweather/aeris-interactive-maps.git"
+  },
+  "keywords": [
+    "maps",
+    "weather",
+    "google maps",
+    "leaflet"
+  ],
+  "author": "Edan Schwartz <edan@edanschwartz.com>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/hamweather/aeris-interactive-maps/issues"
+  },
+  "homepage": "https://github.com/hamweather/aeris-interactive-maps"
+}
