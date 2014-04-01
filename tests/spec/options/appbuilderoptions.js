@@ -1,7 +1,7 @@
 define([
   'aeris/util',
   'aim/options/appbuilderoptions',
-  'mocks/aeris/config'
+  'aeris/mocks/aeris/config'
 ], function(_, AppBuilderOptions, MockConfig) {
 
   describe('A AppBuilderOptions', function() {

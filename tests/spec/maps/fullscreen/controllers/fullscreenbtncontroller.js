@@ -2,7 +2,7 @@ define([
   'aeris/util',
   'aim/maps/fullscreen/controllers/fullscreenbtncontroller',
   'aeris/events',
-  'mocks/aim/maps/fullscreen/helpers/fullscreenservice'
+  'tests/mocks/maps/fullscreen/helpers/fullscreenservice'
 ], function(_, FullscreenBtnController, Events, MockFullscreenService) {
   var template = '<div><span></span></div>';
   var FULLSCREEN_CLASS_STUB = 'FULLSCREEN_CLASS_STUB', EXIT_FULLSCREEN_CLASS_STUB = 'EXIT_FULLSCREEN_CLASS_STUB';

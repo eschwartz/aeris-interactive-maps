@@ -2,8 +2,8 @@ define([
   'aeris/util',
   'aim/routes/routebuilder/controllers/routebuildercontroller',
   'aeris/events',
-  'mocks/aeris/toggle',
-  'mocks/aeris/maps/routes/routebuilder'
+  'aeris/mocks/aeris/toggle',
+  'aeris/mocks/aeris/maps/routes/routebuilder'
 ], function(_, RouteBuilderController, Events, MockRoutePoint, MockRouteBuilder) {
 
 

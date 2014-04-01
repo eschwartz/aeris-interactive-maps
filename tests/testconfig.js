@@ -7,9 +7,15 @@ require.config({
     sinon: 'bower_components/sinon/index',
     spec: 'tests/spec',
 
-    mocks: 'bower_components/aerisjs/tests/mocks',
-    testUtils: 'bower_components/aerisjs/tests/testUtils',
+    'aeris/mocks': 'bower_components/aerisjs/tests/mocks',
+    'aeris/testUtils': 'bower_components/aerisjs/tests/testUtils',
     'matchers': 'bower_components/aerisjs/tests/lib/matchers'
+  },
+
+  map: {
+    'aeris': {
+      mocks: 'aeris/mocks'
+    }
   },
 
   shim: {

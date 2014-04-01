@@ -1,7 +1,7 @@
 define([
   'aeris/util',
   'aim/maps/core/helpers/renderer',
-  'mocks/aeris/application/controllers/controllerinterface'
+  'aeris/mocks/aeris/application/controllers/controllerinterface'
 ], function(_, Renderer, MockController) {
 
   var MockRegion = function() {

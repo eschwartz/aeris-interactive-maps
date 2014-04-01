@@ -2,8 +2,8 @@ define([
   'aeris/util',
   'aim/maps/infopanel/helpers/infopanelrenderer',
   'aeris/events',
-  'mocks/marionette/region',
-  'mocks/aeris/application/controllers/controllerinterface'
+  'tests/mocks/marionette/region',
+  'aeris/mocks/aeris/application/controllers/controllerinterface'
 ], function(_, InfoPanelRenderer, Events, MockRegion, MockController) {
 
 

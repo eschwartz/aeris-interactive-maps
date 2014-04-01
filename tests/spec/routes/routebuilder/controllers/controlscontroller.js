@@ -6,7 +6,7 @@ define([
   'sinon',
   'aeris/util',
   'aeris/util/latlonutil',
-  'testUtils'
+  'aeris/testUtils'
 ], function(ControlsController, RouteBuilder, Route, Waypoint, sinon, _, latLonUtil, testUtils) {
 
   function getStubbedOptions(opt_options) {
