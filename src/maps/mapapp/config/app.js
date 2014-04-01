@@ -8,11 +8,11 @@
 define({
   $exports: { $ref: 'mapApp' },
 
-  mapAppLayout: { wire: 'aeris/builder/maps/mapapp/config/layout' },
+  mapAppLayout: { wire: 'aim/maps/mapapp/config/layout' },
 
-  mapState: { wire: 'aeris/builder/maps/mapapp/config/mapstate' },
+  mapState: { wire: 'aim/maps/mapapp/config/mapstate' },
 
-  subModules: { wire: 'aeris/builder/maps/mapapp/config/submodules' },
+  subModules: { wire: 'aim/maps/mapapp/config/submodules' },
 
   mapApp: {
     create: {

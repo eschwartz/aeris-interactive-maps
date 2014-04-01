@@ -3,11 +3,11 @@ define({
 
   routeControlsController: {
     create: {
-      module: 'aeris/builder/routes/routebuilder/controllers/routecontrolscontroller',
+      module: 'aim/routes/routebuilder/controllers/routecontrolscontroller',
       args: [
         {
           tagName: 'section',
-          template: { module: 'hbars!aeris/builder/routes/routebuilder/views/controls.html' },
+          template: { module: 'hbars!aim/routes/routebuilder/views/controls.html' },
 
           eventHub: { $ref: 'eventHub' },
           routeBuilder: { $ref: 'routeBuilder' },
@@ -34,11 +34,11 @@ define({
 
   SaveRouteController: {
     ClassFactory: {
-      module: 'aeris/builder/routes/routebuilder/controllers/saveroutecontroller',
+      module: 'aim/routes/routebuilder/controllers/saveroutecontroller',
       args: [
         {
           template: {
-            module: 'hbars!aeris/builder/routes/routebuilder/views/saverouteform.html'
+            module: 'hbars!aim/routes/routebuilder/views/saverouteform.html'
           },
           ui: {
             nameInput: '.aeris-routeNameInput',
@@ -78,7 +78,7 @@ define({
 
   travelModeController: {
     create: {
-      module: 'aeris/builder/routes/routebuilder/controllers/travelmodecontroller',
+      module: 'aim/routes/routebuilder/controllers/travelmodecontroller',
       args: [
         {
           collection: {
@@ -118,7 +118,7 @@ define({
 
 
   $plugins: [
-    { module: 'aeris/builder/routes/plugins/travelmode' },
+    { module: 'aim/routes/plugins/travelmode' },
     { module: 'aeris/application/plugins/classfactory' }
   ]
 

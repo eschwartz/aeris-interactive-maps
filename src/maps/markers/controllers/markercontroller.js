@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aeris/builder/maps/core/controllers/mapobjecttogglecontroller',
+  'aim/maps/core/controllers/mapobjecttogglecontroller',
   'aeris/api/params/models/filter',
   'aeris/api/operator'
 ], function(_, MapObjectToggleController, Filter, Operator) {

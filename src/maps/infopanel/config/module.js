@@ -3,7 +3,7 @@ define({
 
   infoPanelModule: {
     create: {
-      module: 'aeris/builder/maps/core/modules/renderermodule',
+      module: 'aim/maps/core/modules/renderermodule',
       args: [
         {
           renderer: { $ref: 'infoPanelRenderer' }
@@ -16,7 +16,7 @@ define({
   // and renders transformed event data
   infoPanelRenderer: {
     create: {
-      module: 'aeris/builder/maps/infopanel/helpers/infopanelrenderer',
+      module: 'aim/maps/infopanel/helpers/infopanelrenderer',
       args: [
         {
           region: {

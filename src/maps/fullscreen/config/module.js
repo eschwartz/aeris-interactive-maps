@@ -3,7 +3,7 @@ define({
 
   fullscreenModule: {
     create: {
-      module: 'aeris/builder/maps/fullscreen/modules/fullscreenmodule',
+      module: 'aim/maps/fullscreen/modules/fullscreenmodule',
       args: [{
         fullscreenController: { $ref: 'fullscreenController' },
         fullscreenBtnController: { $ref: 'fullscreenBtnController' },
@@ -14,7 +14,7 @@ define({
 
   fullscreenController: {
     create: {
-      module: 'aeris/builder/maps/fullscreen/controllers/fullscreencontroller',
+      module: 'aim/maps/fullscreen/controllers/fullscreencontroller',
       args: [{
         fullscreenService: { $ref: 'fullscreenService' }
       }]
@@ -29,11 +29,11 @@ define({
 
   fullscreenBtnController: {
     create: {
-      module: 'aeris/builder/maps/fullscreen/controllers/fullscreenbtncontroller',
+      module: 'aim/maps/fullscreen/controllers/fullscreenbtncontroller',
       args: [{
         tagName: 'a',
         eventHub: { $ref: 'eventHub' },
-        fullscreenStyle: { wire: 'aeris/builder/maps/fullscreen/config/fullscreenstyle' },
+        fullscreenStyle: { wire: 'aim/maps/fullscreen/config/fullscreenstyle' },
         template: { $ref: 'fullscreenBtnTemplate' },
         fullscreenClass: { $ref: 'fullscreenBtnClasses.fullscreen' },
         exitFullscreenClass: { $ref: 'fullscreenBtnClasses.exitFullscreen' },
@@ -43,14 +43,14 @@ define({
   },
 
   // FullscreenBtnController configuration options
-  fullscreenBtnTemplate: { module: 'hbars!aeris/builder/maps/fullscreen/view/fullscreenbutton.html' },
+  fullscreenBtnTemplate: { module: 'hbars!aim/maps/fullscreen/view/fullscreenbutton.html' },
   fullscreenBtnClasses: {
     fullscreen: 'aeris-fullscreen',
     exitFullscreen: 'aeris-exitFullscreen'
   },
 
   fullscreenService: {
-    create: 'aeris/builder/maps/fullscreen/helpers/fullscreenservice'
+    create: 'aim/maps/fullscreen/helpers/fullscreenservice'
   },
 
   $plugins: [

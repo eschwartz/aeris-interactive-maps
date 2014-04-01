@@ -3,9 +3,9 @@ define({
 
   mapControlsModule: {
     wire: {
-      spec: 'aeris/builder/maps/mapcontrols/config/module',
+      spec: 'aim/maps/mapcontrols/config/module',
       provide: {
-        mapControlsRegions: { wire: 'aeris/builder/routes/mapcontrols/config/regions' },
+        mapControlsRegions: { wire: 'aim/routes/mapcontrols/config/regions' },
 
         controlsRegionLookup: {
           geolocation: 'geolocateControlsRegion',
@@ -15,7 +15,7 @@ define({
           routeBuilder: 'routeBuilderControlsRegion'
         },
 
-        mapControlsTemplate: { module: 'hbars!aeris/builder/routes/mapcontrols/views/controls.html' }
+        mapControlsTemplate: { module: 'hbars!aim/routes/mapcontrols/views/controls.html' }
       }
     }
   }

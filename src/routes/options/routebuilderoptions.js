@@ -1,7 +1,7 @@
 define([
   'aeris/util',
   'aeris/config',
-  'aeris/builder/maps/options/mapappbuilderoptions'
+  'aim/maps/options/mapappbuilderoptions'
 ], function(_, config, BaseOptions) {
   /**
    * @typedef {Object} polylineOptions

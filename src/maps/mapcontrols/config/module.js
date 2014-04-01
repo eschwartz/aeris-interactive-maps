@@ -11,7 +11,7 @@ define(
 
     mapControlsModule: {
       create: {
-        module: 'aeris/builder/maps/mapcontrols/modules/mapcontrolsmodule',
+        module: 'aim/maps/mapcontrols/modules/mapcontrolsmodule',
         args: [{
           controlsController: { $ref: 'mapControlsController' },
 
@@ -25,7 +25,7 @@ define(
 
     mapControlsController: {
       create: {
-        module: 'aeris/builder/maps/mapcontrols/controllers/mapcontrolscontroller',
+        module: 'aim/maps/mapcontrols/controllers/mapcontrolscontroller',
         args: [{
           eventHub: { $ref: 'eventHub' },
           builderOptions: { $ref: 'builderOptions' },
@@ -46,9 +46,9 @@ define(
       }
     },
 
-    mapControlsTemplate: { module: 'hbars!aeris/builder/maps/mapcontrols/views/controls.html' },
+    mapControlsTemplate: { module: 'hbars!aim/maps/mapcontrols/views/controls.html' },
 
-    mapControlsRegions: { wire: 'aeris/builder/maps/mapcontrols/config/regions' },
+    mapControlsRegions: { wire: 'aim/maps/mapcontrols/config/regions' },
 
     // These should match up to the
     // the keys of the "controls" builder options.

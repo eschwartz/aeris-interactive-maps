@@ -2,7 +2,7 @@ define({
   $exports: { $ref: 'mapAppLayout' },
 
   mapAppTemplate: {
-    module: 'text!aeris/builder/maps/mapapp/views/app.html'
+    module: 'text!aim/maps/mapapp/views/app.html'
   },
 
   mapAppRegions: {

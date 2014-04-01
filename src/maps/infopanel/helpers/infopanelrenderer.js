@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aeris/builder/maps/core/helpers/renderer'
+  'aim/maps/core/helpers/renderer'
 ], function(_, Renderer) {
   /**
    * Helper for rendering view in the info panel region.

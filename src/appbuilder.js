@@ -1,7 +1,7 @@
 define([
   'aeris/util',
   'aeris/model',
-  'aeris/builder/errors/builderconfigerror',
+  'aim/errors/builderconfigerror',
   'wire'        // Req'd for r.js to include wire package.
 ], function(_, Model, BuilderConfigError) {
 

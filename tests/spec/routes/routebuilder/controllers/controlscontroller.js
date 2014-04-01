@@ -1,5 +1,5 @@
 define([
-  'aeris/builder/routes/routebuilder/controllers/routecontrolscontroller',
+  'aim/routes/routebuilder/controllers/routecontrolscontroller',
   'aeris/maps/routes/routebuilder',
   'aeris/maps/routes/route',
   'aeris/maps/routes/waypoint',

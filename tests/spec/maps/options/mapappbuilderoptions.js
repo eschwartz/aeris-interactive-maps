@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'wire!spec/aeris/builder/maps/options/context'
+  'wire!tests/spec/maps/options/context'
 ], function(_, context) {
   // Load wired Options module
   var Options = context.MapAppBuilderOptions;

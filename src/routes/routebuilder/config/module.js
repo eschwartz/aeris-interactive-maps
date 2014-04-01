@@ -9,21 +9,21 @@ define({
 
   routeBuilderModule: {
     create: {
-      module: 'aeris/builder/routes/routebuilder/modules/routebuildermodule',
+      module: 'aim/routes/routebuilder/modules/routebuildermodule',
       args: [
         {
           routeControlsController: { $ref: 'controllers.routeControlsController' },
           routeBuilderController: { $ref: 'controllers.routeBuilderController' },
           eventHub: { $ref: 'eventHub' },
           appState: { $ref: 'appState' },
-          modules: { wire: 'aeris/builder/routes/routebuilder/config/submodules' }
+          modules: { wire: 'aim/routes/routebuilder/config/submodules' }
         }
       ]
     }
   },
 
-  controllers: { wire: 'aeris/builder/routes/routebuilder/config/controllers' },
+  controllers: { wire: 'aim/routes/routebuilder/config/controllers' },
 
-  routeBuilder: { wire: 'aeris/builder/routes/routebuilder/config/routebuilder' }
+  routeBuilder: { wire: 'aim/routes/routebuilder/config/routebuilder' }
 
 });

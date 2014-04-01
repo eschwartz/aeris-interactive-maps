@@ -1,5 +1,5 @@
 define({
   $exports: {
-    routePointInfo: { wire: 'aeris/builder/routes/routebuilder/routepointinfo/config/module' }
+    routePointInfo: { wire: 'aim/routes/routebuilder/routepointinfo/config/module' }
   }
 });

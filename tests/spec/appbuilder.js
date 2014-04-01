@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aeris/builder/appbuilder',
+  'aim/appbuilder',
   'aeris/model'
 ], function(_, AppBuilder, Model) {
 

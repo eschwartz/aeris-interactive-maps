@@ -10,17 +10,17 @@ define({
 
   markerStateCollection: {
     create: {
-      module: 'aeris/builder/maps/core/collections/mapobjecttogglecollection',
+      module: 'aim/maps/core/collections/mapobjecttogglecollection',
       args: [undefined, {
         // Use MarkerToggle model with our state collection.
-        model: { module: 'aeris/builder/maps/markers/models/markertoggle' }
+        model: { module: 'aim/maps/markers/models/markertoggle' }
       }]
     }
   },
 
   markersModule: {
     create: {
-      module: 'aeris/builder/maps/markers/modules/markersmodule',
+      module: 'aim/maps/markers/modules/markersmodule',
       args: [
         {
           appState: { $ref: 'appState' },
@@ -31,7 +31,7 @@ define({
           mapObjectController: { $ref: 'markerViewController' },
           controlsController: { $ref: 'markerControlsController' },
 
-          validFilters: { module: 'aeris/builder/maps/markers/config/validmarkerfilters' },
+          validFilters: { module: 'aim/maps/markers/config/validmarkerfilters' },
 
           // Constructor for MarkerInfoController
           // (marker details view)
@@ -48,11 +48,11 @@ define({
 
   markerViewController: {
     create: {
-      module: 'aeris/builder/maps/core/controllers/mapobjectcollectioncontroller',
+      module: 'aim/maps/core/controllers/mapobjectcollectioncontroller',
       args: [
         {
           collection: { $ref: 'markerStateCollection' },
-          itemView: { module: 'aeris/builder/maps/markers/controllers/markercontroller' },
+          itemView: { module: 'aim/maps/markers/controllers/markercontroller' },
           itemViewOptions: {
             appState: { $ref: 'appState' },
             eventHub: { $ref: 'eventHub' }
@@ -66,7 +66,7 @@ define({
   // for all types of Marker objects
   markerControlsController: {
     create: {
-      module: 'aeris/builder/maps/core/controllers/togglecontrolscontroller',
+      module: 'aim/maps/core/controllers/togglecontrolscontroller',
       args: [
         {
           eventHub: { $ref: 'eventHub' },
@@ -82,10 +82,10 @@ define({
   // (where the menu sub-items are filter toggles)
   MarkerMenuController: {
     ClassFactory: {
-      module: 'aeris/builder/maps/markers/controllers/markermenucontroller',
+      module: 'aim/maps/markers/controllers/markermenucontroller',
       args: [
         {
-          template: { module: 'hbars!aeris/builder/maps/markers/views/markermenuitem.html' },
+          template: { module: 'hbars!aim/maps/markers/views/markermenuitem.html' },
           handlebarsHelpers: {
             i18n: { module: 'aeris/application/templatehelpers/i18n' }
           },
@@ -108,13 +108,13 @@ define({
   // A set of filter toggle controls
   FilterTogglesController: {
     ClassFactory: {
-      module: 'aeris/builder/maps/markers/controllers/filtertogglescontroller',
+      module: 'aim/maps/markers/controllers/filtertogglescontroller',
       args: [
         {
           className: 'aeris-subMenu',
 
           itemViewOptions: {
-            template: { module: 'hbars!aeris/builder/maps/core/views/toggle.html' },
+            template: { module: 'hbars!aim/maps/core/views/toggle.html' },
             handlebarsHelpers: {
               i18n: { module: 'aeris/application/templatehelpers/i18n' }
             },
@@ -130,16 +130,16 @@ define({
 
   MarkerInfoController: {
     ClassFactory: {
-      module: 'aeris/builder/maps/markers/controllers/markerinfocontroller',
+      module: 'aim/maps/markers/controllers/markerinfocontroller',
       args: [
         {
-          template: { module: 'hbars!aeris/builder/maps/markers/views/markerdetails.html' }
+          template: { module: 'hbars!aim/maps/markers/views/markerdetails.html' }
         }
       ]
     }
   },
 
-  eventDataTransformer: { module: 'aeris/builder/maps/transformers/eventdatatransformer' },
+  eventDataTransformer: { module: 'aim/maps/transformers/eventdatatransformer' },
 
   $plugins: [
     { module: 'aeris/application/plugins/events' },

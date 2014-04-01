@@ -3,7 +3,7 @@ define({
 
   routePointInfoModule: {
     create: {
-      module: 'aeris/builder/routes/routebuilder/routepointinfo/modules/routepointinfomodule',
+      module: 'aim/routes/routebuilder/routepointinfo/modules/routepointinfomodule',
       args: [
         {
           eventHub: { $ref: 'eventHub' },
@@ -16,7 +16,7 @@ define({
 
   RoutePointInfoPanelController: {
     ClassFactory: {
-      module: 'aeris/builder/routes/routebuilder/routepointinfo/controllers/infopanelcontroller',
+      module: 'aim/routes/routebuilder/routepointinfo/controllers/infopanelcontroller',
       args: [
         {
           InfoPanelViewModel: { $ref: 'InfoPanelViewModel' },
@@ -33,11 +33,11 @@ define({
   },
 
   routePointInfoTemplate: {
-    module: 'hbars!aeris/builder/routes/routebuilder/routepointinfo/views/routepointinfopanel.html'
+    module: 'hbars!aim/routes/routebuilder/routepointinfo/views/routepointinfopanel.html'
   },
 
   InfoPanelViewModel: {
-    module: 'aeris/builder/routes/routebuilder/routepointinfo/viewmodels/infopanelviewmodel'
+    module: 'aim/routes/routebuilder/routepointinfo/viewmodels/infopanelviewmodel'
   },
 
   $plugins: [

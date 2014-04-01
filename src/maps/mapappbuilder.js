@@ -1,9 +1,9 @@
 define([
   'aeris/util',
   'aeris/promise',
-  'aeris/builder/appbuilder',
-  'aeris/builder/errors/builderconfigerror',
-  'wire!aeris/builder/maps/config/context'
+  'aim/appbuilder',
+  'aim/errors/builderconfigerror',
+  'wire!aim/maps/config/context'
 ], function(_, Promise, BaseAppBuilder, BuilderConfigError, context) {
   /**
    *

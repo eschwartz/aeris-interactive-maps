@@ -9,7 +9,7 @@ define({
 
   LayerState: {
     ClassFactory: {
-      module: 'aeris/builder/maps/core/models/mapobjecttoggle',
+      module: 'aim/maps/core/models/mapobjecttoggle',
       args: [
         undefined,
         {
@@ -21,7 +21,7 @@ define({
 
   layerStateCollection: {
     create: {
-      module: 'aeris/builder/maps/core/collections/mapobjecttogglecollection',
+      module: 'aim/maps/core/collections/mapobjecttogglecollection',
       args: [
         undefined,
         {
@@ -34,7 +34,7 @@ define({
 
   layersModule: {
     create: {
-      module: 'aeris/builder/maps/core/modules/mapobjectmodule',
+      module: 'aim/maps/core/modules/mapobjectmodule',
       args: [
         {
           appState: { $ref: 'appState' },
@@ -51,7 +51,7 @@ define({
   // Controller for Layer MapExtObjs
   layerViewController: {
     create: {
-      module: 'aeris/builder/maps/core/controllers/mapobjectcollectioncontroller',
+      module: 'aim/maps/core/controllers/mapobjectcollectioncontroller',
       args: [
         {
           collection: { $ref: 'layerStateCollection' },
@@ -65,7 +65,7 @@ define({
 
   layerControlsController: {
     create: {
-      module: 'aeris/builder/maps/core/controllers/togglecontrolscontroller',
+      module: 'aim/maps/core/controllers/togglecontrolscontroller',
       args: [
         {
           eventHub: { $ref: 'eventHub' },
@@ -73,7 +73,7 @@ define({
           collection: { $ref: 'layerStateCollection' },
           className: 'aeris-map-controls',
           itemViewOptions: {
-            template: { module: 'hbars!aeris/builder/maps/core/views/toggle.html' }
+            template: { module: 'hbars!aim/maps/core/views/toggle.html' }
           },
           handlebarsHelpers: {
             i18n: { module: 'aeris/application/templatehelpers/i18n' }

@@ -1,7 +1,7 @@
 define([
   'aeris/util',
   'aeris/events',
-  'aeris/builder/maps/fullscreen/errors/fullscreennotsupportederror'
+  'aim/maps/fullscreen/errors/fullscreennotsupportederror'
 ], function(_, Events, FullscreenNotSupportedError) {
   var root = this;
 

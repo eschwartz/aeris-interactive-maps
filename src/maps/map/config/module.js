@@ -9,7 +9,7 @@ define({
 
   mapModule: {
     create: {
-      module: 'aeris/builder/maps/map/modules/mapmodule',
+      module: 'aim/maps/map/modules/mapmodule',
       args: [{
         mapController: { $ref: 'mapController' },
 
@@ -27,7 +27,7 @@ define({
 
   mapController: {
     create: {
-      module: 'aeris/builder/maps/map/controllers/mapcontroller',
+      module: 'aim/maps/map/controllers/mapcontroller',
       args: [{
         appState: { $ref: 'appState' },
         className: 'aeris-mapCanvas',

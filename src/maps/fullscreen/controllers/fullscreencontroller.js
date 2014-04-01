@@ -1,7 +1,7 @@
 define([
   'aeris/util',
   'aeris/application/controllers/itemcontroller',
-  'aeris/builder/maps/fullscreen/helpers/fullscreenservice'
+  'aim/maps/fullscreen/helpers/fullscreenservice'
 ], function(_, ItemController, FullscreenService) {
   /**
    * Controls a view which can be restyled into and

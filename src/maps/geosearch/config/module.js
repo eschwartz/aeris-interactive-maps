@@ -3,7 +3,7 @@ define({
 
   geosearchModule: {
     create: {
-      module: 'aeris/builder/maps/geosearch/modules/geosearchmodule',
+      module: 'aim/maps/geosearch/modules/geosearchmodule',
       args: [
         {
           eventHub: { $ref: 'eventHub' },
@@ -14,12 +14,12 @@ define({
     }
   },
 
-  geolocateTemplate: { module: 'hbars!aeris/builder/maps/geosearch/views/geolocate.html' },
-  geosearchTemplate: { module: 'hbars!aeris/builder/maps/geosearch/views/geocode.html' },
+  geolocateTemplate: { module: 'hbars!aim/maps/geosearch/views/geolocate.html' },
+  geosearchTemplate: { module: 'hbars!aim/maps/geosearch/views/geocode.html' },
 
   geolocateController: {
     create: {
-      module: 'aeris/builder/maps/geosearch/controllers/geolocatecontroller',
+      module: 'aim/maps/geosearch/controllers/geolocatecontroller',
       args: [
         {
           tagName: 'span',
@@ -46,7 +46,7 @@ define({
 
   geocodeController: {
     create: {
-      module: 'aeris/builder/maps/geosearch/controllers/geocodecontroller',
+      module: 'aim/maps/geosearch/controllers/geocodecontroller',
       args: [
         {
           mapState: { $ref: 'mapState' },

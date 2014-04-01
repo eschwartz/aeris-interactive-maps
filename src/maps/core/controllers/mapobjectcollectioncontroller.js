@@ -1,7 +1,7 @@
 define([
   'aeris/util',
   'marionette',
-  'aeris/builder/maps/core/controllers/mapobjecttogglecontroller'
+  'aim/maps/core/controllers/mapobjecttogglecontroller'
 ], function(_, Marionette, MapObjectToggleController) {
   /**
    * Controls a set of {aeris.maps.extensions.MapExtensionObject}

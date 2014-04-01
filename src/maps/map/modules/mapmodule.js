@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aeris/builder/maps/core/modules/statemodule'
+  'aim/maps/core/modules/statemodule'
 ], function(_, StateModule) {
   /**
    * Encapsulates all MapAppBuilder controllers

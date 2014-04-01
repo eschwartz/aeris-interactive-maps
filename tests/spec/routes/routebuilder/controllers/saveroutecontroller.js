@@ -4,7 +4,7 @@ define([
   'aeris/model',
   'aeris/collection',
   'jquery',
-  'aeris/builder/routes/routebuilder/controllers/saveroutecontroller'
+  'aim/routes/routebuilder/controllers/saveroutecontroller'
 ], function(_, Events, Model, Collection, $, SaveRouteController) {
 
   function stubMethodsFor(obj, methods, opt_name) {

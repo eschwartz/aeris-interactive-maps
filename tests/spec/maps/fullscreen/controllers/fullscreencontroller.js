@@ -1,8 +1,8 @@
 define([
   'aeris/util',
-  'aeris/builder/maps/fullscreen/controllers/fullscreencontroller',
+  'aim/maps/fullscreen/controllers/fullscreencontroller',
   'jquery',
-  'mocks/aeris/builder/maps/fullscreen/helpers/fullscreenservice'
+  'mocks/aim/maps/fullscreen/helpers/fullscreenservice'
 ], function(_, FullscreenController, $, MockFullscreenService) {
 
   var toHaveStyle = function(styleProp, styleVal) {

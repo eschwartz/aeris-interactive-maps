@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aeris/builder/maps/core/modules/mapobjectmodule'
+  'aim/maps/core/modules/mapobjectmodule'
 ], function(_, MapObjectModule) {
   /**
    * Application module for point data markers.

@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aeris/builder/maps/mapcontrols/controllers/mapcontrolscontroller',
+  'aim/maps/mapcontrols/controllers/mapcontrolscontroller',
   'aeris/events',
   'aeris/model',
   'aeris/application/controllers/layoutcontroller',

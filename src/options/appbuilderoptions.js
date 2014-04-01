@@ -2,7 +2,7 @@ define([
   'aeris/util',
   'aeris/model',
   'aeris/config',
-  'aeris/builder/errors/builderconfigerror'
+  'aim/errors/builderconfigerror'
 ], function(_, Model, aerisConfig, BuilderConfigError) {
   /**
    * @typedef {Object} AppBuilderOptions

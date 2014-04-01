@@ -1,8 +1,8 @@
 define([
   'aeris/util',
   'aeris/promise',
-  'aeris/builder/appbuilder',
-  'wire!aeris/builder/routes/config/context'
+  'aim/appbuilder',
+  'wire!aim/routes/config/context'
 ], function(_, Promise, BaseAppBuilder, context) {
   /**
    *

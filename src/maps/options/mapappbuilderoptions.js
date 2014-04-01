@@ -1,7 +1,7 @@
 define([
   'aeris/util',
   'aeris/errors/invalidconfigerror',
-  'aeris/builder/options/appbuilderoptions'
+  'aim/options/appbuilderoptions'
 ], function(_, InvalidConfigError, BaseOptions) {
   /**
    * @typedef {Array.<string|Object>} MapObjectOptions

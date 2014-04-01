@@ -3,7 +3,7 @@ define({
 
   routeBuilderController: {
     create: {
-      module: 'aeris/builder/routes/routebuilder/controllers/routebuildercontroller',
+      module: 'aim/routes/routebuilder/controllers/routebuildercontroller',
       args: [
         {
           routeBuilder: { $ref: 'routeBuilder' },

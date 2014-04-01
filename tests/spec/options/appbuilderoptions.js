@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aeris/builder/options/appbuilderoptions',
+  'aim/options/appbuilderoptions',
   'mocks/aeris/config'
 ], function(_, AppBuilderOptions, MockConfig) {
 
