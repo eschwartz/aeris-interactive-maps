@@ -22,7 +22,10 @@ require.config({
     async: 'bower_components/requirejs-plugins/src/async',
     'gmaps-markerclusterer-plus': 'bower_components/gmaps-markerclusterer-plus/index',
     leaflet: '//cdn.leafletjs.com/leaflet-0.7.2/leaflet-src',
-    'leaflet-markercluster': 'bower_components/leaflet.markercluster/dist/leaflet.markercluster-src'
+    'leaflet-markercluster': 'bower_components/leaflet.markercluster/dist/leaflet.markercluster-src',
+
+    // Set default strategy
+    'aeris/maps/strategy': 'bower_components/aerisjs/src/maps/gmaps'
   },
   packages: [
     // Configure wire packages
