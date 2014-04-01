@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/hamweather/aeris-interactive-maps/issues"
   },
-  "homepage": "https://github.com/hamweather/aeris-interactive-maps"
+  "homepage": "https://github.com/hamweather/aeris-interactive-maps",
+  "devDependencies": {
+    "grunt-jasmine-legacy": "~1.0.2"
+  }
 }
