@@ -1,0 +1,38 @@
+@mixin appendIcon {
+  @include pie-clearfix;
+
+  @include setIconStyles {
+    margin-right: 5px;
+    vertical-align: -3px;
+  }
+
+  &:after {
+    content: '';
+
+    position: relative;
+    top: 2px;
+
+    float: right;
+
+    @content;
+  }
+}
+
+%withCloseIcon {
+  @include appendIcon {
+    @extend .#{$_}icon-close;
+  }
+}
+
+%withOpenIcon {
+  @include appendIcon {
+    @extend .#{$_}icon-rChevronDk;
+    top: 1px;
+  }
+}
+
+%withoutIcon {
+  @include appendIcon {
+   background-image:  none;
+  }
+}

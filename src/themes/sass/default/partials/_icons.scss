@@ -1,0 +1,30 @@
+/**
+ * Compass-generated icon spritesheet.
+*/
+$aeris-icon-sprite-dimensions: true;
+$aeris-icon-sprite-base-class: ".#{$_}icon-sprite";
+@import "aeris-icon/*.png";
+@include all-aeris-icon-sprites;
+
+
+@include setIconStyles {
+  @include inline-block;
+}
+
+@mixin circleIcon($color, $radius: 17px) {
+  @include circle($radius, $color);
+  @include box-shadow(0 0 0 2px #fff inset);
+  border: 1px solid #d2d2d2;
+
+  vertical-align: $radius * -0.25;
+}
+
+.#{$_}icon-open {
+  @include circleIcon(#008000);
+}
+.#{$_}icon-closed {
+  @include circleIcon($red);
+}
+.#{$_}icon-unknown {
+  @include circleIcon(#aeaeae);
+}

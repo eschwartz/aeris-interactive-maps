@@ -1,0 +1,68 @@
+.#{$_}actionBtn {
+  @extend %btn;
+  @extend %textOnRedBg;
+
+  background: $red;
+  color: $text-white;
+  font-weight: normal;
+}
+
+.#{$_}secondaryBtn {
+  @extend %btn;
+
+  background: $greyDk;
+}
+
+@mixin appendExternalLinkIcon {
+
+  position: relative;
+
+  padding-right: 40px;
+
+  &:after {
+    content: '';
+    @extend .#{$_}icon-rDblChevronDk;
+
+    position: absolute;
+    top: 0.72em;    // Using em to have some chance of lining up with text.
+    right: 10px;
+  }
+}
+
+.#{$_}externalButton {
+  @extend .#{$_}actionBtn;
+  @extend %textOnRedBg;
+
+  @include appendExternalLinkIcon;
+
+  text-align: center;
+}
+
+
+.#{$_}geolocateBtn {
+  @include inline-block;
+
+  background-color: $black;
+
+  line-height: 0;
+  padding: 8px;
+
+  &:after {
+    content: '';
+    @extend .#{$_}icon-geolocate;
+
+    margin-top: 1px;
+  }
+
+  &:hover {
+    background-color: #000;
+  }
+  &:active {
+    &:after {
+      margin-top: 2px;
+      margin-left: 1px;
+    }
+  }
+}
+
+@import "buttons/buttonmenu";

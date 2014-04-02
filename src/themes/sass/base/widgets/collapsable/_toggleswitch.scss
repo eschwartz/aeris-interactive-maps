@@ -1,0 +1,15 @@
+%toggleSwitch {
+  cursor: pointer;
+  @extend %withCloseIcon;
+}
+
+
+%toggleSwitchClosed {
+  @extend %toggleSwitch;
+  @extend %withOpenIcon;
+}
+
+%toggleSwitchNone {
+  cursor: default;
+  @extend %withoutIcon;
+}

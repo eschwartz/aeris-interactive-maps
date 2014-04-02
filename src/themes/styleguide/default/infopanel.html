@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/styleguide.css"/>
+  <link rel="stylesheet" href="../../css/default/style.css"/>
+  <link rel="shortcut icon" type="image/x-icon" href="/examples/weather.ico"/>
+  <title>Aeris Interactive Maps Style Guide</title>
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+</head>
+<body>
+
+<div class="sg-container">
+  <div class="sg-mapApp aeris-maps-app">
+    <div class="aeris-infoPanel">
+      <h1>Info Panel</h1>
+
+      <header>
+        <h2>Someplace</h2>
+        <small>near Minneapolis, MN</small>
+      </header>
+
+      <section class="aeris-attributes">
+        <ul>
+          <li><span class="aeris-icon-edit"></span></li>
+          <li class="aeris-openClosed"><span class="aeris-icon-open"></span>open</li>
+        </ul>
+      </section>
+
+      <section>
+        <a class="aeris-externalButton" href="#">Go there</a>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $('.aeris-infoPanel>h1').click(function() {
+    $('.aeris-infoPanel').toggleClass('aeris-state-closed');
+  });
+</script>
+
+</body>
+</html>

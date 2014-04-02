@@ -1,0 +1,17 @@
+@mixin fullscreen {
+  :-moz-full-screen & {
+    @content;
+  }
+
+  :-webkit-full-screen & {
+    @content;
+  }
+
+  :-ms-fullscreen & {
+    @content;
+  }
+
+  :fullscreen & {
+    @content;
+  }
+}

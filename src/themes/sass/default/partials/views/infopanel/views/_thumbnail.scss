@@ -1,0 +1,16 @@
+.aeris-infoPanel.aeris-thumbnail {
+  width: 350px;
+
+  header {
+    @include setIconStyles {
+      float: right;
+
+      position: relative;
+      top: 3px;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}

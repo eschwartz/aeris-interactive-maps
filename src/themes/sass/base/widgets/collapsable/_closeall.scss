@@ -1,0 +1,17 @@
+%closeAllChildren {
+  * {
+    display: none;
+  }
+}
+
+%closeAllExceptToggle {
+  @extend %closeAllChildren;
+
+  @include setToggleSwitchStyles {
+    display: block;
+
+    @include setIconStyles {
+      display: inline-block;
+    }
+  }
+}

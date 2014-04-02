@@ -1,0 +1,20 @@
+/**
+ * A styled version of the collapsable placeholder.
+*/
+%collapsableRed {
+  @extend %collapsable;
+
+  @include setOpenState {
+    @include setToggleSwitchStyles {
+      @extend %buttonWithRedBg;
+      @extend %sectionHeading;
+    }
+  }
+
+  @include setClosedState {
+    @include setToggleSwitchStyles {
+      @extend %buttonWithDarkBg;
+      @extend %sectionHeading;
+    }
+  }
+}

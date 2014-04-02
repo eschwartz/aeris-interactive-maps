@@ -1,0 +1,37 @@
+input[type=checkbox] {
+  display: none;
+
+  // Checkbox label
+  + label {
+    cursor: pointer;
+    color: $text-grey;
+
+    padding-top: 2px;
+
+    font-size: 14px;
+
+    &:before {
+      @extend %checkbox;
+    }
+
+    &:hover {
+      color: $text-black;
+
+      &:before {
+        background: #888;
+      }
+    }
+  }
+
+  &:checked, &.#{$_}checked {
+    // Checked checkbox label
+    + label {
+      color: $text-black;
+
+      &:before {
+        @extend %checkbox;
+        background: $red;
+      }
+    }
+  }
+}

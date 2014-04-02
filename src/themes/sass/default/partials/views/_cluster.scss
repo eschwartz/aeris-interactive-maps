@@ -1,0 +1,31 @@
+/**
+ * Marker cluster styles.
+*/
+.#{$_}cluster {
+  &:after {
+    content: '';
+
+    position:absolute;
+    top: -11px;
+    right: -14px;
+    width: 21px;
+    height: 18px;
+
+
+    @include background-image(linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%));
+
+    @include border-radius(5px);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+  // MarkerClusterer creates empty cluster objects
+  // which it fails to clean up.
+  // This hides any empty clusters.
+  &:empty:after {
+    display: none;
+  }
+
+  div {
+    z-index: 2;
+  }
+}

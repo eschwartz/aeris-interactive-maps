@@ -1,0 +1,15 @@
+// To use:
+//
+// $cssClassSelectorPrefix: 'myApp-';
+//
+// .#{$_}someButton {
+//    color: blue;
+// }
+//
+// Compiles to:
+//
+// .myApp-someButton {
+//    color: blue;
+// }
+$cssClassSelectorPrefix: 'aeris-';
+$_: $cssClassSelectorPrefix;

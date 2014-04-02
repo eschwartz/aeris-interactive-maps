@@ -1,0 +1,33 @@
+/**
+ * InfoPanel Header styles
+*/
+
+@mixin setHeadingStyles {
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 5px;
+  }
+}
+
+@mixin setPaddingWithLeftMargin($padding) {
+  padding: $padding $padding $padding 0;
+  margin-left: $padding;
+}
+
+@mixin setHeaderStyles {
+  @include setInfoPanelStyles {
+    header {
+      @content;
+    }
+  }
+}
+
+
+
+@include setHeaderStyles {
+  @include setPaddingWithLeftMargin($sectionPadding);
+  @include setHeadingStyles;
+
+  border-bottom: 1px solid $redDk;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/styleguide.css"/>
+  <link rel="stylesheet" href="../../css/default/style.css"/>
+  <link rel="shortcut icon" type="image/x-icon" href="/examples/weather.ico"/>
+  <title>Aeris Interactive Maps Sidebar Style Guide</title>
+
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+<body>
+<div class="sg-container">
+
+  <div class="aeris-maps-app">
+    <div class="aeris-mapControlsRegion">
+
+      <div class="aeris-sideMenu">
+        <section class="aeris-geosearch">
+          <a class="aeris-geolocateBtn" href="#"></a>
+
+          <input type="search" placeholder="Search"/>
+        </section>
+
+        <div class="aeris-scrollable">
+
+          <section class="aeris-mapControls aeris-state-closed">
+            <h1>
+              <span class="aeris-icon-controls"></span>
+              Radar
+              <a class="aeris-toggleCollapseBtn" href="#"></a>
+            </h1>
+
+            <div>
+              <label for="aeris-radar-opacity">Opacity</label>
+              <input type="range" id="aeris-radar-opacity"/>
+            </div>
+          </section>
+
+          <section>
+
+            <h1>Severe</h1>
+
+            <section class="aeris-mapControls aeris-state-closed">
+              <h2>
+                <span class="aeris-icon-controls"></span>
+                Advisories
+                <a class="aeris-toggleCollapseBtn" href="#"></a>
+              </h2>
+            </section>
+
+            <section class="aeris-mapControls aeris-state-closed">
+              <h2>
+                <span class="aeris-icon-controls"></span>
+                Storm Reports
+                <a class="aeris-toggleCollapseBtn" href="#"></a>
+              </h2>
+
+              <section class="aeris-menu">
+                <div class="aeris-menuControls">
+                  <div class="aeris-column">
+                    <input type="checkbox" id="aeris-tornado" checked/>
+                    <label class="aeris-checkbox" for="aeris-tornado">
+                      Tornado
+                    </label>
+
+                    <input type="checkbox" id="aeris-wind"/>
+                    <label class="aeris-checkbox" for="aeris-wind">
+                      Wind
+                    </label>
+
+                    <input type="checkbox" id="aeris-hail"/>
+                    <label class="aeris-checkbox" for="aeris-hail">
+                      Hail
+                    </label>
+                    <input type="checkbox" id="aeris-flood"/>
+                    <label class="aeris-checkbox" for="aeris-flood">
+                      Flood / Rain
+                    </label>
+                  </div>
+
+                  <div class="aeris-column">
+
+                    <input type="checkbox" id="aeris-lightning"/>
+                    <label class="aeris-checkbox" for="aeris-lightning">
+                      Lightning
+                    </label>
+
+                    <input type="checkbox" id="aeris-snow"/>
+                    <label class="aeris-checkbox" for="aeris-snow">
+                      Snow
+                    </label>
+
+                    <input type="checkbox" id="aeris-Ice"/>
+                    <label class="aeris-checkbox" for="aeris-Ice">
+                      Ice
+                    </label>
+
+                    <input type="checkbox" id="aeris-Wildfire" checked/>
+                    <label class="aeris-checkbox" for="aeris-Wildfire">
+                      Wildfire
+                    </label>
+                  </div>
+                </div>
+              </section>
+
+            </section>
+
+            <section class="aeris-mapControls aeris-state-closed">
+              <h2>
+                <span class="aeris-icon-controls"></span>
+                Storm Cells
+                <a class="aeris-toggleCollapseBtn" href="#"></a>
+              </h2>
+            </section>
+
+            <section class="aeris-mapControls aeris-state-closed">
+              <h2>
+                <span class="aeris-icon-controls"></span>
+                Lightning
+                <a class="aeris-toggleCollapseBtn" href="#"></a>
+              </h2>
+            </section>
+
+            <section class="aeris-mapControls aeris-state-closed">
+              <h2>
+                <span class="aeris-icon-controls"></span>
+                Convective Outlook
+                <a class="aeris-toggleCollapseBtn" href="#"></a>
+              </h2>
+            </section>
+
+          </section>
+
+          <section>
+
+            <h1>Currents</h1>
+
+            <section class="aeris-mapControls aeris-state-closed">
+              <h2>
+                <span class="aeris-icon-controls"></span>
+                Temperatures
+                <a class="aeris-toggleCollapseBtn" href="#"></a>
+              </h2>
+            </section>
+
+            <section class="aeris-mapControls aeris-state-closed">
+              <h2>
+                <span class="aeris-icon-controls"></span>
+                Dew Points
+                <a class="aeris-toggleCollapseBtn" href="#"></a>
+              </h2>
+            </section>
+
+          </section>
+
+        </div>
+
+        <footer>
+          <ul>
+            <li>
+              <div><a href="#" class="aeris-fullscreen"><span></span></a></div>
+            </li>
+            <li>
+              <div><a href="#" class="aeris-exitFullscreen"><span></span></a></div>
+            </li>
+            <li>
+              <a href="#">
+                <span class="aeris-icon-info"></span>
+              </a>
+              <span>Tips</span>
+            </li>
+          </ul>
+        </footer>
+
+      </div>
+
+    </div>
+
+    <div class="sg-mapApp aeris-mapContainer"></div>
+  </div>
+
+</div>
+
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('a').click(function() {
+      return false;
+    });
+
+    // Collapse section
+    $('h1, h2').click(function() {
+      $(this).parent('section').toggleClass('aeris-state-closed');
+    })
+  });
+</script>
+</body>
+</html>

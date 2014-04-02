@@ -1,0 +1,47 @@
+/**
+ * List view style.
+*/
+.#{$_}sideMenu {
+  ul.#{$_}itemList {
+    @extend %resetList;
+
+    &>li {
+      @include pie-clearfix;
+      padding: 10px;
+
+      border-bottom: 1px solid #aeaeae;
+
+      @extend %greyBtn;
+      a {
+        @extend %cleanLink;
+      }
+
+      .#{$_}content {
+        float: left;
+
+        .#{$_}title {
+          font-size: 16px;
+          font-weight: bold;
+        }
+        small {
+          font-size: 12px;
+          font-weight: normal;
+          line-height: 1em;
+        }
+      }
+      .#{$_}meta {
+        float: right;
+        text-align: right;
+        padding: 0;
+
+        font-size: 13px;
+        font-weight: bold;
+
+        li {
+          padding: 0;
+          border: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+/**
+ * Side menu footer styles.
+*/
+$footerHeight: 35px;
+
+.#{$_}sideMenu {
+  // Room for footer
+  padding-bottom: $footerHeight;
+
+  .#{$_}scrollable {
+    padding-bottom: $footerHeight;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include box-sizing(border-box);
+    height: $footerHeight;
+    width: 100%;
+
+    background: $black;
+
+    color: $text-offWhite;
+    line-height: 1.25em;
+
+    ul {
+      @extend %inlineList;
+      @include box-sizing(border-box);
+      height: 100%;
+
+      li {
+        @include box-sizing(border-box);
+        height: 100%;
+
+        border-right: 1px solid #414141;
+
+
+        cursor: pointer;
+        &:hover, a:hover {
+          color: $text-offWhite;
+          background-color: #000;
+        }
+        &:active, a:active {
+          color: $text-offWhite;
+          background-color: #292929;
+        }
+
+        a {
+          @extend %cleanLink;
+          color: $text-offWhite;
+
+          height: 100%;
+
+        }
+
+        & > span {
+          margin-left: 5px;
+        }
+
+        & > * {
+          padding: 8px 0;
+          display: inline-block;
+          height: 100%;
+          box-sizing: border-box;
+
+          &:first-child {
+            padding-left: 8px;
+          }
+
+          &:last-child {
+            padding-right: 8px;
+          }
+        }
+      }
+    }
+
+    @include setIconStyles {
+      vertical-align: -4px;
+    }
+  }
+}
+
+@import "fullscreenbtn";

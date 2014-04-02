@@ -1,0 +1,19 @@
+& {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  @include pie-clearfix;
+
+  border: 1px solid #aeaeae;
+}
+
+// Note the fullscreen styles
+// for unsupported browsers
+// are defined in the fullscreen module
+// config.
+@include fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
