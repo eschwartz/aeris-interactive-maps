@@ -3,7 +3,7 @@ define([
   'aim/maps/infopanel/helpers/infopanelrenderer',
   'aeris/events',
   'tests/mocks/marionette/region',
-  'aeris/mocks/aeris/application/controllers/controllerinterface'
+  'tests/mocks/application/controllers/controllerinterface'
 ], function(_, InfoPanelRenderer, Events, MockRegion, MockController) {
 
 

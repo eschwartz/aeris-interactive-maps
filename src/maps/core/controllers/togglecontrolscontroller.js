@@ -1,9 +1,9 @@
 define([
   'aeris/util',
-  'aeris/application/forms/controllers/togglecollectioncontroller',
-  'aeris/application/forms/controllers/togglecontroller',
+  'aim/application/forms/controllers/togglecollectioncontroller',
+  'aim/application/forms/controllers/togglecontroller',
   'aeris/errors/invalidargumenterror',
-  'aeris/application/templatehelpers/i18n'
+  'aim/application/templatehelpers/i18n'
 ], function(_, ToggleCollectionController, ToggleController, InvalidArgumentError, i18n) {
   /**
    * Controller for a mapControls view,

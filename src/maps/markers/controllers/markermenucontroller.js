@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aeris/application/controllers/layoutcontroller'
+  'aim/application/controllers/layoutcontroller'
 ], function(_, LayoutController) {
   /**
    * Controls a toggle (~checkbox) view for a marker.

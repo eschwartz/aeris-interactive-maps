@@ -87,7 +87,7 @@ define({
         {
           template: { module: 'hbars!aim/maps/markers/views/markermenuitem.html' },
           handlebarsHelpers: {
-            i18n: { module: 'aeris/application/templatehelpers/i18n' }
+            i18n: { module: 'aim/application/templatehelpers/i18n' }
           },
           className: 'aeris-navItem',
 
@@ -116,7 +116,7 @@ define({
           itemViewOptions: {
             template: { module: 'hbars!aim/maps/core/views/toggle.html' },
             handlebarsHelpers: {
-              i18n: { module: 'aeris/application/templatehelpers/i18n' }
+              i18n: { module: 'aim/application/templatehelpers/i18n' }
             },
             className: 'aeris-subMenuItem',
             selectedClass: 'aeris-selected',
@@ -142,7 +142,7 @@ define({
   eventDataTransformer: { module: 'aim/maps/transformers/eventdatatransformer' },
 
   $plugins: [
-    { module: 'aeris/application/plugins/events' },
-    { module: 'aeris/application/plugins/classfactory' }
+    { module: 'aim/application/plugins/events' },
+    { module: 'aim/application/plugins/classfactory' }
   ]
 });

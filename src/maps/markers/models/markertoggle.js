@@ -1,7 +1,7 @@
 define([
   'aeris/util',
   'aim/maps/core/models/mapobjecttoggle',
-  'aeris/application/forms/collections/togglecollection'
+  'aim/application/forms/collections/togglecollection'
 ], function(_, MapObjectToggle, ToggleCollection) {
   /**
    * The state of a {aeris.maps.markercollections.PointDataMarkers} in the application

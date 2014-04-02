@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aeris/application/forms/collections/togglecollection',
+  'aim/application/forms/collections/togglecollection',
   'aim/maps/core/models/mapobjecttoggle'
 ], function(_, ToggleCollection, MapObjectToggle) {
   /**

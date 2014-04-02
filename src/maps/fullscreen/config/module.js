@@ -54,6 +54,6 @@ define({
   },
 
   $plugins: [
-    { module: 'aeris/application/plugins/events' }
+    { module: 'aim/application/plugins/events' }
   ]
 });

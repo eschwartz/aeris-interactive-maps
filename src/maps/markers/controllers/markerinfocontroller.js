@@ -1,7 +1,7 @@
 define([
   'aeris/util',
-  'aeris/application/controllers/itemcontroller',
-  'aeris/application/templatehelpers/i18n'
+  'aim/application/controllers/itemcontroller',
+  'aim/application/templatehelpers/i18n'
 ], function(_, ItemController, i18n) {
   /**
    * Controls the marker details view.

@@ -3,7 +3,7 @@ define([
   'aeris/errors/invalidargumenterror',
   'aeris/util/latlonutil',
   'jquery',
-  'aeris/application/controllers/layoutcontroller',
+  'aim/application/controllers/layoutcontroller',
   'aeris/maps/routes/waypoint'
 ], function(_, InvalidArgumentError, latLonUtil, $, LayoutController, Waypoint) {
   /**

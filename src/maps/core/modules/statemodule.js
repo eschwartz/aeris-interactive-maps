@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aeris/application/modules/module'
+  'aim/application/modules/module'
 ], function(_, BaseModule) {
   /**
    * Like a module... but with state.

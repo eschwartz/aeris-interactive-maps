@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aeris/application/controllers/itemcontroller',
+  'aim/application/controllers/itemcontroller',
   'aim/maps/fullscreen/helpers/fullscreenservice'
 ], function(_, ItemController, FullscreenService) {
   /**

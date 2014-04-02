@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aeris/application/controllers/itemcontroller'
+  'aim/application/controllers/itemcontroller'
 ], function(_, ItemController) {
   /**
    * Control the map position using

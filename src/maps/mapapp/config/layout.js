@@ -14,7 +14,7 @@ define({
 
   mapAppLayout: {
     create: {
-      module: 'aeris/application/controllers/layoutcontroller',
+      module: 'aim/application/controllers/layoutcontroller',
       args: [
         {
           template: { $ref: 'mapAppTemplate' },

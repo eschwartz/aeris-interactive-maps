@@ -83,7 +83,7 @@ define({
         {
           collection: {
             create: {
-              module: 'aeris/application/forms/collections/radiocollection',
+              module: 'aim/application/forms/collections/radiocollection',
               args: [
                 { $ref: 'travelModes' }
               ]
@@ -119,7 +119,7 @@ define({
 
   $plugins: [
     { module: 'aim/routes/plugins/travelmode' },
-    { module: 'aeris/application/plugins/classfactory' }
+    { module: 'aim/application/plugins/classfactory' }
   ]
 
 });

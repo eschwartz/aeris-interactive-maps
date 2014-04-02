@@ -35,8 +35,8 @@ define({
   },
 
   $plugins: [
-    { module: 'aeris/application/plugins/regionresolver' },
-    { module: 'aeris/application/plugins/events' }
+    { module: 'aim/application/plugins/regionresolver' },
+    { module: 'aim/application/plugins/events' }
   ]
 });
 /**

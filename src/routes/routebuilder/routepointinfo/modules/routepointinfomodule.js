@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aeris/application/modules/module',
+  'aim/application/modules/module',
   'aeris/events'
 ], function(_, Module, Events) {
   /**

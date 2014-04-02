@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aeris/application/forms/controllers/radiocontroller'
+  'aim/application/forms/controllers/radiocontroller'
 ], function(_, RadioController) {
   /**
    *

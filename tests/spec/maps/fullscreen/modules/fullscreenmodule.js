@@ -3,7 +3,7 @@ define([
   'aim/maps/fullscreen/modules/fullscreenmodule',
   'jquery',
   'aeris/model',
-  'aeris/mocks/aeris/application/controllers/controllerinterface',
+  'tests/mocks/application/controllers/controllerinterface',
   'aeris/events'
 ], function(_, FullscreenModule, $, Model, MockController, Events) {
 

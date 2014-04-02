@@ -16,7 +16,7 @@ define({
 
   mapApp: {
     create: {
-      module: 'aeris/application/modules/application',
+      module: 'aim/application/modules/application',
       args: [
         {
           layout: { $ref: 'mapAppLayout' },

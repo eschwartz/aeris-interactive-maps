@@ -2,7 +2,7 @@ define([
   'aeris/util',
   'aeris/collection',
   'aeris/model',
-  'aeris/application/forms/models/toggle'
+  'aim/application/forms/models/toggle'
 ], function(_, Collection, Model, Toggle) {
   /**
    * The state of a {aeris.maps.extensions.MapExtensionObject}

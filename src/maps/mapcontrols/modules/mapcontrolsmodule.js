@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aeris/application/modules/module'
+  'aim/application/modules/module'
 ], function(_, Module) {
   /**
    * Encapsulates handling of the map controls views.

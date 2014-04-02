@@ -76,7 +76,7 @@ define({
             template: { module: 'hbars!aim/maps/core/views/toggle.html' }
           },
           handlebarsHelpers: {
-            i18n: { module: 'aeris/application/templatehelpers/i18n' }
+            i18n: { module: 'aim/application/templatehelpers/i18n' }
           }
         }
       ]
@@ -84,6 +84,6 @@ define({
   },
 
   $plugins: [
-    { module: 'aeris/application/plugins/classfactory' }
+    { module: 'aim/application/plugins/classfactory' }
   ]
 });

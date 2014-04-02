@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aeris/application/controllers/layoutcontroller',
+  'aim/application/controllers/layoutcontroller',
   'aeris/errors/invalidargumenterror',
   'marionette'
 ], function(_, LayoutController, InvalidArgumentError, Marionette) {

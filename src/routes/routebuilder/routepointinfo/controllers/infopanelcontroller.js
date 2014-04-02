@@ -1,7 +1,7 @@
 define([
   'aeris/util',
   'aeris/model',
-  'aeris/application/controllers/itemcontroller'
+  'aim/application/controllers/itemcontroller'
 ], function(_, Model, ItemController) {
   /**
    * @class InfoPanelController

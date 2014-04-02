@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aeris/application/forms/controllers/togglecollectioncontroller'
+  'aim/application/forms/controllers/togglecollectioncontroller'
 ], function(_, ToggleCollectionController) {
   /**
    *

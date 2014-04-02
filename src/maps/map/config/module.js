@@ -37,6 +37,6 @@ define({
   },
 
   $plugins: [
-    { module: 'aeris/application/plugins/regionresolver' }
+    { module: 'aim/application/plugins/regionresolver' }
   ]
 });
