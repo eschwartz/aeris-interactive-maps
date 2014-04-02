@@ -86,7 +86,7 @@ define([
           saveBtn: '#saveBtn',
           closeBtn: '#closeBtn'
         }
-      })
+      });
 
       routeBuilder.getRoute.andReturn(new MockRoute());
     });
@@ -131,7 +131,7 @@ define([
             name: STUB_NAME,
             description: STUB_DESCR,
             route: STUB_ROUTE_EXPORT
-          })
+          });
         });
 
         it('should validate the exported route using the RouteModel', function() {

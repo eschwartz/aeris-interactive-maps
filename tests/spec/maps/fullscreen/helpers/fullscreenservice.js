@@ -67,7 +67,7 @@ define([
   MockFullscreenElement.prototype.disableFullscreenModeForAllPrefixes_ = function() {
     _.each(MockFullscreenElement.EnterFullscreenApiLookup_, this.disableApiMethod_, this);
     _.each(MockFullscreenElement.ExitFullscreenApiLookup_, this.disableApiMethod_, this);
-  }
+  };
 
   /** @private */
   MockFullscreenElement.prototype.disableApiMethod_ = function(apiMethod) {
@@ -112,7 +112,7 @@ define([
     });
 
 
-    
+
     describe('requestFullscreen', function() {
       var mockElement;
 
@@ -122,7 +122,7 @@ define([
         fullscreenService.requestFullscreen(mockElement);
       });
 
-      
+
       it('should requestFullscreen on the element', function() {
         mockElement.enableEnterFullscreenMode();
 
@@ -131,7 +131,7 @@ define([
         expect(mockElement.enterFullscreenSpy).toHaveBeenCalled();
         expect(mockElement.enterFullscreenSpy).toHaveBeenCalledInTheContextOf(mockElement);
       });
-      
+
       it('should use any prefixed requestFullscreen api available', function() {
         _.each(Prefix, function(prefix) {
           // Enable only this prefix
@@ -143,7 +143,7 @@ define([
           expect(mockElement.enterFullscreenSpy).toHaveBeenCalled();
         });
       });
-      
+
       it('should prefer \'requestFullscreen\' api over prefixed apis', function() {
         // Enable all prefixed api method
         _.each(Prefix, mockElement.enableEnterFullscreenMode, mockElement);
@@ -152,7 +152,7 @@ define([
 
         expect(mockElement.requestFullscreen).toHaveBeenCalled();
       });
-      
+
       it('should throw a \'FullscreenNotSupportedError\' error, if no exit fullscreen api is available', function() {
         mockElement.disableFullscreenMode();
 
@@ -160,12 +160,12 @@ define([
           fullscreenService.requestFullscreen(mockElement);
         }).toThrowType('FullscreenNotSupportedError');
       });
-      
+
     });
-    
-    
+
+
     describe('exitFullscreen', function() {
-      
+
       it('should exit fullscreen on the document', function() {
         mockDocument.enableExitFullscreenMode();
 
@@ -174,7 +174,7 @@ define([
         expect(mockDocument.exitFullscreenSpy).toHaveBeenCalled();
         expect(mockDocument.exitFullscreenSpy).toHaveBeenCalledInTheContextOf(mockDocument);
       });
-      
+
       it('should use any prefixed exitFullscreen api available', function() {
         _.each(Prefix, function(prefix) {
           mockDocument.disableFullscreenMode();
@@ -183,9 +183,9 @@ define([
           fullscreenService.exitFullscreen();
 
           expect(mockDocument.exitFullscreenSpy).toHaveBeenCalled();
-        })
+        });
       });
-      
+
       it('should prefer \'exitFullscreen\' over prefixed apis', function() {
         // Enable all prefixed methods
         _.each(Prefix, mockDocument.enableExitFullscreenMode, mockDocument);
@@ -194,7 +194,7 @@ define([
 
         expect(mockDocument.exitFullscreen).toHaveBeenCalled();
       });
-      
+
       it('should throw a \'FullscreenNotSupportedError\' error, if no exitFullscreen api is available', function() {
         mockDocument.disableFullscreenMode();
 
@@ -202,10 +202,10 @@ define([
           fullscreenService.exitFullscreen();
         }).toThrowType('FullscreenNotSupportedError');
       });
-      
+
     });
-    
-    
+
+
     describe('isSupported', function() {
 
       it('should return true if any fullscreen api is available for the document\'s body element', function() {
@@ -216,16 +216,16 @@ define([
           expect(fullscreenService.isSupported()).toEqual(true);
         });
       });
-      
+
       it('should return false if no fullscreen api is available for the document\'s body element', function() {
         mockBody.disableFullscreenMode();
 
         expect(fullscreenService.isSupported()).toEqual(false);
       });
-      
+
     });
-    
-    
+
+
     describe('Events', function() {
       var mockElement;
       var vendorFullscreenChangeEvents = [
@@ -264,11 +264,11 @@ define([
           _.each(vendorFullscreenChangeEvents, function(changeEvent) {
             this.triggerMockEvent(changeEvent);
           }, this);
-        }
+        };
       });
 
-      
-      
+
+
       describe('fullscreen:change', function() {
         var onFullscreenChange;
 
@@ -307,8 +307,8 @@ define([
         });
 
       });
-      
-      
+
+
       describe('fullscreen:enter', function() {
         var onFullscreenEnter;
 
@@ -331,8 +331,8 @@ define([
         });
 
       });
-      
-      
+
+
       describe('fullscreen:exit', function() {
         var onFullscreenExit;
 
@@ -355,9 +355,9 @@ define([
         });
 
       });
-      
+
     });
-    
+
   });
-  
+
 });

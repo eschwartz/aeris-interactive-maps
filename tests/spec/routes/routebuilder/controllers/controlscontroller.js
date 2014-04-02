@@ -40,7 +40,7 @@ define([
       function getStubbedUI() {
         var latLon = testUtils.getRandomLatLon();
         var degrees = latLonUtil.latLonToDegrees(latLon);
-        
+
         return {
           ui: {
             latDeg: createValueSpy(degrees[0][0]),

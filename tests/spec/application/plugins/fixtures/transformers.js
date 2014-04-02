@@ -4,7 +4,7 @@ define([
   return {
     loudspeaker: loudspeaker,
     muffler: function(talk, words) {
-      return words.toLowerCase()
+      return words.toLowerCase();
     }
   };
 });

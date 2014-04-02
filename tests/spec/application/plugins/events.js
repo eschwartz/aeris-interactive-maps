@@ -3,7 +3,7 @@ define([
 ], function(ctx) {
   describe('The wire Event plugin', function() {
 
-    describe('listenTo facet', function () {
+    describe('listenTo facet', function() {
 
       it('should listen to multiple events from multiple emitters', function() {
         ctx.multipleEvents.talkerA.trigger('talk', 'hello you');
@@ -14,13 +14,13 @@ define([
       });
 
 
-      it('should transform event data', function () {
+      it('should transform event data', function() {
           ctx.transformer.talker.trigger('whisper', ctx.transformer.talker, 'hey guy');
 
           expect(ctx.transformer.listener.listen).toHaveBeenCalledWith('HEY GUY');
       });
 
-      it('should find a transformer within a namespace', function () {
+      it('should find a transformer within a namespace', function() {
         ctx.transformerNs.talker.trigger('whisper', ctx.transformerNs.talker, 'hey guy');
         expect(ctx.transformerNs.listener.listen).toHaveBeenCalledWith('HEY GUY');
 

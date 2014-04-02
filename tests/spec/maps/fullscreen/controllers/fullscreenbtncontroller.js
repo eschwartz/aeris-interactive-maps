@@ -7,9 +7,9 @@ define([
   var template = '<div><span></span></div>';
   var FULLSCREEN_CLASS_STUB = 'FULLSCREEN_CLASS_STUB', EXIT_FULLSCREEN_CLASS_STUB = 'EXIT_FULLSCREEN_CLASS_STUB';
 
-  var toHaveCssClass= function(cssClass) {
+  var toHaveCssClass = function(cssClass) {
     var $el = this.actual;
-    var elName = !!$el.selector ? $el.selector : $el.prop("tagName").toLowerCase();
+    var elName = !!$el.selector ? $el.selector : $el.prop('tagName').toLowerCase();
     var hasCssClass = $el.hasClass(cssClass);
 
     this.message = this.isNot ?
@@ -23,7 +23,7 @@ define([
 
 
     return hasCssClass;
-  }
+  };
 
   describe('A FullscreenBtnController', function() {
     var fullscreenBtnController, eventHub, fullscreenService;
@@ -75,7 +75,7 @@ define([
 
 
       describe('on fullscreenBtn click', function() {
-        
+
         it('should toggle the fullscreen/exitFullscreen css classes on the fullscreenBtn', function() {
           expect(fullscreenBtnController.$el).toHaveCssClass(FULLSCREEN_CLASS_STUB);
 
@@ -97,10 +97,10 @@ define([
           expect(fullscreenBtnController.$el).toHaveCssClass(EXIT_FULLSCREEN_CLASS_STUB);
           expect(fullscreenBtnController.$el).not.toHaveCssClass(FULLSCREEN_CLASS_STUB);
         });
-        
+
       });
-      
-      
+
+
       describe('fullscreen:request', function() {
         var onFullscreenRequest;
 
@@ -114,11 +114,11 @@ define([
           // Enter fullscreen
           fullscreenBtnController.$el.trigger('click');
           expect(onFullscreenRequest.callCount).toEqual(1);
-          
+
           // Exit fullscreen
           fullscreenBtnController.$el.trigger('click');
           expect(onFullscreenRequest.callCount).toEqual(1);
-          
+
           // Enter fullscreen
           fullscreenBtnController.$el.trigger('click');
           expect(onFullscreenRequest.callCount).toEqual(2);
@@ -135,17 +135,17 @@ define([
         });
 
       });
-      
-      
+
+
       describe('exitFullscreen:request', function() {
         var onExitFullscreenRequest;
-        
+
         beforeEach(function() {
           onExitFullscreenRequest = jasmine.createSpy('onExitFullscreenRequest');
           eventHub.on('exitFullscreen:request', onExitFullscreenRequest);
         });
-        
-        
+
+
         it('should trigger every 2n times the fullscreenBtn is clicked', function() {
           // Enter fullscreen
           fullscreenBtnController.$el.trigger('click');
@@ -163,9 +163,9 @@ define([
           fullscreenBtnController.$el.trigger('click');
           expect(onExitFullscreenRequest.callCount).toEqual(2);
         });
-        
-        
-      })
+
+
+      });
 
     });
 

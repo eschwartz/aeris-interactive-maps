@@ -22,4 +22,4 @@ define({
   plugins: [
     'aim/application/plugins/attrresolver'
   ]
-})
+});

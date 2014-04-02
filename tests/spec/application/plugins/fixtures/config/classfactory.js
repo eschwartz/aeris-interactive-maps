@@ -14,4 +14,4 @@ define({
   $plugins: [
     'aim/application/plugins/classfactory'
   ]
-})
+});

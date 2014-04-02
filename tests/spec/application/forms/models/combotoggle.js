@@ -38,7 +38,7 @@ define([
       toggles.push(new MockToggle(opt_attrs));
     });
 
-    return toggles
+    return toggles;
   }
 
   function getMixedToggleSet() {

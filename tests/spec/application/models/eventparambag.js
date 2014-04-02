@@ -18,7 +18,7 @@ define([
       frame: function(obj, words) {
         return '[ ' + words + ' ]';
       }
-    }
+    };
   });
   afterEach(function() {
     eventHub.off();

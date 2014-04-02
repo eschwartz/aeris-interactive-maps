@@ -10,7 +10,7 @@ define([
 
   var MockBuilderOptions = function(opt_attrs) {
     var attrs = _.defaults(opt_attrs || {}, {
-      controls:{
+      controls: {
         layers: true,
         waypoints: true,
         trails: false

@@ -153,7 +153,7 @@ define([
         expect(isHelperBCalled).toBeTruthy();
       });
 
-    })
+    });
 
   });
 

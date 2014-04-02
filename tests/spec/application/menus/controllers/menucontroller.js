@@ -8,7 +8,7 @@ define([
    * This is an integration test of the
    * MenuController, and it's MenuItemController CompositeView
    */
-  
+
   function getMenuData() {
     return [
       // Menu 1
@@ -69,7 +69,7 @@ define([
       }
     ];
   }
-  
+
   var TestModel = function(opt_attrs, opt_options) {
     var options = _.defaults(opt_options || {}, {
       childCollectionAttribute: 'subMenu'

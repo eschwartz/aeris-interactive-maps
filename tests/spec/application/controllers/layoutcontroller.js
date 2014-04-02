@@ -2,12 +2,12 @@ define([
   'aeris/util',
   'aim/application/controllers/layoutcontroller',
   'jquery'
-], function (_, LayoutController, $) {
+], function(_, LayoutController, $) {
 
 
-  describe('A LayoutController', function () {
+  describe('A LayoutController', function() {
 
-    describe('hideAllRegions', function () {
+    describe('hideAllRegions', function() {
       var tmpl = '' +
         '<div>' +
         ' <div class="regionA"></div>' +
@@ -28,7 +28,7 @@ define([
         layout.hideAllRegions();
       });
 
-      it('should hide all regions', function () {
+      it('should hide all regions', function() {
         var layout = new LayoutController({
           template: tmpl,
           regions: {
@@ -45,7 +45,7 @@ define([
         expect(layout.$el.find('.regionB').is(':visible')).toEqual(false);
       });
 
-      it('should do nothing with unresolved regions', function () {
+      it('should do nothing with unresolved regions', function() {
         var layout = new LayoutController({
           template: tmpl,
           regions: {

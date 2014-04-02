@@ -14,7 +14,7 @@ define([
       eventHub = new Events();
       mockRegion = new MockRegion();
 
-      mockController = new MockController
+      mockController = new MockController;
 
       infoPanelRenderer = new InfoPanelRenderer({
         eventHub: eventHub,
@@ -52,7 +52,7 @@ define([
         });
 
         it('should not emit if someone else shows a view', function() {
-          mockRegion.trigger('show')
+          mockRegion.trigger('show');
 
           expect(onInfoShow).not.toHaveBeenCalled();
         });

@@ -9,7 +9,7 @@ define([
     this.uid_ = _.uniqueId('mockAttribute_');
     this.setAttrs_ = [];
     this.model_ = model;
-  }
+  };
 
   ModelSetter.prototype.set = function(attr, value) {
     var mockAttrName = this.getMockAttrName(attr);
@@ -19,11 +19,11 @@ define([
 
   ModelSetter.prototype.get = function(attr) {
     return this.model_.get(this.getMockAttrName(attr));
-  }
+  };
 
   ModelSetter.prototype.getMockAttrName = function(attr) {
     return this.uid_ + attr;
-  }
+  };
 
   ModelSetter.prototype.reset = function() {
     _.each(this.setAttrs_, function(setAttr) {
@@ -31,7 +31,7 @@ define([
     }, this);
 
     this.forgetSetAttrs_();
-  }
+  };
 
   ModelSetter.prototype.forgetSetAttrs_ = function() {
     this.setAttrs_.length = 0;

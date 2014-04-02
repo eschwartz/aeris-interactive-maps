@@ -5,11 +5,11 @@ define([
 ], function(_, AppBuilderOptions, MockConfig) {
 
   describe('A AppBuilderOptions', function() {
-    
+
     afterEach(function() {
       MockConfig.restore();
     });
-    
+
 
     describe('validate', function() {
 

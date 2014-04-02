@@ -34,7 +34,7 @@ define([
       ], function(modeToResolve) {
         travelModeResolver(pluginResolver, modeToResolve);
         pluginResolver.shouldHaveResolvedWith(Waypoint.travelMode[modeToResolve]);
-      })
+      });
     });
 
     it('should should reject invalid references', function() {

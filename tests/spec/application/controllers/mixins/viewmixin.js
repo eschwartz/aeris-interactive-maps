@@ -32,7 +32,7 @@ define([
         append($form).
         append($div);
 
-      eventListener = jasmine.createSpy('eventListener')
+      eventListener = jasmine.createSpy('eventListener');
     });
 
 
@@ -173,7 +173,7 @@ define([
       });
 
     });
-    
+
     describe('declareUI', function() {
 
       it('should define an array of UI elements as empty strings', function() {
@@ -187,7 +187,7 @@ define([
           someDiv: ''
         });
       });
-      
+
       it('should not override existing UI elements', function() {
         var view = new ConcreteView();
 
@@ -204,7 +204,7 @@ define([
           someDiv: ''
         });
       });
-      
+
       it('should work after UI elements have been resolved', function() {
         var view = new ConcreteView();
 
@@ -227,9 +227,9 @@ define([
         expect(view.ui.someDiv).toBeInstanceOf($);
         expect(view.ui.someDiv.length).toEqual(0);
       });
-      
+
       describe('ItemController Integration Tests', function() {
-        
+
         it('should aid in processing injected ui bindings', function() {
           var ChildController = function(options) {
             this.declareUI('someButton', 'someForm', 'someDiv');
@@ -251,12 +251,12 @@ define([
             someDiv: ''
           });
         });
-        
+
       });
-      
+
     });
-    
-    
+
+
     describe('getTemplate', function() {
       var templateFn, handlebarsHelpers;
 
@@ -277,7 +277,7 @@ define([
           'helperB'
         ]);
       });
-      
+
       it('should set the registrars template and helpers', function() {
         var registrar = new MockRegistrar();
         var view = new ConcreteView({
@@ -394,7 +394,7 @@ define([
         });
 
       });
-      
+
     });
 
 

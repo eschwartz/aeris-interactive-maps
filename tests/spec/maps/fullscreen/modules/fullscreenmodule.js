@@ -8,7 +8,7 @@ define([
 ], function(_, FullscreenModule, $, Model, MockController, Events) {
 
   describe('A FullscreenModule', function() {
-    
+
     describe('start', function() {
       var fullscreenModule, fullscreenController, fullscreenBtnController, eventHub;
       var startOptions, $appEl;
@@ -24,14 +24,14 @@ define([
           eventHub: eventHub
         });
       });
-      
+
       beforeEach(function() {
         $appEl = $('<div></div>');
         startOptions = new Model({
           el: $appEl
         });
       });
-      
+
 
       it('should not render the fullscreenBtnController before initialization', function() {
         expect(fullscreenBtnController.render).not.toHaveBeenCalled();
@@ -43,7 +43,7 @@ define([
         fullscreenModule.start(startOptions);
         expect(fullscreenBtnController.render).not.toHaveBeenCalled();
       });
-      
+
       it('should set the fullscreenController element from the initialization options', function() {
         expect(fullscreenController.setElement).not.toHaveBeenCalled();
 

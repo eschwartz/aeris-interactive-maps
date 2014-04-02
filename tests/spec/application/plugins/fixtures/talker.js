@@ -7,4 +7,4 @@ define([
   _.extend(Talker.prototype, Backbone.Events);
 
   return Talker;
-})
+});
