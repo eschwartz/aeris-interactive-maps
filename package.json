@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "./node_modules/grunt-cli/bin/grunt test --verbose",
+    "test": "./node_modules/grunt-cli/bin/grunt test --verbose"
   },
   "repository": {
     "type": "git",
