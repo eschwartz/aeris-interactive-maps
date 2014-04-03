@@ -27,3 +27,6 @@ docs/assets/css/
 # Generated SpecRunners
 tests/specrunner.html
 tests/specrunner-*.html
+
+# Ignore symlink'd bower component
+bower_components/aerisjs
