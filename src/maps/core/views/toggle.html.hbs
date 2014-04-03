@@ -1,8 +1,7 @@
-<label>
-  <input type="checkbox" value="{{ type }}"
-    {{#if selected}}
-      checked
-    {{/if}}
-  />
-  {{i18n type }}
+<input type="checkbox" id="aeris-toggle-{{type}}"
+  {{#if selected}}
+       checked
+  {{/if}}/>
+<label class="aeris-checkbox" for="aeris-toggle-{{type}}">
+  {{i18n type}}
 </label>
