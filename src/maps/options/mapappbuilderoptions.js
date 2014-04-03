@@ -112,6 +112,15 @@ define([
 
   _.inherits(MapAppBuilderOptions, BaseOptions);
 
+  /**
+   * @method validate
+   */
+  MapAppBuilderOptions.prototype.validate = function(attrs) {
+    if (!attrs) {
+      return new InvalidConfigError('A valid element must be provided.');
+    }
+  };
+
 
   /**
    * @method normalize_
