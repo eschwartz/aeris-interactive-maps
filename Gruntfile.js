@@ -48,10 +48,20 @@ module.exports = function(grunt) {
           }
         }
       }
+    },
+
+    compass: {
+      themes: {
+        options: {
+          basePath: 'src/themes'
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-jasmine-legacy');
+  grunt.loadNpmTasks('grunt-contrib-compass');
+
 
   grunt.registerTask('test', [
     'jasmine-legacy:aim'
