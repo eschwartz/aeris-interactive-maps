@@ -1,25 +1,12 @@
 define([
-  'aeris/classfactory'    // Require module for rjs build.
-], function() {
-  function convertToCreateFactorySpec(spec) {
-    return {
-      create: {
-        module: 'aeris/classfactory',
-        args: [
-          { module: spec.module },
-          spec.args,
-          { extendArgObjects: true }
-        ]
-      }
-    };
-  }
-
-
+  'aeris/classfactory',    // Require module for rjs build.
+  'aim/application/plugins/helpers/converttoclassfactoryspec'
+], function(ClassFactory, convertToClassFactorySpec) {
   return function(pluginOptions) {
     return {
       factories: {
         ClassFactory: function(resolver, componentDef, wire) {
-          var classFactorySpec = convertToCreateFactorySpec(componentDef.options);
+          var classFactorySpec = convertToClassFactorySpec(componentDef.options);
 
           wire(classFactorySpec).
             then(resolver.resolve, resolver.reject);
