@@ -1,140 +1,114 @@
 define([
   'aeris/util',
-  'aim/application/controllers/itemcontroller',
-  'aeris/errors/unimplementedmethoderror'
-], function(_, ItemController, UnimplementedMethodError) {
+  'aeris/events'
+], function(_, Events) {
   /**
-   * Controls a {aeris.maps.extensions.MapObjectInterface} view.
+   * A controller for an {aeris.maps.MapObjectInterface}
    *
    * @class MapObjectController
    * @namespace aeris.application.controllers
-   * @extends aeris.application.controllers.ItemController
-   *
-   * @abstract
+   * @implements aeris.application.controllers.ControllerInterface
+   * @uses aeris.Events
    *
    * @constructor
-   * @override
    *
-   * @param {?aeris.maps.Map} opt_options.map
-   * @param {?aeris.maps.extensions.MapObjectInterface} opt_options.view
-  */
-  var MapObjectController = function(opt_options) {
-    var options = _.defaults(opt_options || {}, {
-      map: null,
-      view: null
-    });
-
+   * @param {Object=} options
+   * @param {aeris.maps.MapObjectInterface} options.mapObject
+   */
+  var MapObjectController = function(options) {
 
     /**
-     * The map object view.
-     *
-     * @type {?aeris.maps.extensions.MapObjectInterface}
+     * @property mapObject_
      * @protected
-     * @property view_
-     */
-    this.view_ = options.view;
-
+     * @type {aeris.maps.MapObjectInterface}
+    */
+    this.mapObject_ = options.mapObject;
 
     /**
-     * The map to set on our map object view.
+     * The map to use when rendering the
+     * map object.
      *
+     * @property mapInUse_
+     * @private
      * @type {?aeris.maps.Map}
+    */
+    this.mapInUse_ = null;
+
+    /**
+     * @property model
      * @protected
-     * @property map_
+     * @type {aeris.Model}
      */
-    this.map_ = options.map;
+    this.model = options.model;
 
 
-    ItemController.apply(this, arguments);
+    Events.call(this);
+
+    /**
+     * @event map:use
+     * @param {aeris.application.controllers.MapObjectController} mapObject
+     * @param {aeris.maps.Map} map
+     */
   };
-  _.inherits(MapObjectController, ItemController);
+  _.extend(MapObjectController.prototype, Events.prototype);
 
 
   /**
-   * Create the MapObject view,
-   * and set it to the map.
+   * @method useMap
+   * @param {aeris.maps.Map} map
+   */
+  MapObjectController.prototype.useMap = function(map) {
+    this.mapInUse_ = map;
+
+    this.trigger('map:use', this, map);
+  };
+
+
+  /**
    * @method render
    */
   MapObjectController.prototype.render = function() {
-    this.trigger('before:render');
-    if (this.beforeRender) { this.beforeRender(); }
-
-    if (!this.view_) {
-      this.view_ = this.createView_();
+    if (this.mapInUse_) {
+      this.mapObject_.setMap(this.mapInUse_);
     }
 
-    // Set the map view
-    if (this.map_) {
-      this.view_.setMap(this.map_);
-    }
-
-    this.bindViewToMap_();
+    // Bind to map in use
+    this.listenTo(this, 'map:use', function(mapObject, map) {
+      this.mapObject_.setMap(map);
+    });
 
     this.trigger('render');
-    if (this.onRender) { this.onRender(); }
   };
 
 
   /**
-   * @abstract
-   * @protected
-   * @return {aeris.maps.extensions.MapObjectInterface}
-   * @method createView_
+   * @method hide
    */
-  MapObjectController.prototype.createView_ = function() {
-    throw new UnimplementedMethodError('Abstract method \'createView_\' must be defined.');
+  MapObjectController.prototype.hide = function() {
+    this.mapObject_.setMap(null);
+
+    this.stopListening(this, 'map:use');
   };
 
 
   /**
-   * Set our map on our view.
-   *
-   * @private
-   * @method bindViewToMap_
+   * @method destroy
    */
-  MapObjectController.prototype.bindViewToMap_ = function() {
-    this.listenTo(this, {
-      'map:set': function() {
-        this.view_.setMap(this.map_);
-      },
-      'map:remove': function() {
-        this.view_.setMap(null);
-      }
-    });
-  };
-
-
-  /**
-   * Set the map to be used when rendering
-   * the map object view.
-   *
-   * @param {aeris.maps.Map} map
-   * @method setMap
-   */
-  MapObjectController.prototype.setMap = function(map) {
-    this.map_ = map;
-
-    if (map) {
-      this.trigger('map:set');
-    } else {
-      this.trigger('map:remove');
-    }
-  };
-
-
-  /**
-   * Shut 'er down.
-   * @method close
-   */
-  MapObjectController.prototype.close = function() {
-    this.trigger('before:close');
-    if (this.onBeforeClose) { this.onBeforeClose(); }
-
-    this.view_.setMap(null);
+  MapObjectController.prototype.destroy = function() {
+    this.hide();
     this.stopListening();
 
     this.trigger('close');
-    if (this.onClose) { this.onClose(); }
+  };
+
+
+  /**
+   * Alias for `destroy`
+   *
+   * @method close
+   */
+  MapObjectController.prototype.close = function() {
+    this.destroy();
   };
 
 
