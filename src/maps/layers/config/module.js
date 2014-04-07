@@ -7,13 +7,14 @@
 define({
   $exports: { $ref: 'layersModule' },
 
-  LayerState: {
-    ClassFactory: {
-      module: 'aim/maps/core/models/mapobjecttoggle',
+  layersModule: {
+    create: {
+      module: 'aim/maps/layers/modules/layersmodule',
       args: [
-        undefined,
         {
-          namespace: 'aeris.maps.layers'
+          controlsController: { $ref: 'layerControlsController' },
+          eventHub: { $ref: 'eventHub' },
+          moduleState: { $ref: 'layerStateCollection' }
         }
       ]
     }
@@ -21,42 +22,27 @@ define({
 
   layerStateCollection: {
     create: {
-      module: 'aim/maps/core/collections/mapobjecttogglecollection',
+      module: 'aim/application/forms/collections/togglecollection',
       args: [
-        undefined,
+        null,
         {
-          // use the LayerState model
-          model: {$ref: 'LayerState' }
+          modelOptions: {
+            idAttribute: 'type'
+          }
         }
       ]
     }
   },
 
-  layersModule: {
+  layerCollectionController: {
     create: {
-      module: 'aim/maps/core/modules/mapobjectmodule',
-      args: [
-        {
-          appState: { $ref: 'appState' },
-          appStateAttr: 'layers',
-          moduleState: { $ref: 'layerStateCollection' },
-
-          mapObjectController: { $ref: 'layerViewController' },
-          controlsController: { $ref: 'layerControlsController' }
-        }
-      ]
-    }
-  },
-
-  // Controller for Layer MapExtObjs
-  layerViewController: {
-    create: {
-      module: 'aim/maps/core/controllers/mapobjectcollectioncontroller',
+      module: 'aim/application/controllers/collectioncontroller',
       args: [
         {
           collection: { $ref: 'layerStateCollection' },
+          itemControllerLookup: { wire: 'aim/maps/layers/config/layercontrollers' },
           itemViewOptions: {
-            appState: { $ref: 'appState' }
+            mapState: { $ref: 'appState' }
           }
         }
       ]
@@ -65,15 +51,15 @@ define({
 
   layerControlsController: {
     create: {
-      module: 'aim/maps/core/controllers/togglecontrolscontroller',
+      module: 'aim/application/forms/controllers/togglecollectioncontroller',
       args: [
         {
-          eventHub: { $ref: 'eventHub' },
-          name: 'layers',
           collection: { $ref: 'layerStateCollection' },
           className: 'aeris-map-controls',
           itemViewOptions: {
-            template: { module: 'hbars!aim/maps/core/views/toggle.html' }
+            template: { module: 'hbars!aim/maps/core/views/toggle.html' },
+            selectedClass: 'aeris-selected',
+            deselectedClass: 'aeris-deselected'
           },
           handlebarsHelpers: {
             i18n: { module: 'aim/application/templatehelpers/i18n' }
