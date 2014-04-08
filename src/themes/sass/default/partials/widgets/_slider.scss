@@ -1,0 +1,33 @@
+.#{$_}slider {
+  position: relative;
+  @include pie-clearfix;
+
+  .#{$_}slider-label {
+    float: left;
+    width: 30%;
+    line-height: 20px;
+    font-size: 12px;
+    color: lighten($menuPrimaryTextColor, 10%);
+  }
+
+  .#{$_}slider-component {
+    position: relative;
+    float: right;
+    width: 70%;
+    height: 20px;
+    z-index: 10;
+    margin-right: 20px;
+  }
+
+  .#{$_}slider-point {
+    @include cursorGrab;
+    top: 2px;
+    left: 0;
+  }
+
+  &.#{$_}slider-step {
+    .#{$_}slider-point {
+      @include transition(left .2s $ease-out-quad);
+    }
+  }
+}
