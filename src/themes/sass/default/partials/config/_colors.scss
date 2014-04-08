@@ -1,0 +1,10 @@
+$primaryDarkTextColor: rgb(20, 20, 20);
+$secondaryDarkTextColor: lighten($primaryDarkTextColor, 40%);
+$highlightTextColor: #ff5a00;
+
+$menuBackgroundColor: rgb(20, 20, 20);
+$lightBackgroundColor: rgb(240, 240, 240);
+
+$menuPrimaryTextColor: rgb(190, 190, 190);
+$menuSecondaryTextColor: darken($menuPrimaryTextColor, 20%);
+$menuSelectedTextColor: rgb(255, 255, 255);

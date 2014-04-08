@@ -7,6 +7,8 @@
 @import "compass";
 @import "base/packages/base";
 
+@import "partials/global";
+
 // Wrap all styles within the aeris scope
 // to prevent global style leakage.
 .#{$_}maps-app {
@@ -21,6 +23,9 @@
   @import "partials/layout";
   @import "partials/misc";
   @import "partials/typography";
+
+  // Config
+  @import "partials/config/colors";
 
   // Views
   @import "partials/views/app";
