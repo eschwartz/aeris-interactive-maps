@@ -7,6 +7,9 @@ sass_dir = "sass"
 fonts_dir = "fonts"
 relative_assets = true
 
+sass_options = {:sourcemap => true,}
+enable_sourcemaps = true
+
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
 
