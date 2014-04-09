@@ -1,14 +1,4 @@
-@mixin setScrollableStyles {
-  @include setSideMenuStyles {
-    .#{$_}scrollable {
-      @content;
-    }
-  }
-}
-
-
-
-@include setScrollableStyles {
+.#{$_}scrollable {
   @include box-sizing(border-box);
   height: 100%;
   overflow-y: scroll;

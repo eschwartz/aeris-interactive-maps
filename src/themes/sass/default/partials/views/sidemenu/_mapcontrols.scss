@@ -1,19 +1,17 @@
 /**
  * Map controls.
 */
-.#{$_}sideMenu {
-  .#{$_}mapControls {
-    @include setToggleSwitchStyles {
-      text-transform: none;
-    }
+.#{$_}mapControls {
+  @include setToggleSwitchStyles {
+    text-transform: none;
+  }
 
-    h2 {
-      // Headings with Icons
-      &.#{$_}markerHeading {
-        @extend %iconHeading;
-        &:before {
-          @extend .#{$_}icon-info;
-        }
+  h2 {
+    // Headings with Icons
+    &.#{$_}markerHeading {
+      @extend %iconHeading;
+      &:before {
+        @extend .#{$_}icon-info;
       }
     }
   }

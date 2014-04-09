@@ -1,8 +1,6 @@
 /**
  * Widget styles.
 */
-.#{$_}sideMenu {
-  section {
-    @extend %collapsableRed;
-  }
+section {
+  @extend %collapsableRed;
 }

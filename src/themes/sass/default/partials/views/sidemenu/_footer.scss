@@ -3,7 +3,7 @@
 */
 $footerHeight: 35px;
 
-.#{$_}sideMenu {
+& {
   // Room for footer
   padding-bottom: $footerHeight;
 
