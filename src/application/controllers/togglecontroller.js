@@ -9,7 +9,7 @@ define([
    * Toggle model.
    *
    * @class ToggleController
-   * @namespace aeris.interactive.application.forms.controllers
+   * @namespace aeris.interactive.application.controllers
    * @extends aeris.interactive.application.controllers.LayoutController
    *
    * @param {Object=} options

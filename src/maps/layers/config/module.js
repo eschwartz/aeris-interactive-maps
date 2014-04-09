@@ -51,7 +51,7 @@ define({
 
   layerControlsController: {
     create: {
-      module: 'aeris/interactive/application/forms/controllers/togglecollectioncontroller',
+      module: 'aeris/interactive/application/controllers/togglecollectioncontroller',
       args: [
         {
           collection: { $ref: 'layerStateCollection' },

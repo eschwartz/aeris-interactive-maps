@@ -1,14 +1,14 @@
 define([
   'aeris/util',
   'marionette',
-  'aeris/interactive/application/forms/controllers/togglecontroller'
+  'aeris/interactive/application/controllers/togglecontroller'
 ], function(_, Marionette, ToggleController) {
   /**
-   * Controls a collection of map object {aeris.interactive.application.forms.controllers.ToggleController}
+   * Controls a collection of map object {aeris.interactive.application.controllers.ToggleController}
    * views.
    *
    * @class ToggleCollectionController
-   * @namespace aeris.interactive.application.forms.controllers
+   * @namespace aeris.interactive.application.controllers
    * @extends Marionette.CompositeView
    *
    * @param {Object} options
@@ -33,7 +33,7 @@ define([
 
     /**
      * @property itemView
-     * @type {aeris.interactive.application.forms.controllers.ToggleController}
+     * @type {aeris.interactive.application.controllers.ToggleController}
      */
 
     Marionette.CompositeView.call(this, options);
