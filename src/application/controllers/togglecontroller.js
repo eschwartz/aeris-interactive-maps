@@ -26,10 +26,10 @@ define([
       selectedClass: 'aeris-selected',
       deselectedClass: 'aeris-deselected',
       events: {
-        'change input': this.updateModel_
+        'change @ui.toggleBtn': this.updateModel_
       },
       ui: {
-        selectBtn: 'input'
+        toggleBtn: 'input'
       },
       handlebarsHelpers: {
         i18n: i18n
@@ -82,7 +82,7 @@ define([
    * @method updateModel_
    */
   ToggleController.prototype.updateModel_ = function() {
-    var isSelected = this.ui.selectBtn.prop('checked');
+    var isSelected = this.ui.toggleBtn.prop('checked');
     this.model.set('selected', isSelected);
   };
 
