@@ -12,10 +12,7 @@ examples/apikeys.js
 
 # SASS
 .sass-cache
-**/theme/**/*.css
-**/themes/**/*.css
-!**/themes/**/styleguide/*.css
-!**/themes/**/styleguide/**/*.css
+src/themes/css/
 
 build/
 
