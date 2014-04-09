@@ -55,17 +55,19 @@ define({
       args: [
         {
           collection: { $ref: 'layerStateCollection' },
-          handlebarsHelpers: {
-            i18n: { module: 'aeris/interactive/application/templatehelpers/i18n' }
-          },
-
           // Each layer type gets it's own controls controller (item view)
           itemControllerLookup: {
             // We can move all these definitions to config/layercontrolscontroller
             // and we can even create a $MapObjectControlsController plugin, if we want
             Radar: { $ref: 'LayerWithSliderControlsController' },
             Satellite: { $ref: 'LayerWithSliderControlsController'}
-          }
+          },
+
+          handlebarsHelpers: {
+            i18n: { module: 'aeris/interactive/application/templatehelpers/i18n' }
+          },
+          className: 'aeris-menu-items',
+          tagName: 'ul'
         }
       ]
     }
@@ -77,7 +79,10 @@ define({
       args: [{
         controls: [
           { module: 'aeris/interactive/maps/layers/controllers/opacityslidercontroller' }
-        ]
+        ],
+
+        tagName: 'li',
+        className: 'aeris-active'
       }]
     }
   },
