@@ -51,8 +51,8 @@ define([
       this.useMap(map);
     });
   };
-  
-  
+
+
   /**
    * Renders or hides when the model is
    * selected or deselected.
