@@ -4,7 +4,7 @@
 
   .#{$_}slider-label {
     float: left;
-    width: 30%;
+    width: 20%;
     line-height: 20px;
     font-size: 12px;
     color: lighten($menuPrimaryTextColor, 10%);
@@ -16,7 +16,7 @@
     width: 70%;
     height: 20px;
     z-index: 10;
-    margin-right: 20px;
+    margin-right: 5%;
   }
 
   .#{$_}slider-point {
