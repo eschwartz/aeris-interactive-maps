@@ -35,11 +35,6 @@ define(
 
           template: { $ref: 'mapControlsTemplate' },
 
-          ui: {
-            mapOptionsToggle: '.aeris-mapControls>h1:first-child',
-            mapOptionsContent: '.aeris-mapControls'
-          },
-
           regions: { $ref: 'mapControlsRegions' },
           controlsRegionLookup: { $ref: 'controlsRegionLookup' }
         }]

@@ -52,40 +52,7 @@ define([
     this.controlsRegionLookup_ = options.controlsRegionLookup || {};
 
 
-    /**
-     * HTML Class name to apply to a selected
-     * element.
-     *
-     * @type {string}
-     * @private
-     * @property selectedClass_
-     */
-    this.selectedClass_ = options.selectedClass || '';
-
-
-    /**
-     * HTML Class name to apply to a deselected
-     * element.
-     *
-     * @type {string}
-     * @private
-     * @property deselectedClass_
-     */
-    this.deselectedClass_ = options.deselectedClass || '';
-
-
-    /**
-     * UI Elements:
-     *    mapOptionsToggle
-     */
-    options.ui = _.defaults(options.ui || {}, {
-      mapOptionsToggle: ''
-    });
-
-
     LayoutController.call(this, options);
-
-    this.bindUIEvent('click', 'mapOptionsToggle', this.toggleMapControls_, this);
   };
   _.inherits(MapControlsController, LayoutController);
 
@@ -197,16 +164,6 @@ define([
     }, this);
 
     return list;
-  };
-
-
-  /**
-   * @private
-   * @method toggleMapControls_
-   */
-  MapControlsController.prototype.toggleMapControls_ = function() {
-    this.ui.mapOptionsContent.toggleClass(this.selectedClass_);
-    this.ui.mapOptionsContent.toggleClass(this.deselectedClass_);
   };
 
 
