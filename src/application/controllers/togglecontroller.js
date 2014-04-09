@@ -67,9 +67,6 @@ define([
 
     LayoutController.call(this, options);
 
-    // Bind model to view
-    this.listenTo(this.model, 'change', this.render);
-
     this.listenTo(this.model, 'change:selected', this.updateSelectedClass_);
     this.updateSelectedClass_();
   };
