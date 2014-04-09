@@ -2,17 +2,17 @@
  * Search input style
 */
 input[type=search] {
-  color: $text-white;
+  color: $menuPrimaryTextColor;
   background: $black image-url('aeris-icon/search.png') no-repeat 8px;
   text-indent: 30px;
 
   @include border-radius(0);
   border: 1px solid #414141;
 
-  @include font-body;
+  font: $menuFontFamily;
 
   @include placeholder {
-    color: $text-offWhite;
+    color: $menuPrimaryTextColor;
   }
 
   &:active, &:focus {

@@ -1,16 +1,17 @@
 /**
  * Typographic styles.
 */
-* {
-  @include font-body;
+& {
+  font-family: $menuFontFamily;
+  font-size: 12px;
 }
+
 h1, h2, h3, h4, h5, h6, header {
-  @include font-header;
+  font: $menuFontFamily;
   margin: 0;
 }
 
 small {
-  color: $text-greyDk;
   font-size: 14px;
   font-weight: normal;
 }

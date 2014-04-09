@@ -1,25 +1,2 @@
-/**
- * Fonts
-*/
-@include font-face("Urbano Condensed", font-files(
-    "urbano-cond-webfont.woff",
-    "urbano-cond-webfont.ttf",
-    "urbano-cond-webfont.svg"
-), "urbano-cond-webfont.eot");
-
-// Bold version
-@include font-face("Urbano Condensed", font-files(
-    "urbano-boldcond-webfont.woff",
-    "urbano-boldcond-webfont.ttf",
-    "urbano-boldcond-webfont.svg"
-), "urbano-cond-webfont.eot", bold);
-
-
-
-@mixin font-body {
-  font-family: "Urbano Condensed", Arial, sans-serif;
-}
-@mixin font-header {
-  font-family: "Urbano Condensed", Arial, sans-serif;
-  font-weight: bold;
-}
+$menuFontFamily: 'Roboto Condensed', 'Helvetica', sans-serif;
+$dataFontFamily: 'Helvetica', 'Arial', sans-serif;

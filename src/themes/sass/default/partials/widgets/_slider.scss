@@ -27,7 +27,7 @@
 
   &.#{$_}slider-step {
     .#{$_}slider-point {
-      @include transition(left .2s $ease-out-quad);
+      @include transition(left .2s $easeOutQuad);
     }
   }
 }

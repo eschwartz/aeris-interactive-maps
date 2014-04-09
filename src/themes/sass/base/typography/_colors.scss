@@ -1,9 +1,10 @@
 /**
  * Text colors.
 */
-$text-black: #222;
-$text-greyDk: #444;
-$text-grey: #777;
-$text-white: #fff;
-$text-offWhite: #e6e6e6;
-$text-red: #c70402;
+$primaryDarkTextColor: rgb(20, 20, 20);
+$secondaryDarkTextColor: lighten($primaryDarkTextColor, 40%);
+$highlightTextColor: #ff5a00;
+
+$menuPrimaryTextColor: rgb(190, 190, 190);
+$menuSecondaryTextColor: darken($menuPrimaryTextColor, 20%);
+$menuSelectedTextColor: rgb(255, 255, 255);

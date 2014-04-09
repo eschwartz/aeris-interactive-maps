@@ -4,7 +4,7 @@
 label {
   display: block;
 
-  @include font-body;
+  font: $menuFontFamily;
   font-weight: bold;
   line-height: 1.35em;
 
@@ -12,7 +12,7 @@ label {
 }
 
 .#{$_}formError {
-  color: $text-red;
+  color: $highlightTextColor;
   font-weight: normal;
 }
 
