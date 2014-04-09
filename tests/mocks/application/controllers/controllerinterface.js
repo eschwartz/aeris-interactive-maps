@@ -18,6 +18,9 @@ define([
       'setElement'
     ],
     constructor: function() {
+      this.$el = $('<div></div>');
+      this.el = this.$el[0];
+
       Events.call(this);
     }
   });
@@ -27,8 +30,7 @@ define([
   MockController.prototype.render = function() {
     this.trigger('render');
 
-    this.$el = $(MockTemplate());
-    this.el = this.$el[0];
+    this.$el.html(MockTemplate());
 
     return this;
   };
