@@ -12,7 +12,7 @@ define({
       module: 'aeris/interactive/maps/layers/modules/layersmodule',
       args: [
         {
-          controlsController: { $ref: 'layerControlsController' },
+          controlsController: { $ref: 'layerControlsCollectionController' },
           eventHub: { $ref: 'eventHub' },
           moduleState: { $ref: 'layerStateCollection' }
         }
@@ -49,23 +49,36 @@ define({
     }
   },
 
-  layerControlsController: {
+  layerControlsCollectionController: {
     create: {
-      module: 'aeris/interactive/application/controllers/togglecollectioncontroller',
+      module: 'aeris/interactive/application/controllers/collectioncontroller',
       args: [
         {
           collection: { $ref: 'layerStateCollection' },
-          className: 'aeris-map-controls',
-          itemViewOptions: {
-            template: { module: 'hbars!aeris/interactive/maps/core/views/toggle.html' },
-            selectedClass: 'aeris-selected',
-            deselectedClass: 'aeris-deselected'
-          },
           handlebarsHelpers: {
             i18n: { module: 'aeris/interactive/application/templatehelpers/i18n' }
+          },
+
+          // Each layer type gets it's own controls controller (item view)
+          itemControllerLookup: {
+            // We can move all these definitions to config/layercontrolscontroller
+            // and we can even create a $MapObjectControlsController plugin, if we want
+            Radar: { $ref: 'LayerWithSliderControlsController' },
+            Satellite: { $ref: 'LayerWithSliderControlsController'}
           }
         }
       ]
+    }
+  },
+
+  LayerWithSliderControlsController: {
+    ClassFactory: {
+      module: 'aeris/interactive/maps/core/controllers/mapobjectcontrolscontroller',
+      args: [{
+        controls: [
+          { module: 'aeris/interactive/maps/layers/controllers/opacityslidercontroller' }
+        ]
+      }]
     }
   },
 

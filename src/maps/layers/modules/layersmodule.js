@@ -59,6 +59,11 @@ define([
    * @param {aeris.interactive.maps.options.MapAppBuilderOptions} builderOptions
    */
   LayersModule.prototype.renderControls_ = function() {
+    // Note: if we need to render individual control views in different places
+    // (eg. Advisories is in severe group, Temps is in Currents group)
+    // we could allow individual controlsControllers (ItemControllers)
+    // to trigger the mapControls:ready event,
+    // then let the mapControls module decide where to put them.
     this.eventHub_.trigger('mapControls:ready', this.controlsController_, 'layers');
   };
 

@@ -2,8 +2,9 @@ define([
   'aeris/util',
   'jquery',
   'aeris/interactive/application/controllers/togglecontroller',
-  'aeris/interactive/maps/config/menuiconlookup'
-], function(_, $, ToggleController, menuIconLookup) {
+  'aeris/interactive/maps/config/menuiconlookup',
+  'hbars!aeris/interactive/maps/core/views/mapobjectcontrols.html'
+], function(_, $, ToggleController, menuIconLookup, mapObjectControlsTemplate) {
   /**
    * Controls a view with UI controls to manipulate a map object.
    *
@@ -24,6 +25,7 @@ define([
    */
   var MapObjectControlsController = function(options) {
     _.defaults(options, {
+      template: mapObjectControlsTemplate,
       templateHelpers: {},
       ui: {},
       controls: []
