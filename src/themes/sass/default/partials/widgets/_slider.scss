@@ -23,7 +23,12 @@
     @include cursorGrab;
     top: 2px;
     left: 0;
+
+    &.#{$_}grabbing {
+      @include cursorGrabbing;
+    }
   }
+
 
   &.#{$_}slider-step {
     .#{$_}slider-point {
