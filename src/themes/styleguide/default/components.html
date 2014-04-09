@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" type="image/x-icon" href="/examples/weather.ico"/>
   <link rel="stylesheet" href="css/styleguide.css"/>
   <link rel="stylesheet" href="../../css/default/style.css"/>
+
+  <style type="text/css">
+    table#icons {
+      font-size: 16px;
+    }
+
+      table#icons td {
+        padding: 5px;
+      }
+
+        table#icons i {
+          font-size: 48px;
+        }
+  </style>
+
   <title>Aeris Interactive Maps Style Guide</title>
 
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -12,141 +28,314 @@
 
 <div class="sg-container aeris-maps-app">
 
-  <h2 data-section>Forms</h2>
+<h2 data-section>Forms</h2>
 
-  <label>
-    Text input
-    <input placeholder="Placeholder text" type="text"/>
+<label>
+  Text input
+  <input placeholder="Placeholder text" type="text"/>
+</label>
+
+<label>
+  Textarea
+  <textarea>Don't kid yourself, Jimmy. If a cow ever got the chance, he'd eat you and everyone you care
+    about!</textarea>
+</label>
+
+<div id="widget-slider"></div>
+
+<section class="aeris-menu">
+  <header>Menu title</header>
+
+  <input type="checkbox" id="aeris-lightning"/>
+  <label class="aeris-checkbox" for="aeris-lightning">
+    Lightning
   </label>
 
-  <label>
-    Textarea
-    <textarea>Don't kid yourself, Jimmy. If a cow ever got the chance, he'd eat you and everyone you care about!</textarea>
+  <input type="checkbox" id="aeris-tornados"/>
+  <label class="aeris-checkbox" for="aeris-tornados">
+    Tornados
   </label>
 
-  <div id="widget-slider"></div>
+  <input type="checkbox" id="aeris-hail"/>
+  <label class="aeris-checkbox" for="aeris-hail">
+    Hail
+  </label>
+</section>
 
-  <section class="aeris-menu">
-    <header>Menu title</header>
-
-    <input type="checkbox" id="aeris-lightning"/>
-    <label class="aeris-checkbox" for="aeris-lightning">
-      Lightning
-    </label>
-
-    <input type="checkbox" id="aeris-tornados"/>
-    <label class="aeris-checkbox" for="aeris-tornados">
-      Tornados
-    </label>
-
-    <input type="checkbox" id="aeris-hail"/>
-    <label class="aeris-checkbox" for="aeris-hail">
-      Hail
-    </label>
-  </section>
-
-  <input type="search" placeholder="Search input." />
+<input type="search" placeholder="Search input."/>
 
 
+<hr/>
 
-  <hr/>
+<h2 data-section>Buttons</h2>
 
-  <h2 data-section>Buttons</h2>
+<p>
+  <a class="aeris-actionBtn" href="#">Action Button</a>
+  <a class="aeris-secondaryBtn" href="#">Secondary Button</a>
+  <a class="aeris-externalButton" href="#">
+    External link
+  </a>
+</p>
 
-  <p>
-    <a class="aeris-actionBtn" href="#">Action Button</a>
-    <a class="aeris-secondaryBtn" href="#">Secondary Button</a>
-    <a class="aeris-externalButton" href="#">
-      External link
-    </a>
-  </p>
+<hr/>
 
-  <hr/>
+<h2 data-section>Icons</h2>
 
-  <h2 data-section>Icons</h2>
-
-  <table cellpadding="5">
+<table cellpadding="5" id="icons">
+  <tbody>
 
     <tr>
-      <td><span class="aeris-icon-delete"></span></td>
-      <td>Delete / Clear</td>
+      <td><i class="aeris-icon-cells"></i></td>
+      <td>aeris-icon-cells</td>
     </tr>
 
     <tr>
-      <td><span class="aeris-icon-edit"></span></td>
-      <td>Edit</td>
+      <td><i class="aeris-icon-search"></i></td>
+      <td>aeris-icon-search</td>
     </tr>
 
     <tr>
-      <td><span class="aeris-icon-copy"></span></td>
-      <td>Copy</td>
+      <td><i class="aeris-icon-winds"></i></td>
+      <td>aeris-icon-winds</td>
     </tr>
 
     <tr>
-      <td class="sg-bgBlack"><span class="aeris-icon-controls sg-bgBlack"></span></td>
-      <td>Controls</td>
+      <td><i class="aeris-icon-temp"></i></td>
+      <td>aeris-icon-temp</td>
     </tr>
 
     <tr>
-      <td class="sg-bgBlack"><span class="aeris-icon-geolocate sg-bgBlack"></span></td>
-      <td>Geolocate</td>
+      <td><i class="aeris-icon-precip"></i></td>
+      <td>aeris-icon-precip</td>
     </tr>
 
     <tr>
-      <td class="sg-bgBlack"><span class="aeris-icon-search"></span></td>
-      <td>Search</td>
+      <td><i class="aeris-icon-radar"></i></td>
+      <td>aeris-icon-radar</td>
     </tr>
 
     <tr>
-      <td class="sg-bgBlack"><span class="aeris-icon-info"></span></td>
-      <td>Info</td>
+      <td><i class="aeris-icon-locate"></i></td>
+      <td>aeris-icon-locate</td>
     </tr>
 
     <tr>
-      <td class="sg-bgBlack"><span class="aeris-icon-fullscreen"></span></td>
-      <td>Fullscreen</td>
+      <td><i class="aeris-icon-lightning"></i></td>
+      <td>aeris-icon-lightning</td>
     </tr>
 
     <tr>
-      <td class="sg-bgBlack"><span class="aeris-icon-exit-fullscreen"></span></td>
-      <td>Exit Fullscreen</td>
+      <td><i class="aeris-icon-humidity"></i></td>
+      <td>aeris-icon-humidity</td>
     </tr>
 
     <tr>
-      <td><span class="aeris-icon-open"></span></td>
-      <td>Open</td>
+      <td><i class="aeris-icon-dewpoint"></i></td>
+      <td>aeris-icon-dewpoint</td>
     </tr>
 
     <tr>
-      <td><span class="aeris-icon-open"></span></td>
-      <td>Closed</td>
+      <td><i class="aeris-icon-clouds"></i></td>
+      <td>aeris-icon-clouds</td>
     </tr>
 
     <tr>
-      <td><span class="aeris-icon-rChevronDk"></span></td>
-      <td>Dark Chevron (right)</td>
+      <td><i class="aeris-icon-sunrise"></i></td>
+      <td>aeris-icon-sunrise</td>
     </tr>
 
     <tr>
-      <td><span class="aeris-icon-uChevronDk"></span></td>
-      <td>Dark Chevron (up)</td>
+      <td><i class="aeris-icon-clear"></i></td>
+      <td>aeris-icon-clear</td>
     </tr>
 
     <tr>
-      <td><span class="aeris-icon-rDblChevronDk"></span></td>
-      <td>Dark Double Chevron (right)</td>
+      <td><i class="aeris-icon-clearn"></i></td>
+      <td>aeris-icon-clearn</td>
     </tr>
 
     <tr>
-      <td><span class="aeris-icon-close"></span></td>
-      <td>Close</td>
+      <td><i class="aeris-icon-clearw"></i></td>
+      <td>aeris-icon-clearw</td>
     </tr>
 
-  </table>
+    <tr>
+      <td><i class="aeris-icon-wind"></i></td>
+      <td>aeris-icon-wind</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-snowflake"></i></td>
+      <td>aeris-icon-snowflake</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-pcloudy"></i></td>
+      <td>aeris-icon-pcloudy</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-pcloudyn"></i></td>
+      <td>aeris-icon-pcloudyn</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-haze"></i></td>
+      <td>aeris-icon-haze</td>
+    </tr>
+    <tr>
+      <td><i class="aeris-icon-hazen"></i></td>
+      <td>aeris-icon-hazen</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-fog"></i></td>
+      <td>aeris-icon-fog</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-tstorms"></i></td>
+      <td>aeris-icon-tstorms</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-showers"></i></td>
+      <td>aeris-icon-showers</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-rain"></i></td>
+      <td>aeris-icon-rain</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-rainw"></i></td>
+      <td>aeris-icon-rainw</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-snowshowers"></i></td>
+      <td>aeris-icon-snowshowers</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-snow"></i></td>
+      <td>aeris-icon-snow</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-sleet"></i></td>
+      <td>aeris-icon-sleet</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-cloudy"></i></td>
+      <td>aeris-icon-clouds</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-moon"></i></td>
+      <td>aeris-icon-moon</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-convective"></i></td>
+      <td>aeris-icon-convective</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-report"></i></td>
+      <td>aeris-icon-report</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-stack"></i></td>
+      <td>aeris-icon-stack</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-location"></i></td>
+      <td>aeris-icon-location</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-expand"></i></td>
+      <td>aeris-icon-expand</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-contract"></i></td>
+      <td>aeris-icon-contract</td>
+    </tr>
+
+
+    <tr>
+      <td><i class="aeris-icon-cog"></i></td>
+      <td>aeris-icon-cog</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-save"></i></td>
+      <td>aeris-icon-save</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-close"></i></td>
+      <td>aeris-icon-close</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-checkmark"></i></td>
+      <td>aeris-icon-checkmark</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-minus"></i></td>
+      <td>aeris-icon-minus</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-plus"></i></td>
+      <td>aeris-icon-plus</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-play"></i></td>
+      <td>aeris-icon-play</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-pause"></i></td>
+      <td>aeris-icon-pause</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-stop"></i></td>
+      <td>aeris-icon-stop</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-help"></i></td>
+      <td>aeris-icon-help</td>
+    </tr>
+
+
+    <tr>
+      <td><i class="aeris-icon-arrow-down"></i></td>
+      <td>aeris-icon-arrow-down</td>
+    </tr>
+
+    <tr>
+      <td><i class="aeris-icon-arrow-up"></i></td>
+      <td>aeris-icon-arrow-up</td>
+    </tr>
+
+  </tbody>
+</table>
 </div>
 <script type="text/javascript">
-  $(document).ready(function () {
-    $('a').click(function () {
+  $(document).ready(function() {
+    $('a').click(function() {
       return false;
     });
   });
