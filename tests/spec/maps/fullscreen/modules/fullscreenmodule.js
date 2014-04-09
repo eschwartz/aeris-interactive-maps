@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/maps/fullscreen/modules/fullscreenmodule',
+  'aeris/interactive/maps/fullscreen/modules/fullscreenmodule',
   'jquery',
   'aeris/model',
   'tests/mocks/application/controllers/controllerinterface',

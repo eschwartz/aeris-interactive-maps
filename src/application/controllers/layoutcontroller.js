@@ -1,9 +1,9 @@
 define([
   'aeris/util',
   'marionette',
-  'aim/application/controllers/mixins/viewmixin',
+  'aeris/interactive/application/controllers/mixins/viewmixin',
   'aeris/errors/invalidargumenterror',
-  'aim/application/controllers/templatehelperregistrars/handlebarstemplatehelperregistrar'
+  'aeris/interactive/application/controllers/templatehelperregistrars/handlebarstemplatehelperregistrar'
 ], function(_, Marionette, ViewMixin, InvalidArgumentError, HandlebarsTemplateHelperRegistrar) {
   /**
    * An Aeris extension of Marionette.Layout.
@@ -14,9 +14,9 @@ define([
    *   to simplify rendering controllers within regions
    *
    * @class LayoutController
-   * @namespace aeris.application.controllers
+   * @namespace aeris.interactive.application.controllers
    * @extends Marionette.Layout
-   * @uses aeris.application.controllers.ViewMixin
+   * @uses aeris.interactive.application.controllers.ViewMixin
    *
    * @constructor
    * @override
@@ -76,7 +76,7 @@ define([
 
 
     /**
-     * @type {aeris.application.controllers.templatehelperregistrars.TemplateHelperRegistrarInterface}
+     * @type {aeris.interactive.application.controllers.templatehelperregistrars.TemplateHelperRegistrarInterface}
      * @private
      * @property templateHelperService_
      */

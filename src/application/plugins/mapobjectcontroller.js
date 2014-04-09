@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/application/plugins/helpers/converttoclassfactoryspec'
+  'aeris/interactive/application/plugins/helpers/converttoclassfactoryspec'
 ], function(_, convertToClassFactorySpec) {
 
 
@@ -37,7 +37,7 @@ define([
    */
   return function(pluginOptions) {
     var mapState = pluginOptions.mapState;
-    var controllerPath = pluginOptions.controller || 'aim/maps/core/controllers/mapobjectcontroller';
+    var controllerPath = pluginOptions.controller || 'aeris/interactive/maps/core/controllers/mapobjectcontroller';
 
     return {
       factories: {

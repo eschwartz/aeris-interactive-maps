@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/application/forms/models/combotoggle',
+  'aeris/interactive/application/forms/models/combotoggle',
   'sinon',
   'aeris/mocks/aeris/toggle',
   'aeris/collection',

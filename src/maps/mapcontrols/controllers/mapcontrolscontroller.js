@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/application/controllers/layoutcontroller',
+  'aeris/interactive/application/controllers/layoutcontroller',
   'aeris/errors/invalidargumenterror',
   'marionette'
 ], function(_, LayoutController, InvalidArgumentError, Marionette) {
@@ -8,14 +8,14 @@ define([
    * Controls the map controls view.
    *
    * @class MapControlsController
-   * @namespace aeris.builder.maps.mapcontrols.controllers
-   * @extends aeris.application.controllers.LayoutController
+   * @namespace aeris.interactive.maps.mapcontrols.controllers
+   * @extends aeris.interactive.application.controllers.LayoutController
    *
    * @constructor
    *
    * @param {Object} options
    * @param {aeris.Events} options.eventHub Required.
-   * @param {aeris.builder.options.AppBuilderOptions} options.builderOptions Required.
+   * @param {aeris.interactive.options.AppBuilderOptions} options.builderOptions Required.
    * @param {Object.<string,string>=} options.controlsRegionLookup
    * @param {string=} options.selectedClass
    * @param {string=} options.deselectedClass
@@ -34,7 +34,7 @@ define([
     /**
      * App builder options
      *
-     * @type {aeris.builder.options.AppBuilderOptions}
+     * @type {aeris.interactive.options.AppBuilderOptions}
      * @private
      * @property builderOptions_
      */
@@ -224,7 +224,7 @@ define([
 });
 
 /**
- * @for aeris.builder.maps.event.EventHub
+ * @for aeris.interactive.maps.event.EventHub
  */
 /**
  * Fired when a map controls UI controller
@@ -232,6 +232,6 @@ define([
  *
  * @event mapControls:ready
  *
- * @param {aeris.application.controllers.ControllerInterface} controller
+ * @param {aeris.interactive.application.controllers.ControllerInterface} controller
  * @param {string} controlsViewName Name of the controls view.
  */

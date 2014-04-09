@@ -11,12 +11,12 @@ define([
    * - May have child modules, which will be started after the parent module.
    *
    * @class Module
-   * @namespace aeris.application.modules
+   * @namespace aeris.interactive.application.modules
    * @extends Marionette.Application
    *
    * @param {Object=} opt_options
    *
-   * @param {Object.<string,aeris.application.modules.Module>=} opt_options.modules
+   * @param {Object.<string,aeris.interactive.application.modules.Module>=} opt_options.modules
    *        A hash of named child modules, to
    *        be started with this module.
    *
@@ -53,7 +53,7 @@ define([
   /**
    * Start-up child modules
    *
-   * @param {aeris.builder.options.AppBuilderOptions} builderOptions
+   * @param {aeris.interactive.options.AppBuilderOptions} builderOptions
    * @protected
    * @method startChildModules
    */
@@ -78,7 +78,7 @@ define([
    * @param {Array.<string,Marionette.Application|Marionette.Module>} modules
    *        Full list of available child modules.
    *
-   * @param {aeris.builder.options.AppBuilderOptions} builderOptions
+   * @param {aeris.interactive.options.AppBuilderOptions} builderOptions
    *        App builder config.
    *
    * @return {Array.<string,Marionette.Application|Marionette.Module>}

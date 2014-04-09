@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/application/forms/models/toggle',
+  'aeris/interactive/application/forms/models/toggle',
   'aeris/collection',
   'aeris/errors/validationerror'
 ], function(_, Toggle, Collection, ValidationError) {
@@ -24,8 +24,8 @@ define([
    *
    *
    * @class ComboToggle
-   * @namespace aeris.application.forms.models
-   * @extends aeris.application.forms.models.Toggle
+   * @namespace aeris.interactive.application.forms.models
+   * @extends aeris.interactive.application.forms.models.Toggle
    *
    * @constructor
    * @override
@@ -51,7 +51,7 @@ define([
      * by the ComboToggle.
      *
      * @attribute childToggles
-     * @type {Array.<aeris.application.forms.models.Toggle>}
+     * @type {Array.<aeris.interactive.application.forms.models.Toggle>}
      */
 
 
@@ -153,7 +153,7 @@ define([
 
 
   /**
-   * @return {Array.<aeris.application.models.Toggle>}
+   * @return {Array.<aeris.interactive.application.models.Toggle>}
    * @method getChildToggles
    */
   ComboToggle.prototype.getChildToggles = function() {
@@ -165,7 +165,7 @@ define([
    * Add a set of toggles to the combo toggle,
    * to be controlled as child toggles.
    *
-   * @param {Array.<Toggle>|aeris.application.forms.collections.ToggleCollection} toggles
+   * @param {Array.<Toggle>|aeris.interactive.application.forms.collections.ToggleCollection} toggles
    * @method addToggles
    */
   ComboToggle.prototype.addToggles = function(toggles) {

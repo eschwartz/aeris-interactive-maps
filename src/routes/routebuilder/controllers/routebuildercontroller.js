@@ -4,8 +4,8 @@ define([
 ], function(_, Events) {
   /**
    * @class RouteBuilderController
-   * @namespace aeris.builder.routes.routebuilder.controllers
-   * @implements aeris.application.controllers.ControllerInterface
+   * @namespace aeris.interactive.routes.routebuilder.controllers
+   * @implements aeris.interactive.application.controllers.ControllerInterface
    *
    * @param {Object} options
    * @param {aeris.maps.gmaps.route.RouteBuilder} options.routeBuilder
@@ -122,7 +122,7 @@ define([
   return RouteBuilderController;
 });
 /**
- * @for aeris.builder.maps.event.EventHub
+ * @for aeris.interactive.maps.event.EventHub
  */
 /**
  * @event routepoint:click

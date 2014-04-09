@@ -1,14 +1,14 @@
 define([
   'aeris/util',
-  'aim/application/controllers/itemcontroller',
-  'aim/application/widgets/slider/point',
-  'aim/application/widgets/slider/bar',
-  'aim/application/widgets/slider/config/defaultstyles',
-  'hbars!aim/application/widgets/slider/view/layout.html'
+  'aeris/interactive/application/controllers/itemcontroller',
+  'aeris/interactive/application/widgets/slider/point',
+  'aeris/interactive/application/widgets/slider/bar',
+  'aeris/interactive/application/widgets/slider/config/defaultstyles',
+  'hbars!aeris/interactive/application/widgets/slider/view/layout.html'
 ], function(_, ItemController, Point, Bar, defaultStyles, layoutTemplate) {
   /**
    * @class Slider
-   * @namespace aeris.application.widgets.slider
+   * @namespace aeris.interactive.application.widgets.slider
    *
    * @constructor
    *
@@ -23,8 +23,8 @@ define([
    * @param {number=} opt_options.step Set to null to disable stepping
    *
    * @param {Object=} opt_options.style
-   * @param {aeris.application.widgets.slider.options.BarStyle=} opt_options.style.bar
-   * @param {aeris.application.widgets.slider.options.PointStyle=} opt_options.style.point
+   * @param {aeris.interactive.application.widgets.slider.options.BarStyle=} opt_options.style.bar
+   * @param {aeris.interactive.application.widgets.slider.options.PointStyle=} opt_options.style.point
    */
   var Slider = function(opt_options) {
     var options = opt_options || {};
@@ -90,7 +90,7 @@ define([
     /**
      * @property point_
      * @private
-     * @type {aeris.application.widgets.slider.Point}
+     * @type {aeris.interactive.application.widgets.slider.Point}
      */
     this.point_ = options.point || this.createPoint_();
 
@@ -98,7 +98,7 @@ define([
     /**
      * @property bar_
      * @private
-     * @type {aeris.application.widgets.slider.Bar}
+     * @type {aeris.interactive.application.widgets.slider.Bar}
      */
     this.bar_ = options.bar || this.createBar_();
 
@@ -124,7 +124,7 @@ define([
   /**
    * @method createPoint_
    * @private
-   * @return {aeris.application.widgets.slider.Point}
+   * @return {aeris.interactive.application.widgets.slider.Point}
    */
   Slider.prototype.createPoint_ = function() {
     return new Point({
@@ -139,7 +139,7 @@ define([
   /**
    * @method createBar_
    * @private
-   * @return {aeris.application.widgets.slider.Bar}
+   * @return {aeris.interactive.application.widgets.slider.Bar}
    */
   Slider.prototype.createBar_ = function() {
     return new Bar({

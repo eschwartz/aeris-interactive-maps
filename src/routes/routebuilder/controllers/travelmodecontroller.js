@@ -1,12 +1,12 @@
 define([
   'aeris/util',
-  'aim/application/forms/controllers/radiocontroller'
+  'aeris/interactive/application/forms/controllers/radiocontroller'
 ], function(_, RadioController) {
   /**
    *
    * @class TravelModeController
-   * @namespace aeris.builder.routes.routebuilder.controllers
-   * @extends aeris.application.forms.controllers.RadioController
+   * @namespace aeris.interactive.routes.routebuilder.controllers
+   * @extends aeris.interactive.application.forms.controllers.RadioController
    *
    * @constructor
    * @override

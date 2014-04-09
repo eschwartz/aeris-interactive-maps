@@ -9,5 +9,5 @@ define({
     routeBuilderControlsRegion: '.aeris-routeBuilderControls'
   },
 
-  parentRegions: { wire: 'aim/maps/mapcontrols/config/regions' }
+  parentRegions: { wire: 'aeris/interactive/maps/mapcontrols/config/regions' }
 });

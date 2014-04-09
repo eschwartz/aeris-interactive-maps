@@ -2,7 +2,7 @@ define([
   'aeris/util',
   'aeris/model',
   'aeris/collection',
-  'aim/maps/core/collections/mapobjecttogglecollection'
+  'aeris/interactive/maps/core/collections/mapobjecttogglecollection'
 ], function(_, BaseModel, Collection, MapObjectToggleCollection) {
   /**
    * The common state of the builder application.
@@ -12,7 +12,7 @@ define([
    * application modules.
    *
    * @class State
-   * @namespace aeris.builder.maps.core.models
+   * @namespace aeris.interactive.maps.core.models
    * @extends aeris.Model
    * @implements aeris.maps.MapObjectInterface
    *

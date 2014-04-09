@@ -6,7 +6,7 @@ define({
     create: {
       module: 'aeris/classfactory',
       args: [
-        { module: 'aim/maps/options/mapappbuilderoptions' },
+        { module: 'aeris/interactive/maps/options/mapappbuilderoptions' },
         [
           null,             // opt_attrs
           {                 // opt_options

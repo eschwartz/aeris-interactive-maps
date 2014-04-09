@@ -7,7 +7,7 @@ define([
    * Can be activated and deactivated.
    *
    * @class Renderer
-   * @namespace aeris.builder.maps.core
+   * @namespace aeris.interactive.maps.core
    * @uses aeris.Events
    *
    * @constructor
@@ -36,7 +36,7 @@ define([
 
 
   /**
-   * @param {aeris.application.controllers.ControllerInterface} view
+   * @param {aeris.interactive.application.controllers.ControllerInterface} view
    * @method show
    */
   Renderer.prototype.show = function(view) {

@@ -1,14 +1,14 @@
 define([
   'aeris/util',
-  'aim/application/controllers/itemcontroller'
+  'aeris/interactive/application/controllers/itemcontroller'
 ], function(_, ItemController) {
   /**
    * Control the map position using
    * search-by-location form.
    *
    * @class GeocodeController
-   * @namespace aeris.builder.maps.geosearch.controllers
-   * @extends aeris.application.controllers.ItemController
+   * @namespace aeris.interactive.maps.geosearch.controllers
+   * @extends aeris.interactive.application.controllers.ItemController
    *
    * @constructor
    * @override

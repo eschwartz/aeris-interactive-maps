@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/application/controllers/mapobjectcontroller',
+  'aeris/interactive/application/controllers/mapobjectcontroller',
   'aeris/mocks/mapobject',
   'aeris/mocks/aeris/maps/map'
 ], function(_, MapObjectController, MockMapObject, MockMap) {

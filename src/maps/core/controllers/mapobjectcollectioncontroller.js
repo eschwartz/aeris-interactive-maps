@@ -1,18 +1,18 @@
 define([
   'aeris/util',
   'marionette',
-  'aim/maps/core/controllers/mapobjecttogglecontroller'
+  'aeris/interactive/maps/core/controllers/mapobjecttogglecontroller'
 ], function(_, Marionette, MapObjectToggleController) {
   /**
    * Controls a set of {aeris.maps.extensions.MapExtensionObject}
    * view objects.
    *
    * @class MapObjectCollectionController
-   * @namespace aeris.builder.maps.map.controllers
+   * @namespace aeris.interactive.maps.map.controllers
    * @extends Marionette.CollectionView
    *
    * @param {Object=} opt_options
-   * @param {aeris.builder.maps.core.collections.MapObjectToggleCollection} opt_options.collection
+   * @param {aeris.interactive.maps.core.collections.MapObjectToggleCollection} opt_options.collection
    *        State of the map objects collection.
    *
    * @constructor

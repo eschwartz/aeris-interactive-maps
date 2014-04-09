@@ -1,25 +1,25 @@
 define([
   'aeris/util',
-  'aim/maps/core/modules/statemodule'
+  'aeris/interactive/maps/core/modules/statemodule'
 ], function(_, StateModule) {
   /**
    * Encapsulates all MapAppBuilder controllers
    * which interact directly with the map.
    *
    * @class MapModule
-   * @namespace aeris.builder.maps.map.modules
-   * @extends aeris.builder.maps.core.modules.StateModule
+   * @namespace aeris.interactive.maps.map.modules
+   * @extends aeris.interactive.maps.core.modules.StateModule
    *
    * @constructor
    * @override
    *
    * @param {Object} options
-   * @param {aeris.builder.maps.map.controllers.MapController} options.mapController Required.
+   * @param {aeris.interactive.maps.map.controllers.MapController} options.mapController Required.
    * @param {Marionette.Region} options.mapCanvasRegion Required.
    */
   var MapModule = function(options) {
     /**
-     * @type {aeris.builder.maps.map.controllers.MapController}
+     * @type {aeris.interactive.maps.map.controllers.MapController}
      * @private
      * @property mapController_
      */

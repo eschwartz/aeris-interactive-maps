@@ -1,7 +1,7 @@
 /**
  * WireJS Spec for Routes App RouteBuilder module
  * @class context
- * @namespace aeris.builder.routes.routebuilder.config
+ * @namespace aeris.interactive.routes.routebuilder.config
  * @static
  */
 define({
@@ -9,21 +9,21 @@ define({
 
   routeBuilderModule: {
     create: {
-      module: 'aim/routes/routebuilder/modules/routebuildermodule',
+      module: 'aeris/interactive/routes/routebuilder/modules/routebuildermodule',
       args: [
         {
           routeControlsController: { $ref: 'controllers.routeControlsController' },
           routeBuilderController: { $ref: 'controllers.routeBuilderController' },
           eventHub: { $ref: 'eventHub' },
           appState: { $ref: 'appState' },
-          modules: { wire: 'aim/routes/routebuilder/config/submodules' }
+          modules: { wire: 'aeris/interactive/routes/routebuilder/config/submodules' }
         }
       ]
     }
   },
 
-  controllers: { wire: 'aim/routes/routebuilder/config/controllers' },
+  controllers: { wire: 'aeris/interactive/routes/routebuilder/config/controllers' },
 
-  routeBuilder: { wire: 'aim/routes/routebuilder/config/routebuilder' }
+  routeBuilder: { wire: 'aeris/interactive/routes/routebuilder/config/routebuilder' }
 
 });

@@ -7,7 +7,7 @@ define([
 ], function(_, Events, MockFactory, MockTemplate, $) {
   /**
    * @class MockController
-   * @implements aeris.application.controllers.ControllerInterface
+   * @implements aeris.interactive.application.controllers.ControllerInterface
    *
    * @constructor
    */

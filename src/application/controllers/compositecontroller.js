@@ -1,15 +1,15 @@
 define([
   'aeris/util',
   'marionette',
-  'aim/application/controllers/mixins/viewmixin'
+  'aeris/interactive/application/controllers/mixins/viewmixin'
 ], function(_, Marionette, ViewMixin) {
   /**
    * Aeris wrapper around Marionette.CompositeView
    *
    * @class CompositeController
-   * @namespace aeris.application.controllers
+   * @namespace aeris.interactive.application.controllers
    * @extends Marionette.CompositeView
-   * @uses aeris.application.controllers.ViewMixin
+   * @uses aeris.interactive.application.controllers.ViewMixin
    *
    * @constructor
    * @override

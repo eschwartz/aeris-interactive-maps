@@ -6,8 +6,8 @@ define([
    * A controller for an {aeris.maps.MapObjectInterface}
    *
    * @class MapObjectController
-   * @namespace aeris.application.controllers
-   * @implements aeris.application.controllers.ControllerInterface
+   * @namespace aeris.interactive.application.controllers
+   * @implements aeris.interactive.application.controllers.ControllerInterface
    * @uses aeris.Events
    *
    * @constructor
@@ -46,7 +46,7 @@ define([
 
     /**
      * @event map:use
-     * @param {aeris.application.controllers.MapObjectController} mapObject
+     * @param {aeris.interactive.application.controllers.MapObjectController} mapObject
      * @param {aeris.maps.Map} map
      */
   };

@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/maps/layers/controllers/layercontroller',
+  'aeris/interactive/maps/layers/controllers/layercontroller',
   'aeris/mocks/aeris/toggle',
   'aeris/mocks/mapobject'
 ], function(_, LayerController, MockToggle, MockMapObject) {

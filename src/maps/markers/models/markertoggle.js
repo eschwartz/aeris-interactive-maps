@@ -1,14 +1,14 @@
 define([
   'aeris/util',
-  'aim/maps/core/models/mapobjecttoggle',
-  'aim/application/forms/collections/togglecollection'
+  'aeris/interactive/maps/core/models/mapobjecttoggle',
+  'aeris/interactive/application/forms/collections/togglecollection'
 ], function(_, MapObjectToggle, ToggleCollection) {
   /**
    * The state of a {aeris.maps.markercollections.PointDataMarkers} in the application
    *
    * @class MarkerToggle
-   * @namespace aeris.builder.maps.markers.models
-   * @extends aeris.builder.maps.core.models.MapObjectToggle
+   * @namespace aeris.interactive.maps.markers.models
+   * @extends aeris.interactive.maps.core.models.MapObjectToggle
    *
    * @constructor
    * @override
@@ -23,7 +23,7 @@ define([
      * addFilter / removeFilter
      *
      * @attribute filters
-     * @type {aeris.application.forms.collections.ToggleCollection}
+     * @type {aeris.interactive.application.forms.collections.ToggleCollection}
      */
     var attrs = _.defaults(opt_attrs || {}, {
       filters: []

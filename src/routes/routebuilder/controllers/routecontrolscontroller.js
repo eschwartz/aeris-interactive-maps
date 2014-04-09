@@ -3,14 +3,14 @@ define([
   'aeris/errors/invalidargumenterror',
   'aeris/util/latlonutil',
   'jquery',
-  'aim/application/controllers/layoutcontroller',
+  'aeris/interactive/application/controllers/layoutcontroller',
   'aeris/maps/routes/waypoint'
 ], function(_, InvalidArgumentError, latLonUtil, $, LayoutController, Waypoint) {
   /**
    *
    * @class RouteControlsController
-   * @namespace aeris.builder.routes.routebuilder.controllers
-   * @extends aeris.application.LayoutController
+   * @namespace aeris.interactive.routes.routebuilder.controllers
+   * @extends aeris.interactive.application.LayoutController
    *
    * @constructor
    * @override
@@ -19,7 +19,7 @@ define([
    * @param {aeris.maps.gmaps.route.RouteBuilder} options.routeBuilder
    * @param {Object=} options.ui
    * @param {aeris.Events} options.eventHub
-   * @param {aeris.application.controllers.ControllerInterface}  options.SaveRouteController
+   * @param {aeris.interactive.application.controllers.ControllerInterface}  options.SaveRouteController
    * @param {string} options.openStateClass
    * @param {string} options.closedStateClass
    */
@@ -39,7 +39,7 @@ define([
     this.eventHub_ = options.eventHub;
 
     /**
-     * @type {aeris.application.controllers.ControllerInterface}
+     * @type {aeris.interactive.application.controllers.ControllerInterface}
      * @private
      * @property SaveRouteController_
      */
@@ -256,7 +256,7 @@ define([
 
 
   /**
-   * @return {aeris.application.controllers.ControllerInterface}
+   * @return {aeris.interactive.application.controllers.ControllerInterface}
    * @private
    * @method createSaveRouteController_
    */

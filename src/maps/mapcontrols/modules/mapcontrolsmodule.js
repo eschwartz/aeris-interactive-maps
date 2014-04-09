@@ -1,13 +1,13 @@
 define([
   'aeris/util',
-  'aim/application/modules/module'
+  'aeris/interactive/application/modules/module'
 ], function(_, Module) {
   /**
    * Encapsulates handling of the map controls views.
    *
    * @class MapControlsModule
-   * @namespace aeris.builder.maps.mapcontrols.modules
-   * @extends aeris.application.modules.Module
+   * @namespace aeris.interactive.maps.mapcontrols.modules
+   * @extends aeris.interactive.application.modules.Module
    *
    * @constructor
    * @override

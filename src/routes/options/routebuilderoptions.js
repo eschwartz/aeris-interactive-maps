@@ -1,7 +1,7 @@
 define([
   'aeris/util',
   'aeris/config',
-  'aim/maps/options/mapappbuilderoptions'
+  'aeris/interactive/maps/options/mapappbuilderoptions'
 ], function(_, config, BaseOptions) {
   /**
    * @typedef {Object} polylineOptions
@@ -86,11 +86,11 @@ define([
 
   /**
    * Builder configuration options for the
-   * {aeris.builder.routes.RouteAppBuilder}.
+   * {aeris.interactive.routes.RouteAppBuilder}.
    *
    * @class RouteBuilderOptions
-   * @namespace aeris.builder.routes.options
-   * @extends aeris.builder.maps.options.MapAppBuilderOptions
+   * @namespace aeris.interactive.routes.options
+   * @extends aeris.interactive.maps.options.MapAppBuilderOptions
    *
    * @constructor
    * @override

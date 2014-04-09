@@ -1,14 +1,14 @@
 define([
   'aeris/util',
-  'aim/application/controllers/itemcontroller'
+  'aeris/interactive/application/controllers/itemcontroller'
 ], function(_, ItemController) {
   /**
    * Controls the point on a slider
    * which represents the slider value.
    *
    * @class Point
-   * @namespace aeris.application.widgets.slider
-   * @extends aeris.application.ItemController
+   * @namespace aeris.interactive.application.widgets.slider
+   * @extends aeris.interactive.application.ItemController
    *
    * @constructor
    *
@@ -18,7 +18,7 @@ define([
    * @param {number=} opt_options.max Max value
    * @param {number=} opt_options.width Width in pixels of range area
    * @param {number=} opt_options.step Minimum distance between each value point.
-   * @param {aeris.application.widgets.slider.options.Point=} opt_options.style
+   * @param {aeris.interactive.application.widgets.slider.options.Point=} opt_options.style
    */
   var Point = function(opt_options) {
     var options = _.defaults(opt_options || {}, {

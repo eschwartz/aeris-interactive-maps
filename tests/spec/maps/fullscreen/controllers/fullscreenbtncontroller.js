@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/maps/fullscreen/controllers/fullscreenbtncontroller',
+  'aeris/interactive/maps/fullscreen/controllers/fullscreenbtncontroller',
   'aeris/events',
   'tests/mocks/maps/fullscreen/helpers/fullscreenservice'
 ], function(_, FullscreenBtnController, Events, MockFullscreenService) {

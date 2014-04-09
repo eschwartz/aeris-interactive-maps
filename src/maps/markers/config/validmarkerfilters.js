@@ -14,7 +14,7 @@ define([
    *  }
    *
    * @class validMarkerFilters
-   * @namespace aeris.builder.maps.markers.config
+   * @namespace aeris.interactive.maps.markers.config
    * @static
    */
   return {

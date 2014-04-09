@@ -1,11 +1,11 @@
 define([
   'aeris/util',
-  'aim/application/controllers/mapobjectcontroller'
+  'aeris/interactive/application/controllers/mapobjectcontroller'
 ], function(_, BaseMapObjectController) {
   /**
    * @class MapObjectController
-   * @namespace aeris.builder.maps.core.controllers
-   * @extends aeris.application.controlleres.MapObjectController
+   * @namespace aeris.interactive.maps.core.controllers
+   * @extends aeris.interactive.application.controlleres.MapObjectController
    *
    * @constructor
    *
@@ -28,7 +28,7 @@ define([
      *
      * @property model
      * @private
-     * @type {aeris.application.forms.models.Toggle}
+     * @type {aeris.interactive.application.forms.models.Toggle}
      */
 
     BaseMapObjectController.call(this, options);

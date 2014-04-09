@@ -5,7 +5,7 @@ require([
   'config-amd'
 ], function() {
   require([
-    'aim/application/widgets/slider/slider'
+    'aeris/interactive/application/widgets/slider/slider'
   ], function(Slider) {
     $('.sg-slider').each(function() {
       var steppedSlider = new Slider({

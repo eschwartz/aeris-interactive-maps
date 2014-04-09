@@ -1,25 +1,25 @@
 define([
   'aeris/util',
   'marionette',
-  'aim/application/controllers/itemcontroller'
+  'aeris/interactive/application/controllers/itemcontroller'
 ], function(_, Marionette, ItemController) {
   var CollectionView = Marionette.CollectionView;
   /**
    * Renders a for bound to a {aeris.Collection}, using a specified
-   * {aeris.application.controllers.ItemController}
+   * {aeris.interactive.application.controllers.ItemController}
    *
    * See Marionette.CollectionView documentation.
    *
    * @class CollectionController
-   * @namespace aeris.application.controllers
+   * @namespace aeris.interactive.application.controllers
    * @extends Marionette.CollectionView
-   * @implements aeris.application.controllers.ControllerInterface
+   * @implements aeris.interactive.application.controllers.ControllerInterface
    *
    * @constructor
    *
    * @param {Object} options
    * @param {aeris.Collection} options.collection
-   * @param {Object.<string,aeris.application.controllers.ControllerInterface>} options.itemControllerLookup A map of controllers to use,
+   * @param {Object.<string,aeris.interactive.application.controllers.ControllerInterface>} options.itemControllerLookup A map of controllers to use,
    *        based on the model id.
    */
   var CollectionController = function(options) {

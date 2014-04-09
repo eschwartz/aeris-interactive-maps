@@ -1,7 +1,7 @@
 /**
  * Context for the Layers module
  *
- * @property aeris.builder.maps.layers.config.context
+ * @property aeris.interactive.maps.layers.config.context
  * @type {Object}
  */
 define({
@@ -9,7 +9,7 @@ define({
 
   layersModule: {
     create: {
-      module: 'aim/maps/layers/modules/layersmodule',
+      module: 'aeris/interactive/maps/layers/modules/layersmodule',
       args: [
         {
           controlsController: { $ref: 'layerControlsController' },
@@ -22,7 +22,7 @@ define({
 
   layerStateCollection: {
     create: {
-      module: 'aim/application/forms/collections/togglecollection',
+      module: 'aeris/interactive/application/forms/collections/togglecollection',
       args: [
         null,
         {
@@ -36,11 +36,11 @@ define({
 
   layerCollectionController: {
     create: {
-      module: 'aim/application/controllers/collectioncontroller',
+      module: 'aeris/interactive/application/controllers/collectioncontroller',
       args: [
         {
           collection: { $ref: 'layerStateCollection' },
-          itemControllerLookup: { wire: 'aim/maps/layers/config/layercontrollers' },
+          itemControllerLookup: { wire: 'aeris/interactive/maps/layers/config/layercontrollers' },
           itemViewOptions: {
             mapState: { $ref: 'appState' }
           }
@@ -51,18 +51,18 @@ define({
 
   layerControlsController: {
     create: {
-      module: 'aim/application/forms/controllers/togglecollectioncontroller',
+      module: 'aeris/interactive/application/forms/controllers/togglecollectioncontroller',
       args: [
         {
           collection: { $ref: 'layerStateCollection' },
           className: 'aeris-map-controls',
           itemViewOptions: {
-            template: { module: 'hbars!aim/maps/core/views/toggle.html' },
+            template: { module: 'hbars!aeris/interactive/maps/core/views/toggle.html' },
             selectedClass: 'aeris-selected',
             deselectedClass: 'aeris-deselected'
           },
           handlebarsHelpers: {
-            i18n: { module: 'aim/application/templatehelpers/i18n' }
+            i18n: { module: 'aeris/interactive/application/templatehelpers/i18n' }
           }
         }
       ]
@@ -70,6 +70,6 @@ define({
   },
 
   $plugins: [
-    { module: 'aim/application/plugins/classfactory' }
+    { module: 'aeris/interactive/application/plugins/classfactory' }
   ]
 });

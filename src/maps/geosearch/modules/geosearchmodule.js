@@ -1,11 +1,11 @@
 define([
   'aeris/util',
-  'aim/application/modules/module'
+  'aeris/interactive/application/modules/module'
 ], function(_, Module) {
   /**
    * @class GeosearchModule
-   * @namespace aeris.builder.maps.geosearch.modules
-   * @extends aeris.application.Module
+   * @namespace aeris.interactive.maps.geosearch.modules
+   * @extends aeris.interactive.application.Module
    *
    * @constructor
    * @override

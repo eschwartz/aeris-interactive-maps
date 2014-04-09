@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/routes/plugins/travelmode',
+  'aeris/interactive/routes/plugins/travelmode',
   'aeris/maps/routes/waypoint',
   'tests/mocks/application/plugins/pluginresolver'
 ], function(_, travelModePlugin, Waypoint, MockPluginResolver) {

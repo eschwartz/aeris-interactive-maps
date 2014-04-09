@@ -1,12 +1,12 @@
 define([
   'aeris/util',
-  'aim/application/modules/module',
+  'aeris/interactive/application/modules/module',
   'aeris/events'
 ], function(_, Module, Events) {
   /**
    * @class RoutePointInfoModule
-   * @namespace aeris.builder.routes.routebuilder.routepointinfo.modules
-   * @extends aeris.application.modules.Module
+   * @namespace aeris.interactive.routes.routebuilder.routepointinfo.modules
+   * @extends aeris.interactive.application.modules.Module
    * @uses aeris.Events
    *
    * @param {Object} options

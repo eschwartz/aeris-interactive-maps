@@ -1,18 +1,18 @@
 define([
   'aeris/util',
-  'aim/application/modules/module'
+  'aeris/interactive/application/modules/module'
 ], function(_, Module) {
   /**
    * @class RouteBuilderModule
-   * @namespace aeris.builder.routes.routebuilder.modules
-   * @extends aeris.application.modules.Module
+   * @namespace aeris.interactive.routes.routebuilder.modules
+   * @extends aeris.interactive.application.modules.Module
    *
    * @constructor
    *
    * @param {Backbone.View} options.routeControlsController Required.
    * @param {aeris.Events} options.eventHub Required.
    * @param {aeris.Model} options.appState Required.
-   * @param {aeris.application.controllers.ControllerInterface} options.routeBuilderController
+   * @param {aeris.interactive.application.controllers.ControllerInterface} options.routeBuilderController
   */
   var RouteBuilderModule = function(options) {
     /**
@@ -34,7 +34,7 @@ define([
     /**
      * Controls the UI controls view for the route builder.
      *
-     * @type {aeris.application.controllers.ControllerInterface}
+     * @type {aeris.interactive.application.controllers.ControllerInterface}
      * @private
      * @property routeControlsController_
      */
@@ -42,7 +42,7 @@ define([
 
 
     /**
-     * @type {aeris.application.controllers.ControllerInterface}
+     * @type {aeris.interactive.application.controllers.ControllerInterface}
      * @private
      * @property routeBuilderController_
      */

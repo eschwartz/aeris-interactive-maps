@@ -1,6 +1,6 @@
 require.config({
   paths: {
-    aim: 'src',
+    'aeris/interactive': 'src',
     aeris: 'bower_components/aerisjs/src',
 
     // Core library dependencies

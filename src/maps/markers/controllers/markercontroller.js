@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/maps/core/controllers/mapobjecttogglecontroller',
+  'aeris/interactive/maps/core/controllers/mapobjecttogglecontroller',
   'aeris/api/params/models/filter',
   'aeris/api/operator'
 ], function(_, MapObjectToggleController, Filter, Operator) {
@@ -8,13 +8,13 @@ define([
    * Controls {aeris.maps.markercollections.PointDataMarkers} views.
    *
    * @class MarkerController
-   * @namespace aeris.builder.maps.markers.controllers
-   * @extends aeris.builder.core.controllers.MapObjectToggleController
+   * @namespace aeris.interactive.maps.markers.controllers
+   * @extends aeris.interactive.core.controllers.MapObjectToggleController
    *
    * @constructor
    * @override
    *
-   * @param {aeris.builder.maps.markers.models.MarkerToggle} options.model Required.
+   * @param {aeris.interactive.maps.markers.models.MarkerToggle} options.model Required.
    * @param {aeris.Events} options.eventHub Required.
    */
   var MarkerController = function(options) {

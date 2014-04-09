@@ -1,20 +1,20 @@
 define([
   'aeris/util',
-  'aim/application/controllers/layoutcontroller',
-  'hbars!aim/application/forms/views/checkbox.html',
-  'aim/application/templatehelpers/i18n'
+  'aeris/interactive/application/controllers/layoutcontroller',
+  'hbars!aeris/interactive/application/forms/views/checkbox.html',
+  'aeris/interactive/application/templatehelpers/i18n'
 ], function(_, LayoutController, toggleView, i18n) {
   /**
    * A ToggleController is a simple checkbox bound to a
    * Toggle model.
    *
    * @class ToggleController
-   * @namespace aeris.application.forms.controllers
-   * @extends aeris.application.controllers.LayoutController
+   * @namespace aeris.interactive.application.forms.controllers
+   * @extends aeris.interactive.application.controllers.LayoutController
    *
    * @param {Object=} options
    * @param {string=} options.template Toggle view UI template.
-   * @param {aeris.application.forms.models.Toggle} options.model Required.
+   * @param {aeris.interactive.application.forms.models.Toggle} options.model Required.
    * @param {string} options.selectedClass
    * @param {string} options.deselectedClass
    *
@@ -38,7 +38,7 @@ define([
 
     /**
      * @property model
-     * @type {aeris.application.forms.models.Toggle}
+     * @type {aeris.interactive.application.forms.models.Toggle}
      */
 
 

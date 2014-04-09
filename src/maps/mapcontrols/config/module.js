@@ -1,17 +1,17 @@
 define(
   /**
-   * WireJS spec for the {aeris.builder.maps.mapcontrols.modules.MapControlsModule}
+   * WireJS spec for the {aeris.interactive.maps.mapcontrols.modules.MapControlsModule}
    * module.
    *
    * @class context
-   * @namespace aeris.builder.maps.mapcontrols.config
+   * @namespace aeris.interactive.maps.mapcontrols.config
    */
   {
     $exports: { $ref: 'mapControlsModule' },
 
     mapControlsModule: {
       create: {
-        module: 'aim/maps/mapcontrols/modules/mapcontrolsmodule',
+        module: 'aeris/interactive/maps/mapcontrols/modules/mapcontrolsmodule',
         args: [{
           controlsController: { $ref: 'mapControlsController' },
 
@@ -25,7 +25,7 @@ define(
 
     mapControlsController: {
       create: {
-        module: 'aim/maps/mapcontrols/controllers/mapcontrolscontroller',
+        module: 'aeris/interactive/maps/mapcontrols/controllers/mapcontrolscontroller',
         args: [{
           eventHub: { $ref: 'eventHub' },
           builderOptions: { $ref: 'builderOptions' },
@@ -46,9 +46,9 @@ define(
       }
     },
 
-    mapControlsTemplate: { module: 'hbars!aim/maps/mapcontrols/views/controls.html' },
+    mapControlsTemplate: { module: 'hbars!aeris/interactive/maps/mapcontrols/views/controls.html' },
 
-    mapControlsRegions: { wire: 'aim/maps/mapcontrols/config/regions' },
+    mapControlsRegions: { wire: 'aeris/interactive/maps/mapcontrols/config/regions' },
 
     // These should match up to the
     // the keys of the "controls" builder options.
@@ -62,7 +62,7 @@ define(
 
 
     $plugins: [
-      { module: 'aim/application/plugins/regionresolver' }
+      { module: 'aeris/interactive/application/plugins/regionresolver' }
     ]
   }
 );

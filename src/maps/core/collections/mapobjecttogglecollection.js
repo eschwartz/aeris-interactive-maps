@@ -1,14 +1,14 @@
 define([
   'aeris/util',
-  'aim/application/forms/collections/togglecollection',
-  'aim/maps/core/models/mapobjecttoggle'
+  'aeris/interactive/application/forms/collections/togglecollection',
+  'aeris/interactive/maps/core/models/mapobjecttoggle'
 ], function(_, ToggleCollection, MapObjectToggle) {
   /**
-   * A collection of {aeris.builder.maps.core.models.MapObjectToggle} models.
+   * A collection of {aeris.interactive.maps.core.models.MapObjectToggle} models.
    *
    * @class MapObjectToggleCollection
-   * @namespace aeris.builder.maps.core.collections
-   * @extends aeris.application.forms.collections.ToggleCollection
+   * @namespace aeris.interactive.maps.core.collections
+   * @extends aeris.interactive.application.forms.collections.ToggleCollection
    *
    * @constructor
    */
@@ -23,7 +23,7 @@ define([
 
 
   /**
-   * Remove a {aeris.builder.maps.core.models.MapObjectToggle} model
+   * Remove a {aeris.interactive.maps.core.models.MapObjectToggle} model
    * by it's `name` attribute
    *
    * @param {string} name

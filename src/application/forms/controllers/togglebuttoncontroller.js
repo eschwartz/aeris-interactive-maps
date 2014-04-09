@@ -1,20 +1,20 @@
 define([
   'aeris/util',
-  'aim/application/controllers/itemcontroller',
-  'aim/application/forms/models/toggle',
-  'hbars!aim/application/forms/views/button.html'
+  'aeris/interactive/application/controllers/itemcontroller',
+  'aeris/interactive/application/forms/models/toggle',
+  'hbars!aeris/interactive/application/forms/views/button.html'
 ], function(_, ItemView, Toggle, view) {
   /**
    * A ToggleButtonController:
    * - Has either an on or an off state
    * - Updates the 'btn' ui element with 'selected' and 'desselected' classes
-   * - Binds to a {aeris.application.forms.models.Toggle} model
+   * - Binds to a {aeris.interactive.application.forms.models.Toggle} model
    *
    * Think -- "a checkbox"
    *
    * @class ToggleButtonController
-   * @namespace aeris.application.forms.controllers
-   * @extends aeris.application.controllers.ItemController
+   * @namespace aeris.interactive.application.forms.controllers
+   * @extends aeris.interactive.application.controllers.ItemController
    *
    * @constructor
    * @override
@@ -41,7 +41,7 @@ define([
 
     /**
      * @property model
-     * @type {aeris.application.forms.models.Toggle}
+     * @type {aeris.interactive.application.forms.models.Toggle}
      */
 
     /**

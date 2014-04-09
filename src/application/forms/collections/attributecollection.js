@@ -1,13 +1,13 @@
 define([
   'aeris/util',
   'aeris/collection',
-  'aim/application/forms/models/attribute'
+  'aeris/interactive/application/forms/models/attribute'
 ], function(_, Collection, Attribute) {
   /**
    * A collection of form attributes.
    *
    * @class AttributeCollection
-   * @namespace aeris.application.forms.collections
+   * @namespace aeris.interactive.application.forms.collections
    * @extends aeris.Collection
    *
    * @constructor

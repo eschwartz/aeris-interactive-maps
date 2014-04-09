@@ -1,7 +1,7 @@
 define([
   'aeris/util',
   'aeris/model',
-  'aim/errors/builderconfigerror',
+  'aeris/interactive/errors/builderconfigerror',
   'wire'        // Req'd for r.js to include wire package.
 ], function(_, Model, BuilderConfigError) {
 
@@ -23,13 +23,13 @@ define([
    *
    *
    * @class AppBuilder
-   * @namespace aeris.builder
+   * @namespace aeris.interactive
    *
    * @constructor
-   * @throws aeris.builder.errors.BuilderConfigError
+   * @throws aeris.interactive.errors.BuilderConfigError
    *
-   * @param {aeris.builder.maps.options.MapAppBuilderOptions} config MapBuilder configuration.
-   * @param {aeris.builder.maps.options.AppBuilderOptions} builderOptions
+   * @param {aeris.interactive.maps.options.MapAppBuilderOptions} config MapBuilder configuration.
+   * @param {aeris.interactive.maps.options.AppBuilderOptions} builderOptions
    *        An injectable configuration instance.
    */
   var AppBuilder = function(config, builderOptions) {
@@ -37,7 +37,7 @@ define([
 
     /**
      * @property options_
-     * @type {aeris.builder.maps.options.AppBuilderOptions}
+     * @type {aeris.interactive.maps.options.AppBuilderOptions}
      * @private
      */
     this.options_ = builderOptions;
@@ -46,7 +46,7 @@ define([
 
 
   /**
-   * @throws aeris.builder.errors.BuilderConfigError
+   * @throws aeris.interactive.errors.BuilderConfigError
    * @private
    * @method validateCtorArgs_
    */

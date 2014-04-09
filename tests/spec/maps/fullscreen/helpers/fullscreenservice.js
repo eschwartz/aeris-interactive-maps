@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/maps/fullscreen/helpers/fullscreenservice',
+  'aeris/interactive/maps/fullscreen/helpers/fullscreenservice',
   'aeris/events'
 ], function(_, FullscreenService, Events) {
 

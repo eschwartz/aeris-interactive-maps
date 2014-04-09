@@ -1,13 +1,13 @@
 define([
   'aeris/util',
-  'aim/maps/core/helpers/renderer'
+  'aeris/interactive/maps/core/helpers/renderer'
 ], function(_, Renderer) {
   /**
    * Helper for rendering view in the info panel region.
    *
    * @class InfoPanelRenderer
-   * @namespace aeris.builder.maps.infopanel.helpers
-   * @extends aeris.builder.maps.core.Renderer
+   * @namespace aeris.interactive.maps.infopanel.helpers
+   * @extends aeris.interactive.maps.core.Renderer
    *
    * @constructor
    * @override
@@ -47,7 +47,7 @@ define([
   /**
    * @method triggerEventWhenControllerCloses_
    * @private
-   * @param {aeris.application.controllers.ControllerInterface} controller
+   * @param {aeris.interactive.application.controllers.ControllerInterface} controller
    */
   InfoPanelRenderer.prototype.triggerEventWhenControllerCloses_ = function(controller) {
     this.listenToOnce(controller, 'close', function() {
@@ -68,7 +68,7 @@ define([
  * in the info panel region.
  *
  * @event info:show
- * @param {aeris.application.controller.ControllerInterface} controller The rendered controller.
+ * @param {aeris.interactive.application.controller.ControllerInterface} controller The rendered controller.
  */
 /**
  * The info panel region has been closed.

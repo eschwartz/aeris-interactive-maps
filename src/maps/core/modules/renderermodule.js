@@ -1,18 +1,18 @@
 define([
   'aeris/util',
-  'aim/application/modules/module'
+  'aeris/interactive/application/modules/module'
 ], function(_, Module) {
   /**
    * @class RendererModule
-   * @namespace aeris.builder.maps.core
-   * @extends aeris.application.modules.Module
+   * @namespace aeris.interactive.maps.core
+   * @extends aeris.interactive.application.modules.Module
    *
    * @constructor
    * @override
    */
   var RendererModule = function(options) {
     /**
-     * @type {aeris.builder.maps.core.helpers.Renderer}
+     * @type {aeris.interactive.maps.core.helpers.Renderer}
      * @private
      * @property renderer_
      */

@@ -1,6 +1,6 @@
 define([
   'aeris/classfactory',    // Require module for rjs build.
-  'aim/application/plugins/helpers/converttoclassfactoryspec'
+  'aeris/interactive/application/plugins/helpers/converttoclassfactoryspec'
 ], function(ClassFactory, convertToClassFactorySpec) {
   return function(pluginOptions) {
     return {

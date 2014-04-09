@@ -1,12 +1,12 @@
 define([
   'aeris/util',
-  'aim/application/modules/application'
+  'aeris/interactive/application/modules/application'
 ], function(_, Application) {
   /**
    *
    * @class RouteApp
-   * @namespace aeris.builder.routes.routeapp
-   * @extends aeris.application.modules.Application
+   * @namespace aeris.interactive.routes.routeapp
+   * @extends aeris.interactive.application.modules.Application
    *
    * @constructor
    * @override

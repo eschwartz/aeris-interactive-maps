@@ -42,7 +42,7 @@ define({
 
   $plugins: [
     {
-      module: 'aim/application/plugins/mapObjectController',
+      module: 'aeris/interactive/application/plugins/mapObjectController',
       mapState: { $ref: 'mapState' },
       controller: 'tests/mocks/application/controllers/controllerinterface'
     }

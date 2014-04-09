@@ -1,9 +1,9 @@
 define([
   'aeris/util',
-  'aim/application/controllers/mixins/viewmixin',
+  'aeris/interactive/application/controllers/mixins/viewmixin',
   'marionette',
   'jquery',
-  'aim/application/controllers/itemcontroller',
+  'aeris/interactive/application/controllers/itemcontroller',
   'aeris/model'
 ], function(_, ViewMixin, Marionette, $, ItemController, Model) {
   var ConcreteView = function() {

@@ -3,7 +3,7 @@ define([
 ], function(ErrorTypeFactory) {
   /**
    * @class BuilderConfigError
-   * @namespace aeris.builder.errors
+   * @namespace aeris.interactive.errors
    * @extends aeris.errors.AbstractError
   */
   return new ErrorTypeFactory({

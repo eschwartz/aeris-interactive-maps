@@ -1,8 +1,8 @@
 define([
   'aeris/util',
-  'aim/application/menus/controllers/menucontroller',
-  'aim/application/forms/collections/togglecollection',
-  'aim/application/forms/models/recursivetoggle'
+  'aeris/interactive/application/menus/controllers/menucontroller',
+  'aeris/interactive/application/forms/collections/togglecollection',
+  'aeris/interactive/application/forms/models/recursivetoggle'
 ], function(_, MenuController, ToggleCollection, RecursiveToggle) {
   /**
    * This is an integration test of the

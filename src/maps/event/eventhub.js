@@ -6,7 +6,7 @@ define([
    * Application event hub
    *
    * @class EventHub
-   * @namespace aeris.builder.maps.event
+   * @namespace aeris.interactive.maps.event
    * @extends aeris.Events
    */
 

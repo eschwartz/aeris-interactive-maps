@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/maps/layers/modules/layersmodule',
+  'aeris/interactive/maps/layers/modules/layersmodule',
   'tests/mocks/application/controllers/controllerinterface',
   'aeris/model',
   'aeris/collection',

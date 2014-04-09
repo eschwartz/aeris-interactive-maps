@@ -1,9 +1,9 @@
 define([
   'aeris/util',
-  'aim/maps/mapcontrols/controllers/mapcontrolscontroller',
+  'aeris/interactive/maps/mapcontrols/controllers/mapcontrolscontroller',
   'aeris/events',
   'aeris/model',
-  'aim/application/controllers/layoutcontroller',
+  'aeris/interactive/application/controllers/layoutcontroller',
   'jquery',
   'marionette'
 ], function(_, MapControlsController, Events, Model, LayoutController, $, Marionette) {

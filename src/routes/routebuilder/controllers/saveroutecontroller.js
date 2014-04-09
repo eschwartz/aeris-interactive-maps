@@ -1,11 +1,11 @@
 define([
   'aeris/util',
-  'aim/application/controllers/itemcontroller'
+  'aeris/interactive/application/controllers/itemcontroller'
 ], function(_, ItemController) {
   /**
    * @class SaveRouteController
-   * @namespace aeris.builder.routes.routebuilder.controllers
-   * @extends aeris.application.controllers.ItemController
+   * @namespace aeris.interactive.routes.routebuilder.controllers
+   * @extends aeris.interactive.application.controllers.ItemController
    *
    * @constructor
    * @override

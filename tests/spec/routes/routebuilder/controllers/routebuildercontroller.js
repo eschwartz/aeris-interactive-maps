@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/routes/routebuilder/controllers/routebuildercontroller',
+  'aeris/interactive/routes/routebuilder/controllers/routebuildercontroller',
   'aeris/events',
   'aeris/mocks/aeris/toggle',
   'aeris/mocks/aeris/maps/routes/routebuilder'

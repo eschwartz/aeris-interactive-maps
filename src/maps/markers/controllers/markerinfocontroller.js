@@ -1,14 +1,14 @@
 define([
   'aeris/util',
-  'aim/application/controllers/itemcontroller',
-  'aim/application/templatehelpers/i18n'
+  'aeris/interactive/application/controllers/itemcontroller',
+  'aeris/interactive/application/templatehelpers/i18n'
 ], function(_, ItemController, i18n) {
   /**
    * Controls the marker details view.
    *
    * @class MarkerInfoController
-   * @namespace aeris.builder.maps.markers.controllers
-   * @extends aeris.application.controllers.ItemController
+   * @namespace aeris.interactive.maps.markers.controllers
+   * @extends aeris.interactive.application.controllers.ItemController
    *
    * @constructor
    * @override

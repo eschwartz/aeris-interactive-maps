@@ -4,8 +4,8 @@ define([
 ], function(_, InvalidArgumentError) {
   /**
    * @class HandlebarsTemplateHelperRegistrar
-   * @namespace aeris.application.controllers.templatehelperregistrars
-   * @implements aeris.application.controllers.templatehelperregistrars.TemplateHelperRegistrarInterface
+   * @namespace aeris.interactive.application.controllers.templatehelperregistrars
+   * @implements aeris.interactive.application.controllers.templatehelperregistrars.TemplateHelperRegistrarInterface
    *
    * @constructor
    * @override

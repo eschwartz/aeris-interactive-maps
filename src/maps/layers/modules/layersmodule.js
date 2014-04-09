@@ -1,15 +1,15 @@
 define([
   'aeris/util',
-  'aim/application/modules/module'
+  'aeris/interactive/application/modules/module'
 ], function(_, Module) {
   /**
    * Application module for managing tile layers.
    *
    * @class LayersModule
-   * @namespace aeris.builder.maps.layers.modules
-   * @extends aeris.application.modules.Module
+   * @namespace aeris.interactive.maps.layers.modules
+   * @extends aeris.interactive.application.modules.Module
    *
-   * @param {Object.<string, aeris.application.controller.ControllerInterface>} options.controlsController
+   * @param {Object.<string, aeris.interactive.application.controller.ControllerInterface>} options.controlsController
    * @param {aeris.Events} options.eventHub
    * @param {aeris.Collection} options.moduleState
    *
@@ -23,7 +23,7 @@ define([
      *
      * @property controlsController_
      * @private
-     * @type {Object.<string, aeris.application.controller.ControllerInterface>}
+     * @type {Object.<string, aeris.interactive.application.controller.ControllerInterface>}
      */
     this.controlsController_ = options.controlsController;
 
@@ -56,7 +56,7 @@ define([
    *
    * @method renderControls_
    * @private
-   * @param {aeris.builder.maps.options.MapAppBuilderOptions} builderOptions
+   * @param {aeris.interactive.maps.options.MapAppBuilderOptions} builderOptions
    */
   LayersModule.prototype.renderControls_ = function() {
     this.eventHub_.trigger('mapControls:ready', this.controlsController_, 'layers');

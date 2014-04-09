@@ -3,7 +3,7 @@ define([
 ], function(ErrorTypeFactory) {
   /**
    * @class FullscreenNotSupportedError
-   * @namespace aeris.builder.maps.fullscreen.errors
+   * @namespace aeris.interactive.maps.fullscreen.errors
    * @extends aeris.errors.AbstractError
   */
   return new ErrorTypeFactory({

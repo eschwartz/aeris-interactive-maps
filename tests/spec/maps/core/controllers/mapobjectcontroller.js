@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/maps/core/controllers/mapobjectcontroller',
+  'aeris/interactive/maps/core/controllers/mapobjectcontroller',
   'aeris/mocks/mapobject',
   'aeris/mocks/aeris/maps/map',
   'aeris/mocks/aeris/toggle'

@@ -1,18 +1,18 @@
 define([
   'aeris/util',
   'aeris/promise',
-  'aim/appbuilder',
-  'wire!aim/routes/config/context'
+  'aeris/interactive/appbuilder',
+  'wire!aeris/interactive/routes/config/context'
 ], function(_, Promise, BaseAppBuilder, context) {
   /**
    *
    * @class RouteAppBuilder
-   * @namespace aeris.builder.route
-   * @extends aeris.builder.AppBuilder
+   * @namespace aeris.interactive.route
+   * @extends aeris.interactive.AppBuilder
    *
    * @constructor
-   * @param {aeris.builder.routes.options.RouteBuilderOptions} config MapBuilder configuration.
-   * @param {aeris.builder.routes.options.RouteBuilderOptions} opt_builderOptions
+   * @param {aeris.interactive.routes.options.RouteBuilderOptions} config MapBuilder configuration.
+   * @param {aeris.interactive.routes.options.RouteBuilderOptions} opt_builderOptions
    *        An injectable configuration instance.
    */
   var RouteAppBuilder = function(config, opt_builderOptions) {

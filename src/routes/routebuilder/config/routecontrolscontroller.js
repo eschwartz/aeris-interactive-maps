@@ -3,11 +3,11 @@ define({
 
   routeControlsController: {
     create: {
-      module: 'aim/routes/routebuilder/controllers/routecontrolscontroller',
+      module: 'aeris/interactive/routes/routebuilder/controllers/routecontrolscontroller',
       args: [
         {
           tagName: 'section',
-          template: { module: 'hbars!aim/routes/routebuilder/views/controls.html' },
+          template: { module: 'hbars!aeris/interactive/routes/routebuilder/views/controls.html' },
 
           eventHub: { $ref: 'eventHub' },
           routeBuilder: { $ref: 'routeBuilder' },
@@ -34,11 +34,11 @@ define({
 
   SaveRouteController: {
     ClassFactory: {
-      module: 'aim/routes/routebuilder/controllers/saveroutecontroller',
+      module: 'aeris/interactive/routes/routebuilder/controllers/saveroutecontroller',
       args: [
         {
           template: {
-            module: 'hbars!aim/routes/routebuilder/views/saverouteform.html'
+            module: 'hbars!aeris/interactive/routes/routebuilder/views/saverouteform.html'
           },
           ui: {
             nameInput: '.aeris-routeNameInput',
@@ -78,12 +78,12 @@ define({
 
   travelModeController: {
     create: {
-      module: 'aim/routes/routebuilder/controllers/travelmodecontroller',
+      module: 'aeris/interactive/routes/routebuilder/controllers/travelmodecontroller',
       args: [
         {
           collection: {
             create: {
-              module: 'aim/application/forms/collections/radiocollection',
+              module: 'aeris/interactive/application/forms/collections/radiocollection',
               args: [
                 { $ref: 'travelModes' }
               ]
@@ -118,8 +118,8 @@ define({
 
 
   $plugins: [
-    { module: 'aim/routes/plugins/travelmode' },
-    { module: 'aim/application/plugins/classfactory' }
+    { module: 'aeris/interactive/routes/plugins/travelmode' },
+    { module: 'aeris/interactive/application/plugins/classfactory' }
   ]
 
 });

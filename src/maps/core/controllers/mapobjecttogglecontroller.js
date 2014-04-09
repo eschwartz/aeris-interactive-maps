@@ -9,12 +9,12 @@ define([
    * a MapObjectToggle toggle model.
    *
    * @class MapObjectToggleController
-   * @namespace aeris.builder.maps.core.controllers
+   * @namespace aeris.interactive.maps.core.controllers
    * @extends Backbone.View
    *
    * @param {Object} options
-   * @param {aeris.builder.maps.core.models.MapObjectToggle} options.model
-   * @param {aeris.builder.maps.core.models.State} options.appState Required.
+   * @param {aeris.interactive.maps.core.models.MapObjectToggle} options.model
+   * @param {aeris.interactive.maps.core.models.State} options.appState Required.
    * @param {aeris.maps.Map=} options.map
    * @param {aeris.Model|aeris.Collection=} options.data
    *
@@ -29,7 +29,7 @@ define([
     /**
      * The application state
      *
-     * @type {aeris.builder.maps.core.models.State}
+     * @type {aeris.interactive.maps.core.models.State}
      * @property appState_
      */
     this.appState_ = options.appState;
@@ -38,7 +38,7 @@ define([
      * The map object state
      *
      * @property model
-     * @type {aeris.builder.maps.core.models.MapObjectToggle}
+     * @type {aeris.interactive.maps.core.models.MapObjectToggle}
      */
 
 

@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/application/modules/module',
+  'aeris/interactive/application/modules/module',
   'sinon'
 ], function(_, Module, sinon) {
 

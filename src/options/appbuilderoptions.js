@@ -2,7 +2,7 @@ define([
   'aeris/util',
   'aeris/model',
   'aeris/config',
-  'aim/errors/builderconfigerror'
+  'aeris/interactive/errors/builderconfigerror'
 ], function(_, Model, aerisConfig, BuilderConfigError) {
   /**
    * @typedef {Object} AppBuilderOptions
@@ -20,7 +20,7 @@ define([
    * Configuration options for an {aeris.AppBuilder}
    *
    * @class AppBuilderOptions
-   * @namespace aeris.builder.options
+   * @namespace aeris.interactive.options
    * @extends aeris.Model
    *
    * @constructor

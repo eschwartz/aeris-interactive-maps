@@ -1,7 +1,7 @@
 define([
   'aeris/util',
-  'aim/application/controllers/collectioncontroller',
-  'aim/application/controllers/itemcontroller',
+  'aeris/interactive/application/controllers/collectioncontroller',
+  'aeris/interactive/application/controllers/itemcontroller',
   'tests/mocks/template',
   'aeris/collection',
   'aeris/model'

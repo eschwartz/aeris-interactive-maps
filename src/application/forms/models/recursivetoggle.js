@@ -1,7 +1,7 @@
 define([
   'aeris/util',
-  'aim/application/forms/models/toggle',
-  'aim/application/forms/collections/togglecollection',
+  'aeris/interactive/application/forms/models/toggle',
+  'aeris/interactive/application/forms/collections/togglecollection',
   'aeris/classfactory'
 ], function(_, Toggle, ToggleCollection, ClassFactory) {
   /**
@@ -10,8 +10,8 @@ define([
    * - has a collection of RecursiveToggle models as an attribute
    *
    * @class RecursiveToggle
-   * @namespace aeris.application.forms.collections
-   * @extends aeris.application.forms.collections.ToggleCollection
+   * @namespace aeris.interactive.application.forms.collections
+   * @extends aeris.interactive.application.forms.collections.ToggleCollection
    *
    * @constructor
    * @override
@@ -48,7 +48,7 @@ define([
 
 
   /**
-   * @return {aeris.application.forms.collections.ToggleCollection}
+   * @return {aeris.interactive.application.forms.collections.ToggleCollection}
    *        Our collection of RecursiveToggle models.
    * @method getChildCollection
    */
@@ -77,7 +77,7 @@ define([
    * as the current model.
    *
    * @param {Array} opt_models Models to add to the collection.
-   * @return {aeris.application.forms.collections.ToggleCollection}
+   * @return {aeris.interactive.application.forms.collections.ToggleCollection}
    * @private
    * @method createChildCollection_
    */

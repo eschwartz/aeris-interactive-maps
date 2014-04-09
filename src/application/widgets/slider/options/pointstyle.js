@@ -1,6 +1,6 @@
 /**
  * @class PointStyle
- * @namespace aeris.application.widgets.slider.options
+ * @namespace aeris.interactive.application.widgets.slider.options
  * @static
  */
 /**

@@ -24,7 +24,7 @@ define([
    *  bag.get('words')     // 'HELLO THERE'
    *
    * @class EventParamBag
-   * @namespace aeris.builder.maps.core.models
+   * @namespace aeris.interactive.maps.core.models
    * @extends aeris.Model
    *
    * @constructor

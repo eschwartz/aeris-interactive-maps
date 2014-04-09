@@ -20,6 +20,6 @@ define({
   },
 
   plugins: [
-    'aim/application/plugins/attrresolver'
+    'aeris/interactive/application/plugins/attrresolver'
   ]
 });

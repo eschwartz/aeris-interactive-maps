@@ -1,5 +1,5 @@
 define([
-  'aim/config/i18n/labels'
+  'aeris/interactive/config/i18n/labels'
 ], function(labels) {
   var i18n = function(key) {
     return labels[key] || key;

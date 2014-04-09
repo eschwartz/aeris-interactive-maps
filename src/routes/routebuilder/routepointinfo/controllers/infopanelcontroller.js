@@ -1,12 +1,12 @@
 define([
   'aeris/util',
   'aeris/model',
-  'aim/application/controllers/itemcontroller'
+  'aeris/interactive/application/controllers/itemcontroller'
 ], function(_, Model, ItemController) {
   /**
    * @class InfoPanelController
-   * @namespace aeris.builder.routes.routebuilder.routepointinfo.controllers
-   * @extends aeris.application.ItemController
+   * @namespace aeris.interactive.routes.routebuilder.routepointinfo.controllers
+   * @extends aeris.interactive.application.ItemController
    *
    * @constructor
    * @override

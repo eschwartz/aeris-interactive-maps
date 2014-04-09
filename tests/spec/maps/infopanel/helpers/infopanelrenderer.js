@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/maps/infopanel/helpers/infopanelrenderer',
+  'aeris/interactive/maps/infopanel/helpers/infopanelrenderer',
   'aeris/events',
   'tests/mocks/marionette/region',
   'tests/mocks/application/controllers/controllerinterface'

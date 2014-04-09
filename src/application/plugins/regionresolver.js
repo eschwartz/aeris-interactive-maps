@@ -19,7 +19,7 @@ define([
    *    `someLayout` {Marionette.Layout}.
    *
    * @class RegionResolver
-   * @namespace aeris.application.plugin
+   * @namespace aeris.interactive.application.plugin
    */
   function regionResolver(pluginPromise, regionName, refObj, wire) {
     var layoutSpec = refObj.layout;

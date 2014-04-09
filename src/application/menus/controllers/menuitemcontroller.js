@@ -1,16 +1,16 @@
 define([
   'aeris/util',
   'marionette',
-  'hbars!aim/application/menus/views/menuitem.html'
+  'hbars!aeris/interactive/application/menus/views/menuitem.html'
 ], function(_, Marionette, menuItemView) {
   /**
    * A MenuItemController
-   * - Binds to a {aeris.application.forms.models.Toggle} model
+   * - Binds to a {aeris.interactive.application.forms.models.Toggle} model
    * - The sub-menu corresponds to the Toggle model's childCollection attribute
    * - The sub-menu is a MenuController
    *
    * @class MenuItemController
-   * @namespace aeris.application.menus.controllers
+   * @namespace aeris.interactive.application.menus.controllers
    * @extends Marionette.CompositeView
    *
    * @constructor
@@ -27,7 +27,7 @@ define([
 
     /**
      * @property model
-     * @type {aeris.application.forms.models.RecursiveToggle}
+     * @type {aeris.interactive.application.forms.models.RecursiveToggle}
      */
 
     /**
@@ -37,7 +37,7 @@ define([
      * renders a new instance of itself.
      *
      * @property itemView
-     * @type {aeris.application.menus.controllers.MenuItemController}
+     * @type {aeris.interactive.application.menus.controllers.MenuItemController}
      */
 
 

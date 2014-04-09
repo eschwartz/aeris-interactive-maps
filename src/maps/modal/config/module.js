@@ -3,7 +3,7 @@ define({
 
   modalModule: {
     create: {
-      module: 'aim/maps/core/modules/renderermodule',
+      module: 'aeris/interactive/maps/core/modules/renderermodule',
       args: [{
         renderer: { $ref: 'modalViewRenderer' }
       }]
@@ -12,7 +12,7 @@ define({
 
   modalViewRenderer: {
     create: {
-      module: 'aim/maps/core/helpers/renderer',
+      module: 'aeris/interactive/maps/core/helpers/renderer',
       args: [{
         region: {
           $ref: 'region!modal',
@@ -28,7 +28,7 @@ define({
   },
 
   $plugins: [
-    { module: 'aim/application/plugins/regionresolver' },
-    { module: 'aim/application/plugins/events' }
+    { module: 'aeris/interactive/application/plugins/regionresolver' },
+    { module: 'aeris/interactive/application/plugins/events' }
   ]
 });

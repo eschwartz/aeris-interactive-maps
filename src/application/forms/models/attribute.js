@@ -8,7 +8,7 @@ define([
    * Has a value and a label.
    *
    * @class Attribute
-   * @namespace aeris.application.forms.models
+   * @namespace aeris.interactive.application.forms.models
    * @extends aeris.Model
    *
    * @constructor

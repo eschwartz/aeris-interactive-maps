@@ -1,18 +1,18 @@
 define([
   'aeris/util',
-  'aim/application/controllers/layoutcontroller'
+  'aeris/interactive/application/controllers/layoutcontroller'
 ], function(_, LayoutController) {
   /**
    * Controls a toggle (~checkbox) view for a marker.
    *
    * @class MarkerToggleController
-   * @namespace aeris.builder.maps.markers.controllers
-   * @extends aeris.application.controllers.LayoutController
+   * @namespace aeris.interactive.maps.markers.controllers
+   * @extends aeris.interactive.application.controllers.LayoutController
    *
    * @constructor
    * @override
    *
-   * @param {aeris.builder.maps.core.models.MapObjectToggle} options.model Required.
+   * @param {aeris.interactive.maps.core.models.MapObjectToggle} options.model Required.
    * @param {Function} options.FilterTogglesController Required.
    */
   var MarkerToggleController = function(options) {

@@ -1,13 +1,13 @@
 define([
   'aeris/util',
-  'aim/maps/core/controllers/mapobjectcontroller'
+  'aeris/interactive/maps/core/controllers/mapobjectcontroller'
 ], function(_, MapObjectController) {
   /**
    * Controls an {aeris.maps.layer.Layer} view.
    *
    * @class LayerController
-   * @namespace aeris.builder.maps.layers.controllers.LayerController
-   * @extends aeris.builder.maps.core.controllers.MapObjectController
+   * @namespace aeris.interactive.maps.layers.controllers.LayerController
+   * @extends aeris.interactive.maps.core.controllers.MapObjectController
    *
    * @constructor
    *

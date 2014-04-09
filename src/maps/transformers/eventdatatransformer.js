@@ -6,7 +6,7 @@ define([
    * into usable data.
    *
    * @class eventDataTransformer
-   * @namespace aeris.builder.maps.transformers
+   * @namespace aeris.interactive.maps.transformers
    * @static
    */
   return {

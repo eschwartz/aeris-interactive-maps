@@ -1,7 +1,7 @@
 define(function() {
   /**
    * @class ControllerInterface
-   * @namespace aeris.application.controllers
+   * @namespace aeris.interactive.application.controllers
    * @interface
    * @constructor
    *

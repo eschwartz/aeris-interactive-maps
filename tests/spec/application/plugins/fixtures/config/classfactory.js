@@ -12,6 +12,6 @@ define({
   },
 
   $plugins: [
-    'aim/application/plugins/classfactory'
+    'aeris/interactive/application/plugins/classfactory'
   ]
 });

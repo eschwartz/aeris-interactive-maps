@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/maps/fullscreen/controllers/fullscreencontroller',
+  'aeris/interactive/maps/fullscreen/controllers/fullscreencontroller',
   'jquery',
   'tests/mocks/maps/fullscreen/helpers/fullscreenservice'
 ], function(_, FullscreenController, $, MockFullscreenService) {

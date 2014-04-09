@@ -3,7 +3,7 @@ define({
 
   routeApp: {
     create: {
-      module: 'aim/routes/routeapp/routeapp',
+      module: 'aeris/interactive/routes/routeapp/routeapp',
       args: [{
         layout: { $ref: 'mapAppLayout' },
         modules: { $ref: 'subModules' }
@@ -11,9 +11,9 @@ define({
     }
   },
 
-  mapState: { wire: 'aim/maps/mapapp/config/mapstate' },
+  mapState: { wire: 'aeris/interactive/maps/mapapp/config/mapstate' },
 
-  mapAppLayout: { wire: 'aim/maps/mapapp/config/layout' },
+  mapAppLayout: { wire: 'aeris/interactive/maps/mapapp/config/layout' },
 
-  subModules: { wire: 'aim/routes/routeapp/config/submodules' }
+  subModules: { wire: 'aeris/interactive/routes/routeapp/config/submodules' }
 });

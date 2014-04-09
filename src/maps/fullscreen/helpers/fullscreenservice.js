@@ -1,7 +1,7 @@
 define([
   'aeris/util',
   'aeris/events',
-  'aim/maps/fullscreen/errors/fullscreennotsupportederror'
+  'aeris/interactive/maps/fullscreen/errors/fullscreennotsupportederror'
 ], function(_, Events, FullscreenNotSupportedError) {
   var root = this;
 
@@ -11,7 +11,7 @@ define([
    * and api prefixes.
    *
    * @class FullscreenService
-   * @namespace aeris.builder.maps.fullscreen.helpers
+   * @namespace aeris.interactive.maps.fullscreen.helpers
    * @constructor
    *
    * @uses {aeris.Events}
@@ -116,7 +116,7 @@ define([
    * @method requestFullscreen
    * @param {HTMLElement} element
    *
-   * @throws {aeris.builder.maps.fullscreen.error.FullscreenNotSupportedError}
+   * @throws {aeris.interactive.maps.fullscreen.error.FullscreenNotSupportedError}
    *          If the client's browser does not programmatically entering
    *          fullscreen mode.
    */
@@ -139,7 +139,7 @@ define([
    *
    * @method exitFullscreen
    *
-   * @throws {aeris.builder.maps.fullscreen.error.FullscreenNotSupportedError}
+   * @throws {aeris.interactive.maps.fullscreen.error.FullscreenNotSupportedError}
    *          If the client's browser does not support programmatically
    *          exiting fullscreen mode.
    */
@@ -160,7 +160,7 @@ define([
   /**
    * @method throwUnsupportedApiError_
    * @private
-   * @throws {aeris.builder.maps.fullscreen.error.FullscreenNotSupportedError}
+   * @throws {aeris.interactive.maps.fullscreen.error.FullscreenNotSupportedError}
    */
   FullscreenService.prototype.throwUnsupportedApiError_ = function() {
     throw new FullscreenNotSupportedError('Unable to change fullscreen mode: ' +

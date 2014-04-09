@@ -2,7 +2,7 @@ define({
   $exports: { $ref: 'mapAppLayout' },
 
   mapAppTemplate: {
-    module: 'text!aim/maps/mapapp/views/app.html'
+    module: 'text!aeris/interactive/maps/mapapp/views/app.html'
   },
 
   mapAppRegions: {
@@ -14,7 +14,7 @@ define({
 
   mapAppLayout: {
     create: {
-      module: 'aim/application/controllers/layoutcontroller',
+      module: 'aeris/interactive/application/controllers/layoutcontroller',
       args: [
         {
           template: { $ref: 'mapAppTemplate' },

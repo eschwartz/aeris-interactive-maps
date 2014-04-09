@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/application/modules/module'
+  'aeris/interactive/application/modules/module'
 ], function(_, BaseModule) {
   /**
    * Like a module... but with state.
@@ -10,14 +10,14 @@ define([
    *   using builderOptions config.
    *
    * @class StateModule
-   * @namespace aeris.builder.maps.core
-   * @extends aeris.application.modules.Module
+   * @namespace aeris.interactive.maps.core
+   * @extends aeris.interactive.application.modules.Module
    *
    * @constructor
    * @override
    *
    * @param {aeris.Model} options.appState Required.
-   * @param {aeris.builder.maps.core.collections.MapObjectToggleCollection} options.moduleState Required.
+   * @param {aeris.interactive.maps.core.collections.MapObjectToggleCollection} options.moduleState Required.
    * @param {string} options.appStateAttr
    *        The name with which to reference the module state
    *        within the application state.
@@ -40,7 +40,7 @@ define([
      * The state
      * of our map objects module.
      *
-     * @type {aeris.builder.maps.core.collections.MapObjectToggleCollection}
+     * @type {aeris.interactive.maps.core.collections.MapObjectToggleCollection}
      * @property moduleState_
      */
     this.moduleState_ = options.moduleState;
@@ -82,7 +82,7 @@ define([
    * Override `registerState_` to process builderOptions config
    * before adding items to the module state.
    *
-   * @param {aeris.builder.maps.options.MapAppBuilderOptions} builderOptions AppBuilder build config.
+   * @param {aeris.interactive.maps.options.MapAppBuilderOptions} builderOptions AppBuilder build config.
    * @protected
    * @method populateState_
    */
@@ -100,7 +100,7 @@ define([
    * Register the state of this module
    * with the application state.
    *
-   * @param {aeris.builder.maps.options.MapAppBuilderOptions} builderOptions AppBuilder build config.
+   * @param {aeris.interactive.maps.options.MapAppBuilderOptions} builderOptions AppBuilder build config.
    * @protected
    * @method registerState_
    */
@@ -112,7 +112,7 @@ define([
 
   /**
    * Process a configuration from the
-   * {aeris.builder.maps.options.MapAppBuilderOptions} builder options,
+   * {aeris.interactive.maps.options.MapAppBuilderOptions} builder options,
    * in order for it to be added to the module state.
    *
    * Override to provide custom processing. Defaults to passing

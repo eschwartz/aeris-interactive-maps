@@ -8,11 +8,11 @@ define([
    * and related {aeris.maps.extensions.MapExtensionObject} objects.
    *
    * @class MapController
-   * @namespace aeris.builder.maps.map.controllers
+   * @namespace aeris.interactive.maps.map.controllers
    * @extends Backbone.View
    *
    * @param {Object} options
-   * @param {aeris.builder.maps.map.models.State} options.appState
+   * @param {aeris.interactive.maps.map.models.State} options.appState
    *
    * @constructor
    */
@@ -44,7 +44,7 @@ define([
     /**
      * The state of the application.
      *
-     * @type {aeris.builder.maps.map.models.State}
+     * @type {aeris.interactive.maps.map.models.State}
      * @private
      * @property appState_
      */

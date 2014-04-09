@@ -3,7 +3,7 @@ define({
 
   infoPanelModule: {
     create: {
-      module: 'aim/maps/core/modules/renderermodule',
+      module: 'aeris/interactive/maps/core/modules/renderermodule',
       args: [
         {
           renderer: { $ref: 'infoPanelRenderer' }
@@ -16,7 +16,7 @@ define({
   // and renders transformed event data
   infoPanelRenderer: {
     create: {
-      module: 'aim/maps/infopanel/helpers/infopanelrenderer',
+      module: 'aeris/interactive/maps/infopanel/helpers/infopanelrenderer',
       args: [
         {
           region: {
@@ -35,16 +35,16 @@ define({
   },
 
   $plugins: [
-    { module: 'aim/application/plugins/regionresolver' },
-    { module: 'aim/application/plugins/events' }
+    { module: 'aeris/interactive/application/plugins/regionresolver' },
+    { module: 'aeris/interactive/application/plugins/events' }
   ]
 });
 /**
- * @for aeris.builder.maps.event.EventHub
+ * @for aeris.interactive.maps.event.EventHub
  */
 /**
  * And info panel view is ready to be rendered.
  *
  * @event info:view
- * @param {aeris.application.controllers.ControllerInterface} infoViewController
+ * @param {aeris.interactive.application.controllers.ControllerInterface} infoViewController
  */

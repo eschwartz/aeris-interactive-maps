@@ -1,17 +1,17 @@
 define([
   'aeris/util',
-  'aim/application/controllers/itemcontroller'
+  'aeris/interactive/application/controllers/itemcontroller'
 ], function(_, ItemController) {
   /**
    * @class Bar
-   * @namespace aeris.application.widgets.slider
-   * @extends aeris.application.controllers.ItemController
+   * @namespace aeris.interactive.application.widgets.slider
+   * @extends aeris.interactive.application.controllers.ItemController
    *
    * @constructor
    *
    * @param {Object=} opt_options
    * @param {?number=} opt_options.step Pixels between step intervals. If null, no steps will be rendered.
-   * @param {aeris.application.widgets.slider.options.BarStyle=} opt_options.style
+   * @param {aeris.interactive.application.widgets.slider.options.BarStyle=} opt_options.style
    */
   var Bar = function(opt_options) {
     var options = _.defaults(opt_options || {}, {

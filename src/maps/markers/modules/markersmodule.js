@@ -1,13 +1,13 @@
 define([
   'aeris/util',
-  'aim/maps/core/modules/mapobjectmodule'
+  'aeris/interactive/maps/core/modules/mapobjectmodule'
 ], function(_, MapObjectModule) {
   /**
    * Application module for point data markers.
    *
    * @class MarkersModule
-   * @namespace aeris.builder.maps.markers
-   * @extends aeris.builder.core.modules.MapObjectModule
+   * @namespace aeris.interactive.maps.markers
+   * @extends aeris.interactive.core.modules.MapObjectModule
    *
    * @constructor
    * @override

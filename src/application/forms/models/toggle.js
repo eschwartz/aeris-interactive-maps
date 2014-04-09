@@ -1,14 +1,14 @@
 define([
   'aeris/util',
-  'aim/application/forms/models/attribute',
+  'aeris/interactive/application/forms/models/attribute',
   'aeris/togglebehavior'
 ], function(_, Attribute, ToggleBehavior) {
   /**
    * Represents a toggle-able form item.
    *
    * @class Toggle
-   * @namespace aeris.application.forms.models
-   * @extends aeris.application.forms.models.Attribute
+   * @namespace aeris.interactive.application.forms.models
+   * @extends aeris.interactive.application.forms.models.Attribute
    * @uses aeris.ToggleBehavior
    *
    * @constructor

@@ -1,15 +1,15 @@
 define([
   'aeris/util',
   'marionette',
-  'aim/application/forms/controllers/togglebuttoncontroller',
-  'aim/application/forms/collections/radiocollection'
+  'aeris/interactive/application/forms/controllers/togglebuttoncontroller',
+  'aeris/interactive/application/forms/collections/radiocollection'
 ], function(_, Marionette, ToggleButtonController, RadioCollection) {
   /**
    * Controls a view where only one item can be selected
    * at a time (eg. a radio input)
    *
    * @class RadioController
-   * @namespace aeris.application.form
+   * @namespace aeris.interactive.application.form
    * @extends Marionette.CollectionView
    *
    * @constructor
@@ -18,7 +18,7 @@ define([
    * @param {Object=} opt_options
    *
    * @param {Marionette.View} opt_options.itemView
-   *        Defaults to aeris.application.forms.controllers.ToggleButtonController .
+   *        Defaults to aeris.interactive.application.forms.controllers.ToggleButtonController .
    */
   var RadioController = function(opt_options) {
     var options = _.defaults(opt_options || {}, {
@@ -28,7 +28,7 @@ define([
 
     /**
      * @property collection
-     * @type {aeris.application.forms.collections.RadioCollection}
+     * @type {aeris.interactive.application.forms.collections.RadioCollection}
      */
 
     Marionette.CollectionView.call(this, options);

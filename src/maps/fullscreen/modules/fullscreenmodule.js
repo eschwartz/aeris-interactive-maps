@@ -1,22 +1,22 @@
 define([
   'aeris/util',
-  'aim/application/modules/module'
+  'aeris/interactive/application/modules/module'
 ], function(_, Module) {
   /**
    * Initializes logic for functionality related to
    * fullscreen controls.
    *
    * @class FullscreenModule
-   * @namespace aeris.builder.maps.fullscreen.modules
-   * @extends aeris.application.modules.Module
+   * @namespace aeris.interactive.maps.fullscreen.modules
+   * @extends aeris.interactive.application.modules.Module
    *
    * @constructor
    * @override
    *
    * @param {Object} options
-   * @param {aeris.application.controllers.ControllerInterface} options.fullscreenController
+   * @param {aeris.interactive.application.controllers.ControllerInterface} options.fullscreenController
    *        Controller for entering and exiting fullscreen mode.
-   * @param {aeris.application.controllers.ControllerInterface} options.fullscreenBtnController
+   * @param {aeris.interactive.application.controllers.ControllerInterface} options.fullscreenBtnController
    *        Controller for the button to trigger fullscreen mode.
    * @param {aeris.Events} options.eventHub Application event hub.
   */
@@ -24,13 +24,13 @@ define([
     /**
      * @property fullscreenController_
      * @private
-     * @type {aeris.application.controllers.ControllerInterface}
+     * @type {aeris.interactive.application.controllers.ControllerInterface}
     */
     this.fullscreenController_ = options.fullscreenController;
 
     /**
      * @property fullscreenBtnController_
-     * @type {aeris.application.controllers.ControllerInterface}
+     * @type {aeris.interactive.application.controllers.ControllerInterface}
      * @private
      */
     this.fullscreenBtnController_ = options.fullscreenBtnController;

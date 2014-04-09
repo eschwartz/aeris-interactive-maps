@@ -1,6 +1,6 @@
 define([
   'aeris/util',
-  'aim/application/models/eventparambag',
+  'aeris/interactive/application/models/eventparambag',
   'aeris/events'
 ], function(_, EventParamBag, Events) {
   var eventHub;

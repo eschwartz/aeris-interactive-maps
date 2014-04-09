@@ -2,15 +2,15 @@ define([
   'aeris/util',
   'marionette',
   'aeris/errors/invalidargumenterror',
-  'aim/application/controllers/templatehelperregistrars/handlebarstemplatehelperregistrar'
+  'aeris/interactive/application/controllers/templatehelperregistrars/handlebarstemplatehelperregistrar'
 ], function(_, Marionette, InvalidArgumentError, HandlebarsTemplateHelperRegistrar) {
   /**
    * @class ViewMixin
-   * @namespace aeris.application.controllers
+   * @namespace aeris.interactive.application.controllers
    * @extends Marionette.View
    *
    * @param {Object=} opt_options
-   * @param {aeris.application.controllers.templatehelperregistrars.TemplateHelperRegistrarInterface=} opt_options.templateHelperRegistrar
+   * @param {aeris.interactive.application.controllers.templatehelperregistrars.TemplateHelperRegistrarInterface=} opt_options.templateHelperRegistrar
    *
    * @constructor
    */

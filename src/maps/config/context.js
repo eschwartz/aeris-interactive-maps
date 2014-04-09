@@ -1,20 +1,20 @@
 define({
   builderOptions: {
     create: {
-      module: 'aim/maps/options/mapappbuilderoptions',
+      module: 'aeris/interactive/maps/options/mapappbuilderoptions',
       args: [
         null,
         {
-          defaults: { wire: 'aim/maps/config/builderoptions' },
-          mapObjectTypes: { wire: 'aim/maps/config/mapobjecttypes' }
+          defaults: { wire: 'aeris/interactive/maps/config/builderoptions' },
+          mapObjectTypes: { wire: 'aeris/interactive/maps/config/mapobjecttypes' }
         }
       ]
     }
   },
 
-  eventHub: { create: 'aim/maps/event/eventhub' },
+  eventHub: { create: 'aeris/interactive/maps/event/eventhub' },
 
-  appState: { create: 'aim/maps/core/models/state' },
+  appState: { create: 'aeris/interactive/maps/core/models/state' },
 
-  mapApp: { wire: 'aim/maps/mapapp/config/app' }
+  mapApp: { wire: 'aeris/interactive/maps/mapapp/config/app' }
 });

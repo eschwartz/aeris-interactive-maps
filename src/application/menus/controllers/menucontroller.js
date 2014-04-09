@@ -1,8 +1,8 @@
 define([
   'aeris/util',
   'marionette',
-  'aim/application/forms/collections/togglecollection',
-  'aim/application/menus/controllers/menuitemcontroller'
+  'aeris/interactive/application/forms/collections/togglecollection',
+  'aeris/interactive/application/menus/controllers/menuitemcontroller'
 ], function(_, Marionette, ToggleCollection, MenuItemController) {
   /**
    * A MenuController
@@ -15,7 +15,7 @@ define([
    * Think -- "a drop-down menu"
    *
    * @class MenuController
-   * @namespace aeris.application.menus.controllers
+   * @namespace aeris.interactive.application.menus.controllers
    * @extends Marionette.CollectionView
    */
   var MenuController = function(opt_options) {
@@ -30,7 +30,7 @@ define([
      *      (attr) childCollection: {ToggleCollection}   <-- ad inifinitum
      *
      * @property collection
-     * @type {aeris.application.forms.collections.ToggleCollection}
+     * @type {aeris.interactive.application.forms.collections.ToggleCollection}
      */
 
     Marionette.CollectionView.call(this, options);

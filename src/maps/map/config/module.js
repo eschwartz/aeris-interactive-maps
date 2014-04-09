@@ -1,7 +1,7 @@
 /**
  * Context for the Map module.
  *
- * @property aeris.builder.maps.map.config.context
+ * @property aeris.interactive.maps.map.config.context
  * @type {Object}
  */
 define({
@@ -9,7 +9,7 @@ define({
 
   mapModule: {
     create: {
-      module: 'aim/maps/map/modules/mapmodule',
+      module: 'aeris/interactive/maps/map/modules/mapmodule',
       args: [{
         mapController: { $ref: 'mapController' },
 
@@ -27,7 +27,7 @@ define({
 
   mapController: {
     create: {
-      module: 'aim/maps/map/controllers/mapcontroller',
+      module: 'aeris/interactive/maps/map/controllers/mapcontroller',
       args: [{
         appState: { $ref: 'appState' },
         className: 'aeris-mapCanvas',
@@ -37,6 +37,6 @@ define({
   },
 
   $plugins: [
-    { module: 'aim/application/plugins/regionresolver' }
+    { module: 'aeris/interactive/application/plugins/regionresolver' }
   ]
 });

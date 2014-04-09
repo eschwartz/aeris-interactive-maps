@@ -2,7 +2,7 @@ define([
   'aeris/util',
   'backbone',
   'jquery',
-  'aim/application/modules/module'
+  'aeris/interactive/application/modules/module'
 ], function(_, Backbone, $, BaseModule) {
   /**
    * Base Application class.
@@ -20,8 +20,8 @@ define([
    * - Starts the Backbone history.
    *
    * @class Application
-   * @namespace aeris.application.modules
-   * @extends aeris.application.modules.Module
+   * @namespace aeris.interactive.application.modules
+   * @extends aeris.interactive.application.modules.Module
    *
    * @constructor
    * @override
@@ -45,7 +45,7 @@ define([
     /**
      * Application router
      *
-     * @type {aeris.builder.maps.core.router.StateRouter}
+     * @type {aeris.interactive.maps.core.router.StateRouter}
      * @protected
      * @property router_
      */
@@ -74,7 +74,7 @@ define([
    *
    * @override
    *
-   * @param {aeris.builder.options.AppBuilderOptions} builderOptions
+   * @param {aeris.interactive.options.AppBuilderOptions} builderOptions
    *        Builder options must provide either a jquery $el,
    *        or a plain jane element.
    *

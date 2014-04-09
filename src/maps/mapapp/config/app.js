@@ -2,21 +2,21 @@
  * Context for the MapApp application.
  *
  * @class context
- * @namespace aeris.builder.maps.mapapp.config
+ * @namespace aeris.interactive.maps.mapapp.config
  * @static
  */
 define({
   $exports: { $ref: 'mapApp' },
 
-  mapAppLayout: { wire: 'aim/maps/mapapp/config/layout' },
+  mapAppLayout: { wire: 'aeris/interactive/maps/mapapp/config/layout' },
 
-  mapState: { wire: 'aim/maps/mapapp/config/mapstate' },
+  mapState: { wire: 'aeris/interactive/maps/mapapp/config/mapstate' },
 
-  subModules: { wire: 'aim/maps/mapapp/config/submodules' },
+  subModules: { wire: 'aeris/interactive/maps/mapapp/config/submodules' },
 
   mapApp: {
     create: {
-      module: 'aim/application/modules/application',
+      module: 'aeris/interactive/application/modules/application',
       args: [
         {
           layout: { $ref: 'mapAppLayout' },

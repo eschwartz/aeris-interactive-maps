@@ -1,5 +1,5 @@
 require([
-  'aim/application/plugins/attrresolver',
-  'aim/application/plugins/events',
-  'aim/application/plugins/regionresolver'
+  'aeris/interactive/application/plugins/attrresolver',
+  'aeris/interactive/application/plugins/events',
+  'aeris/interactive/application/plugins/regionresolver'
 ]);

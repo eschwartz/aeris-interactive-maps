@@ -1,21 +1,21 @@
 define([
   'aeris/util',
-  'aim/maps/core/modules/statemodule',
+  'aeris/interactive/maps/core/modules/statemodule',
   'aeris/errors/invalidargumenterror'
 ], function(_, StateModule, InvalidArgumentError) {
   /**
    * A base module for rendering and controlling {aeris.maps.extensions.MapExtensionObject}s.
    *
    * @class MapObjectModule
-   * @namespace aeris.builder.maps.core.modules
-   * @extends aeris.builder.maps.core.modules.StateModule
+   * @namespace aeris.interactive.maps.core.modules
+   * @extends aeris.interactive.maps.core.modules.StateModule
    *
    * @constructor
    * @override
    *
    * @param {Object} options
    *
-   * @param {aeris.builder.maps.core.controllers.MapObjectCollectionController} options.mapObjectController
+   * @param {aeris.interactive.maps.core.controllers.MapObjectCollectionController} options.mapObjectController
    * @param {Backbone.View=} options.controlsController Optional.
    * @param {string} options.stateAttr
    */
@@ -32,7 +32,7 @@ define([
 
 
     /**
-     * @type {aeris.builder.maps.core.controllers.MapObjectCollectionController}
+     * @type {aeris.interactive.maps.core.controllers.MapObjectCollectionController}
      * @private
      * @property mapObjectController_
      */
@@ -48,7 +48,7 @@ define([
 
   /**
    * Convert mapObjectOptions into
-   * the format for a {aeris.application.forms.models.Toggle} model.
+   * the format for a {aeris.interactive.application.forms.models.Toggle} model.
    *
    * @param {Array.<Object>} mapObjectOptions
    *
@@ -92,7 +92,7 @@ define([
   /**
    * Render controllers associated with this module.
    *
-   * @param {aeris.builder.maps.options.MapAppBuilderOptions} builderOptions
+   * @param {aeris.interactive.maps.options.MapAppBuilderOptions} builderOptions
    *
    * @private
    * @method renderControllers_

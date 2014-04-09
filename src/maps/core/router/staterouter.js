@@ -6,10 +6,10 @@ define([
 ], function(_, parseObjectValues, queryString, Backbone) {
   /**
    * An application router, which syncs itself
-   * to a aeris.builder.maps.core.models.State model.
+   * to a aeris.interactive.maps.core.models.State model.
    *
    * @class StateRouter
-   * @namespace aeris.builder.maps.core.router
+   * @namespace aeris.interactive.maps.core.router
    * @extends Backbone.Router
    *
    * @constructor

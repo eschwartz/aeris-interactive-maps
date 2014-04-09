@@ -1,13 +1,13 @@
 define([
   'aeris/util',
   'aeris/collection',
-  'aim/application/forms/models/toggle'
+  'aeris/interactive/application/forms/models/toggle'
 ], function(_, Collection, Toggle) {
   /**
    * Collection of Toggle models.
    *
    * @class ToggleCollection
-   * @namespace aeris.application.forms.collections
+   * @namespace aeris.interactive.application.forms.collections
    * @extends aeris.Collection
    *
    * @constructor
@@ -24,7 +24,7 @@ define([
 
 
   /**
-   * @return {Array.<aeris.application.forms.models.Toggle>} Selected Toggle  models.
+   * @return {Array.<aeris.interactive.application.forms.models.Toggle>} Selected Toggle  models.
    * @method getSelected
    */
   ToggleCollection.prototype.getSelected = function() {

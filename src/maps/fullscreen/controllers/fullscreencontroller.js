@@ -1,21 +1,21 @@
 define([
   'aeris/util',
-  'aim/application/controllers/itemcontroller',
-  'aim/maps/fullscreen/helpers/fullscreenservice'
+  'aeris/interactive/application/controllers/itemcontroller',
+  'aeris/interactive/maps/fullscreen/helpers/fullscreenservice'
 ], function(_, ItemController, FullscreenService) {
   /**
    * Controls a view which can be restyled into and
    * out of fullscreen mode.
    *
    * @class FullscreenController
-   * @namespace aeris.builder.maps.fullscreen.controllers
-   * @extends aeris.application.controllers.ItemController
+   * @namespace aeris.interactive.maps.fullscreen.controllers
+   * @extends aeris.interactive.application.controllers.ItemController
    *
    * @constructor
    * @override
    *
    * @param {Object=} opt_options
-   * @param {aeris.builder.maps.fullscreen.helpers.FullscreenService=} opt_options.fullscreenService
+   * @param {aeris.interactive.maps.fullscreen.helpers.FullscreenService=} opt_options.fullscreenService
    */
   var FullscreenController = function(opt_options) {
     var options = opt_options || {};
@@ -34,7 +34,7 @@ define([
     /**
      * @property fullscreenService_
      * @private
-     * @type {aeris.builder.maps.fullscreen.helpers.FullscreenService}
+     * @type {aeris.interactive.maps.fullscreen.helpers.FullscreenService}
     */
     this.fullscreenService_ = options.fullscreenService || new FullscreenService();
 

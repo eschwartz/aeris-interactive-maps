@@ -1,17 +1,17 @@
 define([
   'aeris/util',
   'marionette',
-  'aim/application/controllers/mixins/viewmixin',
-  'aim/application/controllers/templatehelperregistrars/handlebarstemplatehelperregistrar'
+  'aeris/interactive/application/controllers/mixins/viewmixin',
+  'aeris/interactive/application/controllers/templatehelperregistrars/handlebarstemplatehelperregistrar'
 ], function(_, Marionette, ViewMixin, HandlebarsTemplateHelperRegistrar) {
   /**
    * An aeris extension of a Marionette.ItemView
    *
    * @class ItemController
-   * @namespace aeris.application.controllers
+   * @namespace aeris.interactive.application.controllers
    * @extends Marionette.ItemView
-   * @uses aeris.application.controllers.ViewMixin
-   * @implements aeris.application.controllers.ControllerInterface
+   * @uses aeris.interactive.application.controllers.ViewMixin
+   * @implements aeris.interactive.application.controllers.ControllerInterface
    *
    * @constructor
    * @override
@@ -44,7 +44,7 @@ define([
 
 
     /**
-     * @type {aeris.application.controllers.templatehelperregistrars.TemplateHelperRegistrarInterface}
+     * @type {aeris.interactive.application.controllers.templatehelperregistrars.TemplateHelperRegistrarInterface}
      * @private
      * @property templateHelperService_
      */

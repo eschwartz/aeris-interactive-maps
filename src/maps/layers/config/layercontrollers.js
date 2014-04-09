@@ -51,9 +51,9 @@ define({
 
   $plugins: [
     {
-      module: 'aim/application/plugins/mapobjectcontroller',
+      module: 'aeris/interactive/application/plugins/mapobjectcontroller',
       mapState: { $ref: 'appState' },
-      controller: 'aim/maps/layers/controllers/layercontroller'
+      controller: 'aeris/interactive/maps/layers/controllers/layercontroller'
     }
   ]
 });

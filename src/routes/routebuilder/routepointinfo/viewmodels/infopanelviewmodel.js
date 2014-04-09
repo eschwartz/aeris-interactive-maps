@@ -4,7 +4,7 @@ define([
 ], function(_, ViewModel) {
   /**
    * @class InfoPanelViewModel
-   * @namespace aeris.builder.routes.routebuilder.routepointinfo.viewmodels
+   * @namespace aeris.interactive.routes.routebuilder.routepointinfo.viewmodels
    * @extends aeris.ViewModel
    *
    * @constructor

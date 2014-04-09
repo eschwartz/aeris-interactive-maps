@@ -1,13 +1,13 @@
 define([
   'aeris/util',
-  'aim/application/controllers/itemcontroller'
+  'aeris/interactive/application/controllers/itemcontroller'
 ], function(_, ItemController) {
   /**
    * Controls the fullscreen button view.
    *
    * @class FullscreenBtnController
-   * @namespace aeris.builder.maps.fullscreen.controllers
-   * @extends aeris.application.controllers.ItemController
+   * @namespace aeris.interactive.maps.fullscreen.controllers
+   * @extends aeris.interactive.application.controllers.ItemController
    *
    * @constructor
    * @override
@@ -66,7 +66,7 @@ define([
     /**
      * @property fullscreenService_
      * @private
-     * @type {aeris.builder.maps.fullscreen.helpers.FullscreenService}
+     * @type {aeris.interactive.maps.fullscreen.helpers.FullscreenService}
     */
     this.fullscreenService_ = options.fullscreenService;
 
@@ -181,7 +181,7 @@ define([
  * container view.
  *
  * @event fullscreen:request
- * @for aeris.builder.maps.event.EventHub
+ * @for aeris.interactive.maps.event.EventHub
  * @param {Object} fullscreenStyle
  */
 
@@ -191,6 +191,6 @@ define([
  * container view.
  *
  * @event exitFullscreen:request
- * @for aeris.builder.maps.event.EventHub
+ * @for aeris.interactive.maps.event.EventHub
  * @param {Object} fullscreenStyle Original fullscreen styles.
  */

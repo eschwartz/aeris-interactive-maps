@@ -2,15 +2,15 @@ define([
   'aeris/util',
   'aeris/collection',
   'aeris/model',
-  'aim/application/forms/models/toggle'
+  'aeris/interactive/application/forms/models/toggle'
 ], function(_, Collection, Model, Toggle) {
   /**
    * The state of a {aeris.maps.extensions.MapExtensionObject}
    * within the application.
    *
    * @class MapObjectToggle
-   * @namespace aeris.builder.maps.core.models
-   * @extends aeris.application.forms.models.Toggle
+   * @namespace aeris.interactive.maps.core.models
+   * @extends aeris.interactive.application.forms.models.Toggle
    *
    * @constructor
    * @override

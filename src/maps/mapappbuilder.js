@@ -1,19 +1,19 @@
 define([
   'aeris/util',
   'aeris/promise',
-  'aim/appbuilder',
-  'aim/errors/builderconfigerror',
-  'wire!aim/maps/config/context'
+  'aeris/interactive/appbuilder',
+  'aeris/interactive/errors/builderconfigerror',
+  'wire!aeris/interactive/maps/config/context'
 ], function(_, Promise, BaseAppBuilder, BuilderConfigError, context) {
   /**
    *
    * @class MapAppBuilder
-   * @namespace aeris.builder.maps
-   * @extends aeris.builder.AppBuilder
+   * @namespace aeris.interactive.maps
+   * @extends aeris.interactive.AppBuilder
    *
    * @constructor
-   * @param {aeris.builder.maps.options.MapAppBuilderOptions} config MapBuilder configuration.
-   * @param {aeris.builder.options.AppBuilderOptions} opt_builderOptions
+   * @param {aeris.interactive.maps.options.MapAppBuilderOptions} config MapBuilder configuration.
+   * @param {aeris.interactive.options.AppBuilderOptions} opt_builderOptions
    *        An injectable configuration instance.
    */
   var MapAppBuilder = function(config, opt_builderOptions) {

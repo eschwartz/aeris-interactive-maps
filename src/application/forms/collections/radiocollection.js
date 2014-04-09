@@ -1,15 +1,15 @@
 define([
   'aeris/util',
-  'aim/application/forms/collections/attributecollection',
-  'aim/application/forms/models/toggle'
+  'aeris/interactive/application/forms/collections/attributecollection',
+  'aeris/interactive/application/forms/models/toggle'
 ], function(_, AttributeCollection, Toggle) {
   /**
    * Represents a collection of toggle attributes,
    * where only one attribute can be selected at a given time.
    *
    * @class RadioCollection
-   * @namespace aeris.application.forms.collections
-   * @extends aeris.application.forms.collections.AttributeCollection
+   * @namespace aeris.interactive.application.forms.collections
+   * @extends aeris.interactive.application.forms.collections.AttributeCollection
    *
    * @constructor
    * @override
@@ -20,7 +20,7 @@ define([
     });
     /**
      * @property model
-     * @type aeris.application.forms.models.Toggle
+     * @type aeris.interactive.application.forms.models.Toggle
      */
 
     AttributeCollection.call(this, opt_models, options);
@@ -51,7 +51,7 @@ define([
    *
    * If no model is specified, selects the first selected model, or the first model
    *
-   * @param {aeris.application.forms.models.Toggle} opt_selectedModel Defaults to the first mode.
+   * @param {aeris.interactive.application.forms.models.Toggle} opt_selectedModel Defaults to the first mode.
    * @method selectUnique
    */
   RadioCollection.prototype.selectUnique = function(opt_selectedModel) {
@@ -77,7 +77,7 @@ define([
   /**
    * Returns the selected model.
    *
-   * @return {aeris.application.forms.models.Toggle}
+   * @return {aeris.interactive.application.forms.models.Toggle}
    * @method getSelected
    */
   RadioCollection.prototype.getSelected = function() {
