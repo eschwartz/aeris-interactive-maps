@@ -1,0 +1,141 @@
+.#{$_}menu {
+  overflow-y: auto;
+  border-top: 2px solid lighten($menuBackgroundColor, 50%);
+  z-index: 2;
+
+  .#{$_}menu-group {
+
+    .#{$_}menu-items {
+
+      > li {
+        @include pie-clearfix;
+
+        border-bottom: 1px solid lighten($menuBackgroundColor, 10%);
+        @include transition(height .5s $easeOutQuint, background-color .2s ease-out);
+
+
+        &:first-child {
+          border-top: 0;
+        }
+
+        &:hover {
+          background-color: lighten($menuBackgroundColor, 5%);
+
+          > button {
+            @include setIconStyles { color: #fff  }
+          }
+        }
+
+        &.#{$_}active {
+          background-color: lighten($menuBackgroundColor, 10%);
+          border-color: $menuBackgroundColor;
+
+          > button {
+            color: $menuSelectedTextColor;
+          }
+          > button:hover {
+            background-color: lighten($menuBackgroundColor, 15%);
+          }
+        }
+
+
+        > button {
+          position: relative;
+          width: 100%;
+          height: 35px;
+          margin: 0;
+          padding: 0 8px;
+          font-size: 14px;
+          color: darken($menuPrimaryTextColor, 10%);
+          text-align: left;
+          @include transition(background-color .2s ease);
+
+          @include setIconStyles {
+            float: left;
+            width: 24px;
+            margin-right: 8px;
+            line-height: 35px;
+            text-align: center;
+            font-size: 20px
+          }
+
+          .#{$_}item-label {
+            float: left;
+            height: 20px;
+            margin-top: 1px;
+            line-height: 35px;
+            @include transition(opacity .2s ease);
+          }
+
+
+
+          // individual icon size adjustments
+          .#{$_}icon-clouds {
+            font-size: 24px;
+          }
+          .#{$_}icon-advisory {
+            font-size: 18px;
+          }
+          .#{$_}icon-winds {
+            font-size: 26px;
+          }
+
+        }
+      }
+
+    }
+
+  }
+
+  .#{$_}menu-toggle {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 22px;
+    height: 22px;
+    overflow: visible;
+    background-color: #000;
+    border: 2px solid lighten($menuBackgroundColor, 10%);
+    @include border-radius(11px);
+
+    &.#{$_}selected {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 12px;
+        height: 12px;
+        margin: -6px 0 0 -6px;
+        background-color: #ff5a00;
+        @include border-radius(7px);
+      }
+    }
+  }
+
+
+  .#{$_}menu-item-opts {
+    margin: 0 0 10px 20px;
+    border-top: 1px solid lighten($menuBackgroundColor, 15%);
+    font-weight: 200;
+    font-size: 12px;
+    color: #aaa;
+    padding-top: 6px;
+
+    .#{$_}item-opt {
+      margin: 0;
+      padding: 5px 0;
+    }
+
+    .#{$_}item-opt-legend {
+      @extend .#{$_}item-opt;
+      padding-right: 10px;
+    }
+
+    .#{$_}item-opt-slider {
+      @extend .#{$_}item-opt;
+      margin-right: 5px;
+    }
+  }
+
+}

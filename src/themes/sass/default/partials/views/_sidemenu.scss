@@ -1,0 +1,27 @@
+.#{$_}sideMenu {
+  position: relative;
+  height: 100%;
+  background-color: $menuBackgroundColor;
+
+  button {
+    color: $menuPrimaryTextColor;
+    @include transition(color .2s ease);
+
+    &:hover {
+      color: #fff;
+    }
+    &.selected {
+      background: $lightBackgroundColor;
+      color: $primaryDarkTextColor;
+    }
+  }
+
+  .#{$_}content {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  @import "sidemenu/menu";
+}

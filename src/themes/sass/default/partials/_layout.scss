@@ -1,21 +1,21 @@
 /**
  * Layout styles.
 */
-
-$mapControlsWidth: 250px;
+$sidebarWidth: 250px;
 
 .#{$_}mapControlsRegion {
   position: relative;
   float: left;
 
-  width: $mapControlsWidth;
+  width: $sidebarWidth;
   height: 100%;
+  @include transition(width .5s $easeOutQuint)
 }
 
 .#{$_}mapContainer {
   position: relative;
   height: 100%;
-  margin-left: $mapControlsWidth;
+  margin-left: $sidebarWidth;
 }
 
 
