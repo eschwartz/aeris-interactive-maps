@@ -20,13 +20,13 @@
 
 %withCloseIcon {
   @include appendIcon {
-    @extend .#{$_}icon-close;
+    //@extend .#{$_}icon-close;
   }
 }
 
 %withOpenIcon {
   @include appendIcon {
-    @extend .#{$_}icon-rChevronDk;
+    //@extend .#{$_}icon-rChevronDk;
     top: 1px;
   }
 }

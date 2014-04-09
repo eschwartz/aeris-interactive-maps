@@ -21,7 +21,7 @@
 
   &:after {
     content: '';
-    @extend .#{$_}icon-rDblChevronDk;
+    //@extend .#{$_}icon-rDblChevronDk;
 
     position: absolute;
     top: 0.72em;    // Using em to have some chance of lining up with text.
@@ -49,7 +49,7 @@
 
   &:after {
     content: '';
-    @extend .#{$_}icon-geolocate;
+    //@extend .#{$_}icon-geolocate;
 
     margin-top: 1px;
   }
