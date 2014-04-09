@@ -1,0 +1,12 @@
+.#{$_}locator {
+  height: 42px;
+
+  button {
+    display: block;
+    float: left;
+    width: 42px;
+    height: 100%;
+    border-right: 1px solid lighten($menuBackgroundColor, 10%);
+    font-size: 20px;
+  }
+}

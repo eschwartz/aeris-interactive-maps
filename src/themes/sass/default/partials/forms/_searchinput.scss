@@ -1,0 +1,28 @@
+.#{$_}search {
+  display: block;
+  float: left;
+  width: 205px;
+  height: 100%;
+
+  i {
+    display: block;
+    float: left;
+    width: 34px;
+    height: 100%;
+    line-height: 42px;
+    font-size: 18px;
+    text-align: center;
+    color: #bbb;
+  }
+
+  input {
+    float: left;
+    width: 170px;
+    height: 100%;
+    line-height: 30px;
+    padding: 6px 4px 4px;
+    background-color: transparent;
+    font-size: 14px;
+    color: #fff;
+  }
+}
