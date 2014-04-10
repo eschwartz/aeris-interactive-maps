@@ -32,13 +32,7 @@ define({
       'HeatIndex',
       'Temps',
       'SnowDepth'
-    ],
-    controls: {
-      layers: true,
-      markers: true,
-      geolocation: true,
-      geocode: true
-    }
+    ]
   },
 
   $exports: { $ref: 'defaultBuilderOptions' }

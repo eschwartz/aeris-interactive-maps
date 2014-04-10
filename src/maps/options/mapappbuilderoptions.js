@@ -99,13 +99,13 @@ define([
     });
 
     /**
-     * Valid map objected configuration keys.
+     * Valid mapObject configuration keys.
      *
      * @type {Array.<string>}
      * @private
-     * @property mapObjectTypes_
+     * @property mapObjectKeys_
      */
-    this.mapObjectTypes_ = options.mapObjectTypes;
+    this.mapObjectKeys_ = options.mapObjectTypes;
 
     BaseOptions.call(this, opt_attrs, options);
   };
@@ -126,22 +126,13 @@ define([
    * @method normalize_
    */
   MapAppBuilderOptions.prototype.normalize_ = function(builderOptions) {
-    // Default to visible if layer controls off
-    var isDefault = !this.getAtPath('controls.layers') && !_.path('controls.layers', builderOptions);
-
     // Normalize MapObjectOptions
-    _.each(this.mapObjectTypes_, function(configKey) {
-      if (_(builderOptions).has(configKey)) {
-        builderOptions[configKey] = this.normalizeMapObject_(builderOptions[configKey], {
-          selected: isDefault
-        });
-      }
+    this.mapObjectKeys_.forEach(function(key) {
+      builderOptions[key] = this.normalizeMapObjectOptions_(builderOptions[key]);
     }, this);
 
     // Normalize markers
-    if (builderOptions.markers) {
-      builderOptions.markers = this.normalizeMarkers_(builderOptions.markers);
-    }
+    builderOptions.markers = this.normalizeMarkers_(builderOptions.markers);
 
     return builderOptions;
   };
@@ -154,32 +145,26 @@ define([
    *    selected: {Boolean}
    *  }...]
    *
-   * @param {MapObjectOptions} mapObjectOptions
-   * @param {Object=} opt_options
-   * @param {Boolean=} opt_options.default Whether to set default to true, by default.
+   * @param {MapObjectOptions} opt_mapObjectOptions
    * @return {MapObjectOptions}
    *
    * @private
-   * @method normalizeMapObject_
+   * @method normalizeMapObjectOptions_
    */
-  MapAppBuilderOptions.prototype.normalizeMapObject_ = function(mapObjectOptions, opt_options) {
-    var options = _.extend({
-      selected: true
-    }, opt_options);
+  MapAppBuilderOptions.prototype.normalizeMapObjectOptions_ = function(opt_mapObjectOptions, opt_options) {
+    var mapObjectOptions = opt_mapObjectOptions || [];
 
-    // MapObjectOptions default values
-    var defaultObj = {
-      selected: options.selected
-    };
+    return mapObjectOptions.map(function(option) {
+      if (_.isString(option)) {
+        option = {
+          type: option
+        };
+      }
 
-    _.each(mapObjectOptions, function(opt, n) {
-      var optionObject = _.isString(opt) ? { type: opt } : opt;
-
-      // Set defaults
-      mapObjectOptions[n] = _.defaults(optionObject, defaultObj);
+      return _.defaults(option, {
+        selected: true
+      });
     }, this);
-
-    return mapObjectOptions;
   };
 
 
@@ -193,7 +178,7 @@ define([
    * @method normalizeMarkers_
    */
   MapAppBuilderOptions.prototype.normalizeMarkers_ = function(markerOptions) {
-    return _.map(markerOptions, function(opt) {
+    return _.map(markerOptions || [], function(opt) {
       return _.defaults(opt, {
         filters: []
       });

@@ -28,7 +28,6 @@ define(
         module: 'aeris/interactive/maps/mapcontrols/controllers/mapcontrolscontroller',
         args: [{
           eventHub: { $ref: 'eventHub' },
-          builderOptions: { $ref: 'builderOptions' },
           className: 'aeris-sideMenu',
           selectedClass: 'aeris-state-open',
           deselectedClass: 'aeris-state-closed',

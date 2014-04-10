@@ -19,7 +19,7 @@ define([
    * @param {Object.<string,string>=} options.controlsRegionLookup
    * @param {string=} options.selectedClass
    * @param {string=} options.deselectedClass
-  */
+   */
   var MapControlsController = function(options) {
     /**
      * Application event hub.
@@ -29,16 +29,6 @@ define([
      * @property eventHub_
      */
     this.eventHub_ = options.eventHub;
-
-
-    /**
-     * App builder options
-     *
-     * @type {aeris.interactive.options.AppBuilderOptions}
-     * @private
-     * @property builderOptions_
-     */
-    this.builderOptions_ = options.builderOptions;
 
 
     /**
@@ -79,33 +69,7 @@ define([
    */
   MapControlsController.prototype.startRenderingControlsFromEvents_ = function() {
     // Request controls views.
-    this.listenTo(this.eventHub_, 'mapControls:ready', this.renderControlsFromEvent_);
-  };
-
-
-  /**
-   * @param {LayoutController} controller
-   * @param {string} controlsViewName
-   * @private
-   * @method renderControlsFromEvent_
-   */
-  MapControlsController.prototype.renderControlsFromEvent_ = function(controller, controlsViewName) {
-    if (this.isConfiguredToRender(controlsViewName)) {
-      this.renderControlsView(controller, controlsViewName);
-    }
-  };
-
-
-  /**
-   * Is the controller configured to render this
-   * type of controller?
-   *
-   * @param {string} controlsViewName
-   * @return {Boolean}
-   * @method isConfiguredToRender
-   */
-  MapControlsController.prototype.isConfiguredToRender = function(controlsViewName) {
-    return _(this.getAllowedControlsViewNames_()).contains(controlsViewName);
+    this.listenTo(this.eventHub_, 'mapControls:ready', this.renderControlsView);
   };
 
 
@@ -144,26 +108,6 @@ define([
     var isRegionCorrectType = region instanceof Marionette.Region;
 
     return isRegionCorrectType ? region : undefined;
-  };
-
-
-  /**
-   *
-   * @return {Array}
-   * @private
-   * @method getAllowedControlsViewNames_
-   */
-  MapControlsController.prototype.getAllowedControlsViewNames_ = function() {
-    var controlsConfig = this.builderOptions_.get('controls');
-    var list = [];
-
-    _.each(controlsConfig, function(isControlActive, controlType) {
-      if (isControlActive) {
-        list.push(controlType);
-      }
-    }, this);
-
-    return list;
   };
 
 

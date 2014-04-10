@@ -9,14 +9,7 @@ define([
 ], function(_, MapControlsController, Events, Model, LayoutController, $, Marionette) {
 
   var MockBuilderOptions = function(opt_attrs) {
-    var attrs = _.defaults(opt_attrs || {}, {
-      controls: {
-        layers: true,
-        waypoints: true,
-        trails: false
-      }
-    });
-    var opts = new Model(attrs);
+    var opts = new Model(opt_attrs);
 
     return opts;
   };
@@ -40,55 +33,13 @@ define([
   _.inherits(MockRegion, Marionette.Region);
 
 
-  describe('A ControlsController', function() {
+  describe('A MapControlsController', function() {
     var templateFn;
 
     beforeEach(function() {
       templateFn = function() { return 'foo'; };
     });
 
-
-
-    describe('render', function() {
-
-      describe('Event bindings', function() {
-
-        it('should add only white-listed controls on mapControls:ready', function() {
-          var controller;
-          var eventHub = new Events();
-          var layerControls = new MockController();
-          var waypointControls = new MockController();
-          var trailsControls = new MockController();
-
-          spyOn(MapControlsController.prototype, 'renderControlsView');
-
-          controller = new MapControlsController({
-            template: templateFn,
-            builderOptions: new MockBuilderOptions({
-              controls: {
-                layers: true,
-                waypoints: true,
-                trails: false
-              }
-            }),
-            eventHub: eventHub
-          });
-          controller.render();
-
-          eventHub.trigger('mapControls:ready', layerControls, 'layers');
-          expect(MapControlsController.prototype.renderControlsView).toHaveBeenCalledWith(layerControls, 'layers');
-
-          eventHub.trigger('mapControls:ready', waypointControls, 'waypoints');
-          expect(MapControlsController.prototype.renderControlsView).toHaveBeenCalledWith(waypointControls, 'waypoints');
-
-          eventHub.trigger('mapControls:ready', trailsControls, 'trails');
-          expect(MapControlsController.prototype.renderControlsView).not.toHaveBeenCalledWith(trailsControls, 'trails');
-
-        });
-
-      });
-
-    });
 
     describe('renderControlsView', function() {
 
