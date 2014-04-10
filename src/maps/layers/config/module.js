@@ -55,13 +55,7 @@ define({
       args: [
         {
           collection: { $ref: 'layerStateCollection' },
-          // Each layer type gets it's own controls controller (item view)
-          itemControllerLookup: {
-            // We can move all these definitions to config/layercontrolscontroller
-            // and we can even create a $MapObjectControlsController plugin, if we want
-            Radar: { $ref: 'LayerWithSliderControlsController' },
-            Satellite: { $ref: 'LayerWithSliderControlsController'}
-          },
+          itemView: { $ref: 'LayerWithSliderControlsController' },
 
           handlebarsHelpers: {
             i18n: { module: 'aeris/interactive/application/templatehelpers/i18n' }
