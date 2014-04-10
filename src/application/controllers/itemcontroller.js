@@ -74,6 +74,10 @@ define([
     /**
      * @event transition:out
      */
+
+    this.listenTo(this, 'close', function() {
+      this.stopListening();
+    });
   };
   _.inherits(ItemController, Marionette.ItemView);
   _.extend(ItemController.prototype, ViewMixin);
@@ -111,10 +115,11 @@ define([
    * @method transitionIn_
    */
   ItemController.prototype.transitionIn_ = function(opt_duration, opt_cb, opt_ctx) {
-    this.$el.hide();
-
-    this.transitionUsing_('fadeIn', opt_duration, opt_cb, opt_ctx);
-
+    // Stub transition
+    // May be overwritten by child class
+    if (opt_cb) {
+      opt_cb.call(opt_ctx || this);
+    }
     return this;
   };
 
@@ -133,8 +138,11 @@ define([
    * @method transitionOut_
    */
   ItemController.prototype.transitionOut_ = function(opt_duration, opt_cb, opt_ctx) {
-    this.transitionUsing_('fadeOut', opt_duration, opt_cb, opt_ctx);
-
+    // Stub transition
+    // May be overwritten by child class
+    if (opt_cb) {
+      opt_cb.call(opt_ctx || this);
+    }
     return this;
   };
 
