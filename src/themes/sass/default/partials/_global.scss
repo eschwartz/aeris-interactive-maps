@@ -8,3 +8,11 @@
 .#{$_}grab {
   @include cursorGrab;
 }
+
+// Override all other cursor styles
+// when .grabbing is applied to the body.
+body.#{$_}grabbing {
+  cursor: grabbing !important;
+  cursor: -moz-grabbing !important;
+  cursor: -webkit-grabbing !important;
+}
