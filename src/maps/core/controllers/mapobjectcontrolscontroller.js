@@ -3,9 +3,10 @@ define([
   'jquery',
   'aeris/interactive/application/controllers/togglecontroller',
   'aeris/interactive/maps/config/translate/menuicons',
+  'aeris/interactive/maps/config/translate/mapobjecttypes',
   'hbars!aeris/interactive/maps/core/views/mapobjectcontrols.html',
   'aeris/interactive/application/helpers/autoheight'
-], function(_, $, ToggleController, menuIconLookup, mapObjectControlsTemplate, autoHeight) {
+], function(_, $, ToggleController, menuIconLookup, mapObjectTypesLookup, mapObjectControlsTemplate, autoHeight) {
   /**
    * Controls a view with UI controls to manipulate a map object.
    *
@@ -37,7 +38,7 @@ define([
         return menuIconLookup[this.id] || 'aeris-icon-stack';
       },
       label: function() {
-        return this.id;
+        return mapObjectTypesLookup[this.id] || this.id;
       }
     });
 
