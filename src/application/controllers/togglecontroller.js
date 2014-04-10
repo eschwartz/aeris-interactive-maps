@@ -26,7 +26,7 @@ define([
       selectedClass: 'aeris-selected',
       deselectedClass: 'aeris-deselected',
       events: {
-        'change @ui.toggleBtn': this.updateModel_
+        'click @ui.toggleBtn': this.toggleModel
       },
       ui: {
         toggleBtn: 'input'
@@ -71,17 +71,6 @@ define([
     this.updateSelectedClass_();
   };
   _.inherits(ToggleController, LayoutController);
-
-
-  /**
-   * Update our model to
-   * match UI control values.
-   * @method updateModel_
-   */
-  ToggleController.prototype.updateModel_ = function() {
-    var isSelected = this.ui.toggleBtn.prop('checked');
-    this.model.set('selected', isSelected);
-  };
 
 
   /**

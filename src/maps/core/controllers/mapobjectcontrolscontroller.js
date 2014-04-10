@@ -3,8 +3,9 @@ define([
   'jquery',
   'aeris/interactive/application/controllers/togglecontroller',
   'aeris/interactive/maps/config/menuiconlookup',
-  'hbars!aeris/interactive/maps/core/views/mapobjectcontrols.html'
-], function(_, $, ToggleController, menuIconLookup, mapObjectControlsTemplate) {
+  'hbars!aeris/interactive/maps/core/views/mapobjectcontrols.html',
+  'aeris/interactive/application/helpers/autoheight'
+], function(_, $, ToggleController, menuIconLookup, mapObjectControlsTemplate, autoHeight) {
   /**
    * Controls a view with UI controls to manipulate a map object.
    *
@@ -60,6 +61,8 @@ define([
       options.controls.forEach(function(Controller) {
         this.addControls(Controller);
       }, this);
+
+      this.collapseAndExpandOnToggle_();
     });
   };
   _.inherits(MapObjectControlsController, ToggleController);
@@ -97,6 +100,41 @@ define([
     data.id = this.model.id;
 
     return data;
+  };
+
+
+  /**
+   * @method collapseAndExpandOnToggle_
+   * @private
+   */
+  MapObjectControlsController.prototype.collapseAndExpandOnToggle_ = function() {
+    this.listenTo(this.model, {
+      select: this.expand,
+      deselect: this.collapse
+    });
+
+    if (!this.model.isSelected()) {
+      this.collapse();
+    }
+  };
+
+
+  /**
+   * @method expand
+   */
+  MapObjectControlsController.prototype.expand = function() {
+    this.$el.css('height', autoHeight(this.$el));
+  };
+
+
+  /**
+   * @method collapse
+   */
+  MapObjectControlsController.prototype.collapse = function() {
+    var mapControlsHeight = autoHeight(this.ui.controlsRegion);
+    var expandedHeight = autoHeight(this.$el);
+
+    this.$el.css('height', expandedHeight - mapControlsHeight);
   };
 
 
