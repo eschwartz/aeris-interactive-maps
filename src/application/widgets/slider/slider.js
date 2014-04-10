@@ -9,6 +9,7 @@ define([
   /**
    * @class Slider
    * @namespace aeris.interactive.application.widgets.slider
+   * @extends aeris.interactive.application.controller.ItemController
    *
    * @constructor
    *
