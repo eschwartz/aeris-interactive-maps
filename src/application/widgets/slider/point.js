@@ -190,6 +190,28 @@ define([
   Point.prototype.setValue = function(value) {
     var isSameValue;
 
+    value = this.normalizeValue_(value);
+
+    isSameValue = (this.value_ === value);
+    if (isSameValue) {
+      return;
+    }
+
+    this.value_ = value;
+    this.renderValue_(value);
+    this.trigger('change', value);
+  };
+
+
+  /**
+   * Apply bounds and interval rules to the value.
+   *
+   * @method normalizeValue_
+   * @private
+   * @param {number} value
+   * @return {number}
+   */
+  Point.prototype.normalizeValue_ = function(value) {
     // Bound position by min/max config
     value = Math.max(value, this.min_);
     value = Math.min(value, this.max_);
@@ -197,15 +219,7 @@ define([
     // Round to step
     value = Math.round(value / this.step_) * this.step_;
 
-    this.renderValue_(value);
-
-    isSameValue = this.value_ === value;
-
-    this.value_ = value;
-
-    if (!isSameValue) {
-      this.trigger('change', value);
-    }
+    return value;
   };
 
 
