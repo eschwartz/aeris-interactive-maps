@@ -24,7 +24,8 @@ define([
    */
   var CollectionController = function(options) {
     _.defaults(options, {
-      itemView: ItemController
+      itemView: ItemController,
+      itemControllerLookup: {}
     });
 
     /**
