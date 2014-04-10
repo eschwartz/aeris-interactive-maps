@@ -4,7 +4,7 @@ define([
   'aeris/mocks/aeris/toggle',
   'aeris/mocks/mapobject'
 ], function(_, LayerController, MockToggle, MockMapObject) {
-  
+
   describe('LayerController', function() {
     var layerController;
     var model, mapObject, mapState;
@@ -19,7 +19,7 @@ define([
 
       return new LayerController(options);
     }
-    
+
     beforeEach(function() {
       model = new MockToggle();
       mapObject = new MockMapObject();
@@ -44,12 +44,12 @@ define([
         it('should bind the map object opacity to the model', function() {
           var OPACITY_STUB = 0.12345;
           var layerController;
-          
+
           model.set('opacity', OPACITY_STUB);
           layerController = createLayerController({
             mapObject: mapObject
           });
-          
+
           expect(mapObject.get('opacity')).toEqual(OPACITY_STUB);
         });
 
@@ -86,5 +86,5 @@ define([
     });
 
   });
-  
+
 });
