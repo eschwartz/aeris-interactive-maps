@@ -14,7 +14,8 @@ define([
   var OpacitySliderController = function(options) {
     _.defaults(options, {
       label: 'Opacity',
-      range: {}
+      range: {},
+      className: 'aeris-item-opt-slider'
     });
     _.defaults(options.range, {
       min: 0,
