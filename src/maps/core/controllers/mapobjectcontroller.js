@@ -13,6 +13,10 @@ define([
    * @param {aeris.maps.MapObjectInterface} options.appState
    */
   var MapObjectController = function(options) {
+    _.defaults(options, {
+      boundAttributes: []
+    });
+
     /**
      * The state of the map used by the application.
      *
@@ -21,6 +25,17 @@ define([
      * @type {aeris.maps.MapObjectInterface}
      */
     this.mapState_ = options.mapState;
+
+    /**
+     * The controller will keep the values
+     * of these attributes in sync
+     * between the map object and the map object state.
+     *
+     * @property boundAttributes_
+     * @private
+     * @type {Array.<string>}
+     */
+    this.boundAttributes_ = options.boundAttributes;
 
     /**
      * Describes the current state of the
@@ -35,6 +50,7 @@ define([
 
     this.bindToMapState_();
     this.bindToToggleState_();
+    this.bindAttributes_();
   };
   _.inherits(MapObjectController, BaseMapObjectController);
 
@@ -76,6 +92,56 @@ define([
     else {
       this.hide();
     }
+  };
+
+
+  /**
+   * @method bindAttributes_
+   * @private
+   */
+  MapObjectController.prototype.bindAttributes_ = function() {
+    this.bindMapObjectToState_();
+    this.updateStateFromMapObject_();
+  };
+
+
+  /**
+   * @method bindMapObjectToState_
+   * @private
+   */
+  MapObjectController.prototype.bindMapObjectToState_ = function() {
+    var changeEvents = this.boundAttributes_.map(function(attr) {
+      return _.template('change:{attr}', { attr: attr });
+    });
+
+    this.listenTo(this.model, changeEvents.join(' '), this.updateMapObjectFromState_);
+  };
+
+
+  /**
+   * Update map object, using attributes
+   * from the app state.
+   *
+   * @method updateMapObjectFromState_
+   * @private
+   */
+  MapObjectController.prototype.updateMapObjectFromState_ = function() {
+    var appStateViewAttributes = this.model.pick(this.boundAttributes_);
+
+    this.mapObject_.set(appStateViewAttributes, { validate: true });
+  };
+
+
+  /**
+   * Update the app state with attributes
+   * from the view.
+   *
+   * @method updateStateFromMapObject_
+   * @private
+   */
+  MapObjectController.prototype.updateStateFromMapObject_ = function() {
+    var viewAttributes = this.mapObject_.pick(this.boundAttributes_);
+    this.model.set(viewAttributes, { validate: true });
   };
 
 

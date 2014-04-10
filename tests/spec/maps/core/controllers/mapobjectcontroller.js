@@ -54,7 +54,7 @@ define([
     });
 
 
-    describe('binding to model (Toggle)', function() {
+    describe('binding to model toggle state', function() {
 
       beforeEach(function() {
         spyOn(MapObjectController.prototype, 'render');
@@ -99,6 +99,60 @@ define([
 
         expect(MapObjectController.prototype.hide).toHaveBeenCalled();
       });
+
+    });
+
+
+    describe('binding to model attributes', function() {
+      var ATTR_A_STUB = 'ATTR_A_STUB';
+      var ATTR_B_STUB = 'ATTR_B_STUB';
+
+      beforeEach(function() {
+        mockMapObject = new MockMapObject();
+        mockMapObject.set({
+          attrA: ATTR_A_STUB,
+          attrB: ATTR_B_STUB
+        });
+
+        mapObjectController = new MapObjectController({
+          mapObject: mockMapObject,
+          mapState: mockMapState,
+          model: model,
+          boundAttributes: ['attrA', 'attrB']
+        });
+      });
+
+
+      it('should set the initial model state using the map object\'s bound attributes', function() {
+        expect(model.get('attrA')).toEqual(ATTR_A_STUB);
+        expect(model.get('attrB')).toEqual(ATTR_B_STUB);
+      });
+
+      describe('when bound model attributes change', function() {
+        var CHANGED_ATTR_A_STUB = 'CHANGED_ATTR_A_STUB';
+        var CHANGED_ATTR_B_STUB = 'CHANGED_BTTR_A_STUB';
+
+
+        it('should update the mapObject with the model attribute values', function() {
+          model.set('attrA', CHANGED_ATTR_A_STUB);
+          expect(mockMapObject.get('attrA')).toEqual(CHANGED_ATTR_A_STUB);
+
+          model.set('attrB', CHANGED_ATTR_B_STUB);
+          expect(mockMapObject.get('attrB')).toEqual(CHANGED_ATTR_B_STUB);
+        });
+
+      });
+
+      describe('when not-bound model attributes change', function() {
+        var NOT_BOUND_ATTR_STUB = 'NOT_BOUND_ATTR_STUB';
+
+        it('should not update the mapObject', function() {
+          model.set('notBoundAttr', NOT_BOUND_ATTR_STUB);
+          expect(mockMapObject.get('notBoundAttr')).not.toEqual(NOT_BOUND_ATTR_STUB);
+        });
+
+      });
+
 
     });
 
