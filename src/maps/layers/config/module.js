@@ -36,7 +36,7 @@ define({
 
   layerCollectionController: {
     create: {
-      module: 'aeris/interactive/application/controllers/collectioncontroller',
+      module: 'aeris/interactive/maps/core/controllers/mapobjectcollectioncontroller',
       args: [
         {
           collection: { $ref: 'layerStateCollection' },

@@ -162,7 +162,7 @@ define([
       }
 
       return _.defaults(option, {
-        selected: true
+        selected: false
       });
     }, this);
   };
