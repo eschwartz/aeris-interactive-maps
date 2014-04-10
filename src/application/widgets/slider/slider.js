@@ -200,5 +200,14 @@ define([
   };
 
 
+  /**
+   * @method setValue
+   * @param {number} value
+   */
+  Slider.prototype.setValue = function(value) {
+    this.point_.setValue(value);
+  };
+
+
   return Slider;
 });
