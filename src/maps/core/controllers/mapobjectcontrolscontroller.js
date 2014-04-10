@@ -124,7 +124,7 @@ define([
    * @method expand
    */
   MapObjectControlsController.prototype.expand = function() {
-    this.$el.css('height', autoHeight(this.$el));
+    this.$el.css('height', this.getFullHeight_());
   };
 
 
@@ -136,6 +136,23 @@ define([
     var expandedHeight = autoHeight(this.$el);
 
     this.$el.css('height', expandedHeight - mapControlsHeight);
+  };
+
+
+  /**
+   * @method getFullHeight_
+   * @private
+   */
+  MapObjectControlsController.prototype.getFullHeight_ = function() {
+    var fullHeight;
+    if (this.fullHeight_) { return this.fullHeight_; }
+
+    fullHeight = 0;
+    this.$el.children().each(function() {
+      fullHeight += $(this).outerHeight(true);
+    });
+
+    return this.fullHeight_ = fullHeight;
   };
 
 
