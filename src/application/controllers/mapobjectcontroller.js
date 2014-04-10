@@ -49,6 +49,12 @@ define([
      * @param {aeris.interactive.application.controllers.MapObjectController} mapObject
      * @param {aeris.maps.Map} map
      */
+
+    this.listenToOnce(this, 'render', function() {
+      this.listenTo(this, 'map:use', function(mapObject, map) {
+        this.mapObject_.setMap(map);
+      });
+    });
   };
   _.extend(MapObjectController.prototype, Events.prototype);
 
@@ -71,11 +77,6 @@ define([
     if (this.mapInUse_) {
       this.mapObject_.setMap(this.mapInUse_);
     }
-
-    // Bind to map in use
-    this.listenTo(this, 'map:use', function(mapObject, map) {
-      this.mapObject_.setMap(map);
-    });
 
     this.trigger('render');
   };
