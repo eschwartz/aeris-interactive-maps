@@ -1,7 +1,7 @@
 define({
   defaultBuilderOptions: {
     mapOptions: {
-      zoom: 12,
+      zoom: 4,
       center: [44.98, -93.2636],
       scrollZoom: true
     },
@@ -27,11 +27,20 @@ define({
         type: 'Radar',
         selected: true
       },
-      'Satellite',
+      {
+        type: 'SatelliteGlobal',
+        selected: true
+      },
       'Advisories',
+      'Chlorophyll',
+      'Dewpoints',
       'HeatIndex',
-      'Temps',
-      'SnowDepth'
+      'Humidity',
+      'SeaSurfaceTemps',
+      'SnowDepth',
+      'Temperatures',
+      'WindChill',
+      'Winds'
     ]
   },
 

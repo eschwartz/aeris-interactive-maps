@@ -20,7 +20,6 @@
 
 
   <script type="text/javascript" src="../apikeys.js"></script>
-  <script type="text/javascript" src="http://cdn.aerisjs.com/aeris.js"></script>
   <script type="text/javascript" src="../../bower_components/requirejs/require.js"
           data-main="../../config-amd"></script>
   <script type="text/javascript" src="../../config-amd.js"></script>
@@ -29,36 +28,17 @@
   <div id="map-canvas"></div>
 
   <script type="text/javascript">
-    aeris.config.set({
-      apiId: apiKeys.aeris.id,
-      apiSecret: apiKeys.aeris.secret
-    });
     require([
       'aeris/interactive/maps/mapappbuilder'
     ], function(MapAppBuilder) {
+      aeris.config.set({
+        apiId: apiKeys.aeris.id,
+        apiSecret: apiKeys.aeris.secret
+      });
       var mapAppBuilder = new MapAppBuilder({
         apiId: apiKeys.aeris.id,
         apiSecret: apiKeys.aeris.secret,
-        el: '#map-canvas',
-
-        mapOptions: {
-          zoom: 4
-        },
-
-        markers: [],
-        layers: [
-          'Radar',
-          'Satellite',
-          'Temperatures',
-          'WindChill'
-        ],
-
-        controls: {
-          layers: true,
-          markers: false,
-          geolocation: false,
-          geocode: false
-        }
+        el: '#map-canvas'
       });
       mapAppBuilder.build().
         fail(function(e) {
