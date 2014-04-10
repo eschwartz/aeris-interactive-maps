@@ -133,7 +133,6 @@ define([
 
     ItemController.call(this, options);
 
-    this.listenTo(this, 'render', this.setValue.bind(this, this.min_));
     this.listenTo(this, 'render', this.renderPoint_.bind(this, this.style_));
 
     this.listenTo(this, {
@@ -234,24 +233,6 @@ define([
 
 
   /**
-   * @method renderValue_
-   * @private
-   */
-  Point.prototype.renderValue_ = function(value) {
-    var span = this.max_ - this.min_;
-    var valueAsPercentage = value / span;
-    var valueAsPixels = valueAsPercentage * this.width_;
-
-    // Adjust for width of element
-    // so that circle is centered over
-    // value point
-    valueAsPixels = valueAsPixels - (this.size_ / 2);
-
-    this.$el.css('left', valueAsPixels);
-  };
-
-
-  /**
    * @method renderPoint_
    * @private
    * @param {Object} style
@@ -283,6 +264,26 @@ define([
     ctx.stroke();
     ctx.fillStyle = style.fillColor;
     ctx.fill();
+
+    this.renderValue_(this.value_);
+  };
+
+
+  /**
+   * @method renderValue_
+   * @private
+   */
+  Point.prototype.renderValue_ = function(value) {
+    var span = this.max_ - this.min_;
+    var valueAsPercentage = value / span;
+    var valueAsPixels = valueAsPercentage * this.width_;
+
+    // Adjust for width of element
+    // so that circle is centered over
+    // value point
+    valueAsPixels = valueAsPixels - (this.size_ / 2);
+
+    this.$el.css('left', valueAsPixels);
   };
 
 
