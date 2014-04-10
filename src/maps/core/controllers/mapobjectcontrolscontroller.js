@@ -2,7 +2,7 @@ define([
   'aeris/util',
   'jquery',
   'aeris/interactive/application/controllers/togglecontroller',
-  'aeris/interactive/maps/config/menuiconlookup',
+  'aeris/interactive/maps/config/translate/menuicons',
   'hbars!aeris/interactive/maps/core/views/mapobjectcontrols.html',
   'aeris/interactive/application/helpers/autoheight'
 ], function(_, $, ToggleController, menuIconLookup, mapObjectControlsTemplate, autoHeight) {
