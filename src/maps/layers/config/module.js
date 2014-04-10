@@ -55,7 +55,9 @@ define({
       args: [
         {
           collection: { $ref: 'layerStateCollection' },
-          itemView: { $ref: 'LayerWithSliderControlsController' },
+          itemView: { $ref: 'layersControlsItemControllers.DEFAULT' },
+
+          itemControllerLookup: { $ref: 'layersControlsItemControllers' },
 
           handlebarsHelpers: {
             i18n: { module: 'aeris/interactive/application/templatehelpers/i18n' }
@@ -67,21 +69,10 @@ define({
     }
   },
 
-  LayerWithSliderControlsController: {
-    ClassFactory: {
-      module: 'aeris/interactive/maps/core/controllers/mapobjectcontrolscontroller',
-      args: [{
-        controls: [
-          { module: 'aeris/interactive/maps/layers/controllers/opacityslidercontroller' }
-        ],
+  // Defined with ItemControllers to use for
+  // which models
+  layersControlsItemControllers: {
+    wire: 'aeris/interactive/maps/layers/config/layercontrolscontrollers'
+  }
 
-        tagName: 'li',
-        className: 'aeris-active'
-      }]
-    }
-  },
-
-  $plugins: [
-    { module: 'aeris/interactive/application/plugins/classfactory' }
-  ]
 });

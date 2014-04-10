@@ -33,7 +33,8 @@
     ], function(MapAppBuilder) {
       aeris.config.set({
         apiId: apiKeys.aeris.id,
-        apiSecret: apiKeys.aeris.secret
+        apiSecret: apiKeys.aeris.secret,
+        assetPath: '../../../assets/'
       });
       var mapAppBuilder = new MapAppBuilder({
         apiId: apiKeys.aeris.id,
