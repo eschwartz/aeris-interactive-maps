@@ -178,7 +178,7 @@ define([
    * @type {number}
    * @private
    */
-  Bar.SCALE_ = (window.devicePixelRatio == 2) ? 2 : 1;
+  Bar.SCALE_ = (window.devicePixelRatio === 2) ? 2 : 1;
 
 
   return Bar;

@@ -243,7 +243,7 @@ define([
 
     this.applyBoxStyles_();
 
-    scale = (window.devicePixelRatio == 2) ? 2 : 1;
+    scale = (window.devicePixelRatio === 2) ? 2 : 1;
     ctx = this.el.getContext('2d');
     width = this.el.width;
     height = this.el.height;
@@ -292,7 +292,7 @@ define([
    * @private
    */
   Point.prototype.applyBoxStyles_ = function() {
-    var scale = (window.devicePixelRatio == 2) ? 2 : 1;
+    var scale = (window.devicePixelRatio === 2) ? 2 : 1;
     var containerHeight = this.$el.parent().height();
 
     // Set width and height to scale for retina displays
