@@ -128,7 +128,9 @@ define([
   MapAppBuilderOptions.prototype.normalize_ = function(builderOptions) {
     // Normalize MapObjectOptions
     this.mapObjectKeys_.forEach(function(key) {
-      builderOptions[key] = this.normalizeMapObjectOptions_(builderOptions[key]);
+      if (builderOptions[key]) {
+        builderOptions[key] = this.normalizeMapObjectOptions_(builderOptions[key]);
+      }
     }, this);
 
     // Normalize markers
