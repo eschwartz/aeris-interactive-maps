@@ -37,7 +37,7 @@ define({
 
           template: { $ref: 'geolocateTemplate' },
           ui: {
-            geolocateBtn: 'a'
+            geolocateBtn: 'button'
           }
         }
       ]
@@ -54,10 +54,10 @@ define({
           geocodeService: { create: 'aeris/geocode/googlegeocodeservice' },
           zoomTo: 8,
 
-          className: 'aeris-geocode',
+          className: 'aeris-search',
           template: { $ref: 'geosearchTemplate' },
           ui: {
-            searchInput: 'input[type=search]',
+            searchInput: 'input[type=text]',
             searchForm: 'form'
           },
           events: {
