@@ -32,15 +32,15 @@ define({
         selected: true
       },
       'Advisories',
-      'Chlorophyll',
-      'Dewpoints',
-      'HeatIndex',
-      'Humidity',
-      'SeaSurfaceTemps',
-      'SnowDepth',
       'Temperatures',
+      'HeatIndex',
       'WindChill',
-      'Winds'
+      'Winds',
+      'Humidity',
+      'DewPoints',
+      'SeaSurfaceTemps',
+      'Chlorophyll',
+      'SnowDepth'
     ]
   },
 

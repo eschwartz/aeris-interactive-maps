@@ -1,4 +1,20 @@
 define({
   Radar: 'aeris-icon-radar',
-  Satellite: 'aeris-icon-clouds'
+  Satellite: 'aeris-icon-clouds',
+  SatelliteGlobal: 'aeris-icon-clouds',
+  SatelliteVisible: 'aeris-icon-clouds',
+  Advisories: 'aeris-icon-advisory',
+  StormReports: 'aeris-icon-report',
+  StormCells: 'aeris-icon-cells',
+  Lightning: 'aeris-icon-lightning',
+  Convective: 'aeris-icon-tstorms',
+  Temperatures: 'aeris-icon-temp',
+  DewPoints: 'aeris-icon-dewpoint',
+  Winds: 'aeris-icon-wind',
+  Humidity: 'aeris-icon-humidity',
+  SnowDepth: 'aeris-icon-snowflake',
+  HeatIndex: 'aeris-icon-clear',
+  SeaSurfaceTemps: 'aeris-icon-temp',
+  WindChill: 'aeris-icon-winds',
+  Chlorophyll: 'aeris-icon-haze'
 });

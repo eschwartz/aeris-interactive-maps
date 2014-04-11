@@ -11,7 +11,7 @@ define({
     Chlorophyll: {
       $MapObjectController: 'aeris/maps/layers/chlorophyll'
     },
-    Dewpoints: {
+    DewPoints: {
       $MapObjectController: 'aeris/maps/layers/dewpoints'
     },
     HeatIndex: {
