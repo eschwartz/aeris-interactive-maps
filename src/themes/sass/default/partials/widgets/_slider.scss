@@ -35,4 +35,12 @@
       @include transition(left .2s $easeOutQuad);
     }
   }
+
+
+  // Set component z-index
+  .#{$_}slider-component {
+    .#{$_}slider-point { z-index: 2; }
+    .#{$_}slider-bar { z-index: 1; }
+    .#{$_}tooltip { z-index: 1; }
+  }
 }

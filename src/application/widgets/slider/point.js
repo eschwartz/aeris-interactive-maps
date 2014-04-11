@@ -145,6 +145,14 @@ define([
         this.$el.removeClass('aeris-grabbing');
       }
     });
+
+
+    /**
+     * @event drag:start
+     */
+    /**
+     * @event drag:end
+     */
   };
   _.inherits(Point, ItemController);
 
@@ -274,6 +282,17 @@ define([
    * @private
    */
   Point.prototype.renderValue_ = function(value) {
+    this.$el.css('left', this.getValueAsPixels_(value));
+  };
+
+
+  /**
+   * @method getValueAsPixels_
+   * @private
+   * @param {number} value
+   * @return {number} Pixel distance from left, corresponding to the point value.
+   */
+  Point.prototype.getValueAsPixels_ = function(value) {
     var span = this.max_ - this.min_;
     var valueAsPercentage = value / span;
     var valueAsPixels = valueAsPercentage * this.width_;
@@ -283,7 +302,10 @@ define([
     // value point
     valueAsPixels = valueAsPixels - (this.size_ / 2);
 
-    this.$el.css('left', valueAsPixels);
+    // Round to 1 decimal place
+    valueAsPixels = Math.round(valueAsPixels * 10) / 10;
+
+    return valueAsPixels;
   };
 
 

@@ -1,0 +1,36 @@
+.#{$_}tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  min-width: 30px;
+  padding: 0 5px;
+
+  // Starts out hidden
+  opacity: 0;
+
+  background-color: #efefef;
+  @include border-radius(3px);
+  @include transition(opacity .2s ease);
+
+  .#{$_}tooltip-content {
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 16px;
+    color: #333;
+    padding: 2px;
+  }
+  &:after {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -8px;
+    border-top: 8px solid #efefef;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+  }
+}

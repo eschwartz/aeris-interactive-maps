@@ -3,9 +3,10 @@ define([
   'aeris/interactive/application/controllers/itemcontroller',
   'aeris/interactive/application/widgets/slider/point',
   'aeris/interactive/application/widgets/slider/bar',
+  'aeris/interactive/application/widgets/slider/tooltip',
   'aeris/interactive/application/widgets/slider/config/defaultstyles',
   'hbars!aeris/interactive/application/widgets/slider/view/layout.html'
-], function(_, ItemController, Point, Bar, defaultStyles, layoutTemplate) {
+], function(_, ItemController, Point, Bar, Tooltip, defaultStyles, layoutTemplate) {
   /**
    * @class Slider
    * @namespace aeris.interactive.application.widgets.slider
@@ -26,6 +27,8 @@ define([
    * @param {Object=} opt_options.style
    * @param {aeris.interactive.application.widgets.slider.options.BarStyle=} opt_options.style.bar
    * @param {aeris.interactive.application.widgets.slider.options.PointStyle=} opt_options.style.point
+   *
+   * @param {function():string} opt_options.getTooltipContent Method which returns the content of the tooltip.
    */
   var Slider = function(opt_options) {
     var options = opt_options || {};
@@ -45,7 +48,8 @@ define([
       template: layoutTemplate,
       ui: _.defaults(options.ui || {}, {
         component: '.aeris-slider-component'
-      })
+      }),
+      getTooltipContent: this.getValue
     });
 
     if (options.step) {
@@ -80,6 +84,7 @@ define([
      */
     this.step_ = options.step;
 
+
     /**
      * @property style_
      * @private
@@ -104,20 +109,47 @@ define([
     this.bar_ = options.bar || this.createBar_();
 
 
+    /**
+     * @property tooltip_
+     * @private
+     * @type {aeris.interactive.application.widgets.slider.Tooltip}
+     */
+    this.tooltip_ = options.tooltip || this.createTooltip_();
+
+
+    /**
+     * @property getTooltipContent_
+     * @private
+     * @type {function():string}
+     */
+    this.getTooltipContent_ = options.getTooltipContent;
+
+
     ItemController.call(this, options);
 
     this.listenTo(this, 'render', function() {
       // Rendering hack:
       // Component width is not correct immediately on render.
       _.defer(function() {
-        this.renderBar_();
-        this.renderPoint_();
+        this.renderComponents_();
+        this.bindTooltipToValue_();
       }.bind(this));
     });
 
-    this.listenTo(this.point_, 'change', function() {
-      this.trigger('change', this.point_.getValue());
+    this.listenTo(this.point_, {
+      // Proxy Point's 'change' event
+      change: function() {
+        this.trigger('change', this.point_.getValue());
+      },
+      'drag:start': this.updateTooltip_
     });
+
+    /**
+     * When the slider value changes
+     *
+     * @event change
+     * @param {number} value
+     */
   };
   _.inherits(Slider, ItemController);
 
@@ -152,6 +184,28 @@ define([
 
 
   /**
+   * @method createTooltip_
+   * @private
+   */
+  Slider.prototype.createTooltip_ = function() {
+    return new Tooltip({
+      offsetY: 2
+    });
+  };
+
+
+  /**
+   * @method renderComponents_
+   * @private
+   */
+  Slider.prototype.renderComponents_ = function() {
+    this.renderBar_();
+    this.renderPoint_();
+    this.renderTooltip_();
+  };
+
+
+  /**
    * @method renderPoint_
    * @private
    */
@@ -174,6 +228,49 @@ define([
     this.bar_.render();
     this.bar_.$el.appendTo(this.ui.component);
     this.bar_.setStep(pixelsPerStep);
+  };
+
+
+  /**
+   * @method renderTooltip_
+   * @private
+   */
+  Slider.prototype.renderTooltip_ = function() {
+    this.tooltip_.$el.appendTo(this.ui.component);
+    this.tooltip_.render();
+    this.updateTooltip_();
+
+    // Tooltip is only shown during dragging
+    this.tooltip_.hide();
+  };
+
+
+  /**
+   * @method bindTooltipToValue_
+   * @private
+   */
+  Slider.prototype.bindTooltipToValue_ = function() {
+    this.listenTo(this.point_, {
+      change: function() {
+        this.updateTooltip_();
+      },
+      'drag:start': function() {
+        this.tooltip_.show();
+      },
+      'drag:end': function() {
+        this.tooltip_.hide();
+      }
+    });
+  };
+
+
+  /**
+   * @method updateTooltip_
+   * @private
+   */
+  Slider.prototype.updateTooltip_ = function() {
+    this.tooltip_.setContent(this.getTooltipContent_());
+    this.tooltip_.setPosition(this.getValueInPixels_());
   };
 
 
@@ -207,6 +304,18 @@ define([
    */
   Slider.prototype.setValue = function(value) {
     this.point_.setValue(value);
+  };
+
+
+  /**
+   * @method getValueInPixels_
+   * @private
+   */
+  Slider.prototype.getValueInPixels_ = function() {
+    var componentWidth = this.ui.component.width();
+    var pixelsPerValue = componentWidth / this.range_.max;
+
+    return this.getValue() * pixelsPerValue;
   };
 
 

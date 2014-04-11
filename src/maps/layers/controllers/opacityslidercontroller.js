@@ -15,7 +15,8 @@ define([
     _.defaults(options, {
       label: 'Opacity',
       range: {},
-      className: 'aeris-item-opt-slider'
+      className: 'aeris-item-opt-slider',
+      getTooltipContent: this.getTooltipContent_
     });
     _.defaults(options.range, {
       min: 0,
@@ -50,6 +51,15 @@ define([
     this.setValue(opacity * 100);
   };
 
+
+  /**
+   * @method getTooltipContent_
+   * @private
+   * @return {string}
+   */
+  OpacitySliderController.prototype.getTooltipContent_ = function() {
+    return _.template('{val}%', { val: this.getValue() });
+  };
 
   return OpacitySliderController;
 });
